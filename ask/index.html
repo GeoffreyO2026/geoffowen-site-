@@ -214,7 +214,10 @@ function addMessage(role, content) {
   body.className = 'message-body';body.innerHTML = content
       .replace(/\n\n/g, '<br><br>')
       .replace(/\n/g, '<br>')
-      .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" style="color:var(--gold); text-decoration:underline;">$1</a>');
+      .replace(/(https?:\/\/[^\s<]+)/g, function(match) {
+        var clean = match.replace(/[.,!?;:]+$/, '');
+        return '<a href="' + clean + '" target="_blank" style="color:var(--gold); text-decoration:underline;">' + clean + '</a>';
+      });
   div.appendChild(label);
   div.appendChild(body);
   messages.appendChild(div);
