@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Player Managers & Agents | Geoff Owen — Biologically Aligned Parenting</title>
+<meta name="description" content="A short video for player managers and agents who work with professional golfers who are fathers.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0a0a0a; }
+:root {
+  --gold: #B8972A; --gold-light: #D4AF45; --black: #0a0a0a;
+  --near-black: #111111; --dark: #1a1a1a; --white: #ffffff;
+  --border: rgba(184,151,42,0.5); --nav-h: 70px;
+}
+html { scroll-behavior: auto; }
+body { background: var(--black); color: rgba(232,228,222,0.88); font-family: 'Montserrat', sans-serif; font-weight: 400; -webkit-overflow-scrolling: touch; }
+
+/* NAV */
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--black); height: var(--nav-h); display: flex; align-items: center; padding: 0 2.5rem; border-bottom: 1.5px solid var(--border); }
+.nav-logo { text-decoration: none; white-space: nowrap; margin-right: auto; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-logo .g { color: var(--gold); } .nav-logo .o { color: var(--white); }
+.nav-links { display: flex; align-items: center; list-style: none; height: var(--nav-h); }
+.nav-links > li { position: relative; height: var(--nav-h); display: flex; align-items: center; }
+.nav-links > li > a { display: flex; align-items: center; height: var(--nav-h); padding: 0 0.9rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; transition: color 0.2s; }
+.nav-links > li > a:hover { color: var(--white); }
+.nav-links > li.has-dropdown > a::after { content: ''; display: inline-block; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: 4px; flex-shrink: 0; }
+.dropdown { display: none; position: absolute; top: calc(100% + 4px); left: 0; background: var(--dark); border: 1.5px solid var(--border); min-width: 220px; z-index: 1001; }
+.dropdown.open { display: block; }
+.dropdown a { display: block; padding: 0.85rem 1.25rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.2s, background 0.2s; }
+.dropdown a:last-child { border-bottom: none; }
+.dropdown a:hover { color: var(--gold-light); background: rgba(184,151,42,0.06); }
+.nav-cta { display: inline-flex; align-items: center; height: 32px; padding: 0 1rem; margin-left: 1rem; align-self: center; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1.5px solid var(--gold); white-space: nowrap; transition: background 0.2s, color 0.2s; }
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+
+/* HERO — two column */
+.hero {
+  min-height: calc(100vh - var(--nav-h));
+  padding-top: var(--nav-h);
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+/* LEFT — text */
+.hero-text { }
+
+.eyebrow { display: block; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.75rem; font-weight: 500; }
+
+h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.6rem, 4vw, 3.8rem); line-height: 1.1; color: var(--white); margin-bottom: 0.25rem; }
+h1 span { display: block; font-style: italic; color: var(--white); }
+h1 .gold-word { display: inline; font-style: normal; color: var(--gold-light); }
+
+.gold-rule { width: 40px; height: 1px; background: var(--gold); margin: 2rem 0; opacity: 0.6; }
+
+.intro { font-size: 0.88rem; line-height: 1.9; color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; }
+
+.btn-primary { display: inline-flex; align-items: center; height: 44px; padding: 0 1.75rem; background: transparent; border: 1.5px solid var(--gold); color: var(--gold); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; transition: background 0.2s, color 0.2s; margin-right: 1.25rem; margin-bottom: 0.75rem; }
+.btn-primary:hover { background: var(--gold); color: var(--black); }
+.btn-secondary { display: inline-flex; align-items: center; height: 44px; color: rgba(255,255,255,0.5); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.25); transition: color 0.2s, border-color 0.2s; margin-bottom: 0.75rem; }
+.btn-secondary:hover { color: var(--gold); border-color: var(--gold); }
+
+/* RIGHT — video */
+.hero-video { }
+.video-wrap { position: relative; width: 100%; padding-bottom: 56.25%; background: var(--dark); border: 1.5px solid var(--border); overflow: hidden; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+/* LOWER SECTION */
+.lower { max-width: 1300px; margin: 0 auto; padding: 0 4rem 6rem; border-top: 1.5px solid var(--border); }
+
+.lower-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; padding: 4rem 0; }
+
+.lower-item { }
+.lower-item-label { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; font-weight: 500; }
+.lower-item p { font-size: 0.88rem; line-height: 1.85; color: rgba(255,255,255,0.65); }
+
+/* CTA BLOCK */
+.cta-block { background: #1a1500; border: 1.5px solid var(--border); border-left: 3px solid var(--gold); padding: 2.5rem 3rem; margin-top: 1rem; }
+.cta-block h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 2rem; color: var(--white); margin-bottom: 0.75rem; line-height: 1.3; }
+.cta-block p { font-size: 0.88rem; line-height: 1.8; color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
+
+/* FOOTER */
+footer { background: var(--black); padding: 4rem 3rem; text-align: center; border-top: 1.5px solid var(--border); margin-top: 4rem; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+footer p { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; }
+footer a { color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: var(--gold); }
+.footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--gold); margin: 0.75rem 0 1rem; }
+.copyright { font-size: 0.8rem; color: rgba(255,255,255,0.35); margin-top: 2rem; }
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .site-nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .hero { padding-left: 1.5rem; padding-right: 1.5rem; min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 0; }
+  .lower { padding: 0 1.5rem 4rem; }
+  .lower-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .cta-block { padding: 1.75rem 1.5rem; }
+}
+
+/* HAMBURGER — mobile only */
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; cursor: pointer; background: transparent; border: none; padding: 0; margin-left: 1rem; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white, #ffffff); transition: all 0.25s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: #0a0a0a; z-index: 998; flex-direction: column; padding: 2rem 2rem; overflow-y: auto; border-top: 1.5px solid rgba(184,151,42,0.4); }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+.mobile-menu a:hover { color: #B8972A; }
+.mobile-menu a.mobile-cta { color: #B8972A; border: 1.5px solid #B8972A; text-align: center; padding: 1rem; margin-top: 1.5rem; border-bottom: 1.5px solid #B8972A; }
+.mobile-menu a.mobile-cta:hover { background: #B8972A; color: #0a0a0a; }
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: flex; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#bap">The Framework</a></li>
+    <li class="has-dropdown">
+      <a href="/working-with-me">Work With Me</a>
+      <div class="dropdown">
+        <a href="/working-with-me#tier1">The Foundation Programme</a>
+        <a href="/working-with-me#tier2">Fathers Coaching</a>
+        <a href="/working-with-me#tier3">Just for Parents</a>
+        <a href="/working-with-me#tier4">The Family Legacy Advisory</a>
+      </div>
+    </li>
+    <li><a href="/books">Books</a></li>
+    <li><a href="/organisations">Organisations</a></li>
+    <li><a href="/insights">Insights</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Free Consultation</a>
+<!-- HAMBURGER BUTTON -->
+<button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+</button>
+
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/working-with-me">Work With Me</a>
+  <a href="/insights">Insights</a>
+  <a href="/faq">FAQ</a>
+  <a href="/books">Books</a>
+  <a href="/organisations">Organisations</a>
+  <a href="/webinar">Webinar</a>
+  <a href="/guide">Free Guide</a>
+  <a href="/speak-with-geoff" class="mobile-cta">Book a Conversation</a>
+</div>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- LEFT: text -->
+    <div class="hero-text">
+      <span class="eyebrow">For Player Managers &amp; Agents</span>
+      <h1>The One <span class="gold-word">Shift</span> That Changes Everything at Home and on the Course</h1>
+      <div class="gold-rule"></div>
+      <p class="intro">A short video explaining what Biologically Aligned Parenting is, why it matters to a touring professional who is a father, and what changes when he understands it.</p>
+      <a href="https://calendly.com/geoffreyowen/45mins" class="btn-primary">Book a Conversation</a>
+      <a href="mailto:geoff@geoffreyowen.com" class="btn-secondary">Send an Email</a>
+    </div>
+
+    <!-- RIGHT: video -->
+    <div class="hero-video">
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/YOUTUBE_ID_HERE"
+          title="The One Shift That Changes Everything at Home — Geoff Owen"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOWER CONTENT -->
+<div class="lower">
+  <div class="lower-grid">
+
+    <div class="lower-item">
+      <span class="lower-item-label">What he is carrying</span>
+      <p>He is away for days at a time. He comes home carrying the weight of the week. His children have adapted to his absence in ways that neither he nor they fully understand. When he walks through the door, what he finds does not always match what he hoped for.</p>
+    </div>
+
+    <div class="lower-item">
+      <span class="lower-item-label">What is actually happening</span>
+      <p>The stress is not a character problem or a time problem. It is a knowledge problem. What is missing is a framework built around the biology of the child rather than the effort of the father. And knowledge problems have solutions.</p>
+    </div>
+
+    <div class="lower-item">
+      <span class="lower-item-label">What changes</span>
+      <p>The parenting stress reduces. The homecoming changes. The weight he has been carrying quietly lifts. He arrives on the first tee on Thursday with a clearer mind and more peace in his heart than he has known in a long time.</p>
+    </div>
+
+  </div>
+
+  <div class="cta-block">
+    <h2>If this feels relevant to a player you represent</h2>
+    <p>A brief conversation is the right next step. There is no obligation and nothing to prepare. It begins with a question and goes from there.</p>
+    <a href="https://calendly.com/geoffreyowen/45mins" class="btn-primary">Book a Conversation</a>
+    <a href="mailto:geoff@geoffreyowen.com" class="btn-secondary">Send an Email</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Geoff Owen</span>
+  <p class="footer-tagline">Biologically Aligned Parenting</p>
+  <p><a href="/">geoffreyowen.com</a> &nbsp;|&nbsp; <a href="mailto:geoff@geoffreyowen.com">geoff@geoffreyowen.com</a></p>
+  <p class="copyright">&copy; 2025 Geoff Owen. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.has-dropdown').forEach(function(li) {
+    li.addEventListener('click', function(e) {
+      var dd = li.querySelector('.dropdown');
+      if (dd) dd.classList.toggle('open');
+      e.stopPropagation();
+    });
+  });
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.dropdown.open').forEach(function(dd) {
+      dd.classList.remove('open');
+    });
+  });
+</script>
+
+
+<script>
+function toggleMenu() {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+document.addEventListener('click', function(e) {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  if (m && m.classList.contains('open') && !m.contains(e.target) && !h.contains(e.target)) {
+    h.classList.remove('open');
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+
+</body>
+</html>
