@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organisations — Geoff Owen | When Parenting Stress Affects Performance</title>
+<meta name="description" content="For HR directors and Chief People Officers. When parenting stress affects performance. Geoff Owen offers an approach that addresses the cause, not the symptoms.">
+<link rel="canonical" href="https://geoffreyowen.com/organisations/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0a0a0a; }
+
+:root {
+  --gold: #B8972A;
+  --gold-light: #D4AF45;
+  --black: #0a0a0a;
+  --near-black: #111111;
+  --dark: #1a1a1a;
+  --white: #ffffff;
+  --border: rgba(184,151,42,0.5);
+  --nav-h: 70px;
+  --bar-h: 46px;
+  --offset: 116px;
+}
+
+html { scroll-behavior: auto; background: var(--black); }
+
+.page-top, main, .hero, .guide-page, .webinar-page, .download-page {
+}
+body { background: var(--black); color: rgba(232,228,222,0.88); font-family: 'Montserrat', sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+
+/* ─── NAV ─── */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: var(--black); height: var(--nav-h);
+  display: flex; align-items: center;
+  padding: 0 2.5rem; border-bottom: 1.5px solid var(--border);
+}
+.nav-logo {
+  text-decoration: none; white-space: nowrap; margin-right: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+.nav-logo .g { color: var(--gold); }
+.nav-logo .o { color: var(--white); }
+.nav-links { display: flex; align-items: center; list-style: none; height: var(--nav-h); }
+.nav-links > li { position: relative; height: var(--nav-h); display: flex; align-items: center; }
+.nav-links > li > a {
+  display: flex; align-items: center; height: var(--nav-h);
+  padding: 0 0.9rem;
+  font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; transition: color 0.2s;
+}
+.nav-links > li > a:hover { color: var(--white); }
+.nav-links > li.has-dropdown > a::after {
+  content: ''; display: inline-block; width: 5px; height: 5px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px); margin-left: 4px; flex-shrink: 0;
+}
+.dropdown {
+  display: none; position: absolute; top: calc(100% + 4px); left: 0;
+  background: var(--dark); border: 1.5px solid var(--border);
+  min-width: 220px; z-index: 1001;
+}
+.dropdown.open { display: block; }
+.dropdown a {
+  display: block; padding: 0.85rem 1.25rem;
+  font-size: 0.62rem; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7); text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.2s, background 0.2s;
+}
+.dropdown a:last-child { border-bottom: none; }
+.dropdown a:hover { color: var(--gold-light); background: rgba(184,151,42,0.06); }
+.nav-cta {
+  display: inline-flex; align-items: center;
+  height: 32px; padding: 0 1rem; margin-left: 1rem; align-self: center;
+  font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none;
+  border: 1.5px solid var(--gold); white-space: nowrap; transition: background 0.2s, color 0.2s;
+}
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+
+/* ─── ANNOUNCEMENT BAR ─── */
+.ann-bar {
+  position: sticky; top: var(--nav-h); z-index: 999;
+  background: #1a1600; height: var(--bar-h);
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1.5px solid var(--border);
+  font-size: 0.7rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.75);
+  gap: 0.5rem; padding: 0 2rem;
+}
+.ann-bar a { color: var(--gold); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.ann-bar a:hover { color: var(--white); }
+.faq-link-bar { position: fixed; top: var(--offset); right: 0; z-index: 998; display: flex; padding: 0.75rem 1.5rem; }
+.faq-link-bar a { display: inline-flex; align-items: center; height: 28px; padding: 0 0.9rem; font-size: 0.58rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--black); border: 1.5px solid var(--gold); text-decoration: none; transition: background 0.2s, color 0.2s; }
+.faq-link-bar a:hover { background: var(--gold); color: var(--black); }
+
+[id] { scroll-margin-top: var(--offset); }
+
+/* ─── PAGE ─── */
+.page-top { padding-top: 2rem; }
+
+.section { padding: 5rem 3rem; max-width: 880px; margin: 0 auto; }
+.section + .section {  }
+
+.eyebrow {
+  display: block; font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.25rem; font-weight: 500;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2.6rem, 5vw, 4.2rem); line-height: 1.1;
+  color: var(--white); margin-bottom: 2rem;
+}
+h1 em { font-style: italic; color: var(--gold-light); }
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.15;
+  color: var(--white); margin-bottom: 1.75rem;
+}
+h2 em { font-style: italic; color: var(--gold-light); }
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400; font-size: 1.4rem; color: var(--gold-light); margin-bottom: 0.75rem;
+}
+
+p { font-size: 0.95rem; line-height: 1.9; color: rgba(255,255,255,0.8); margin-bottom: 1.25rem; max-width: 680px; }
+p:last-child { margin-bottom: 0; }
+
+.divider { width: 60px; height: 1px; background: var(--gold); margin: 2.5rem 0; opacity: 0.5; }
+
+/* ─── STATS ─── */
+.stats-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;
+  margin: 3.5rem 0; padding: 3rem 0;
+   border-bottom: 1.5px solid var(--border);
+}
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 0.6rem;
+  contain: paint;
+}
+.stat-text { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 0.4rem; max-width: 100%;   contain: paint;
+}
+.stat-source { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); opacity: 0.7;   contain: paint;
+}
+
+/* ─── QUOTE BLOCK ─── */
+.quote-block {
+  border-left: 3px solid var(--gold); padding: 1.75rem 2.5rem;
+  margin: 3rem 0; background: rgba(255,255,255,0.02);
+}
+.quote-block p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; font-style: italic;
+  color: rgba(255,255,255,0.75); line-height: 1.65; margin-bottom: 0; max-width: 100%;
+}
+
+/* ─── TRIED BLOCK ─── */
+.tried-block {
+  background: rgba(255,255,255,0.03); border: 1.5px solid var(--border);
+  padding: 2.5rem 3rem; margin: 3rem 0;
+  contain: paint;
+}
+.tried-label {
+  display: block; font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.25rem;
+}
+.tried-block p { font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-bottom: 1rem; max-width: 100%; }
+.tried-block p:last-child { margin-bottom: 0; }
+.tried-block strong { color: rgba(255,255,255,0.88); }
+
+/* ─── COMPARISON ─── */
+.comparison-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  margin: 3rem 0; border: 1.5px solid var(--border);
+  contain: paint;
+}
+.comparison-col { padding: 2.25rem; }
+.comparison-col.modern { background: rgba(255,255,255,0.02); border-right: 1.5px solid var(--border); }
+.comparison-col.bap { background: rgba(184,151,42,0.04); }
+.comparison-col-label {
+  display: block; font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+  margin-bottom: 1.25rem; font-weight: 500;
+}
+.comparison-col.modern .comparison-col-label { color: rgba(255,255,255,0.4); }
+.comparison-col.bap .comparison-col-label { color: var(--gold); }
+.comparison-col p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 0.75rem; max-width: 100%; }
+.comparison-col.bap p { color: rgba(255,255,255,0.75); }
+
+/* ─── OFFERINGS ─── */
+.offerings { margin-top: 3.5rem; }
+.offering {
+  display: grid; grid-template-columns: 48px 1fr; gap: 2rem;
+  padding: 2.5rem 0; border-bottom: 1.5px solid var(--border); align-items: start;
+  contain: paint;
+}
+.offering:first-child {  }
+.offering-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem; font-weight: 300; color: var(--gold); opacity: 0.5; line-height: 1; padding-top: 4px;
+}
+.offering-content p { font-size: 0.88rem; color: rgba(255,255,255,0.65); max-width: 100%; }
+
+.format-note {
+  background: rgba(184,151,42,0.05); border: 1.5px solid var(--border);
+  padding: 1.75rem 2.25rem; margin-top: 3rem;
+  contain: paint;
+}
+.format-note p { font-size: 0.85rem; color: rgba(255,255,255,0.55); font-style: italic; max-width: 100%; }
+
+/* ─── CONTACT ─── */
+.contact-section { background: rgba(255,255,255,0.02);  padding: 5rem 3rem; }
+.contact-inner { max-width: 580px; margin: 0 auto; }
+
+.field { margin-bottom: 1.5rem; }
+.field label {
+  display: block; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.5rem;
+}
+.field input, .field select, .field textarea {
+  width: 100%; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12); color: var(--white);
+  font-family: 'Montserrat', sans-serif; font-size: 0.9rem;
+  padding: 0.85rem 1rem; outline: none; appearance: none;
+  transition: border-color 0.2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
+.field textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+
+.submit-btn {
+  background: transparent; border: 1.5px solid var(--gold); color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 1.1rem 3rem; cursor: pointer; transition: background 0.2s, color 0.2s; margin-top: 0.75rem;
+}
+.submit-btn:hover { background: var(--gold); color: var(--black); }
+
+.form-success {
+  display: none; background: rgba(184,151,42,0.08); border: 1.5px solid var(--border);
+  padding: 1.75rem 2rem; margin-bottom: 2rem;
+}
+.form-success p { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 0; max-width: 100%; }
+
+/* ─── FOOTER ─── */
+footer { background: var(--black); padding: 4rem 3rem; text-align: center;  }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+footer p { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; max-width: 100%; }
+footer a { color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: var(--gold); }
+.footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--gold); margin: 0.75rem 0 1rem; }
+.copyright { font-size: 0.8rem; color: rgba(255,255,255,0.35); margin-top: 2rem; }
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 1.5rem; }
+  .stats-row { grid-template-columns: 1fr; gap: 2rem; }
+  .comparison-grid { grid-template-columns: 1fr;   contain: paint;
+}
+  .comparison-col.modern { border-right: none; border-bottom: 1.5px solid var(--border); }
+  .offering { grid-template-columns: 36px 1fr; gap: 1.25rem;   contain: paint;
+}
+  .tried-block { padding: 1.75rem 1.5rem;   contain: paint;
+}
+  .quote-block { padding: 1.5rem 1.75rem; }
+  .contact-section { padding: 4rem 1.5rem; }
+  footer { padding: 3rem 1.5rem; }
+}
+
+
+/* HAMBURGER — mobile only */
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; cursor: pointer; background: transparent; border: none; padding: 0; margin-left: 1rem; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white, #ffffff); transition: all 0.25s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: #0a0a0a; z-index: 998; flex-direction: column; padding: 2rem 2rem; overflow-y: auto; border-top: 1.5px solid rgba(184,151,42,0.4); }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+.mobile-menu a:hover { color: #B8972A; }
+.mobile-menu a.mobile-cta { color: #B8972A; border: 1.5px solid #B8972A; text-align: center; padding: 1rem; margin-top: 1.5rem; border-bottom: 1.5px solid #B8972A; }
+.mobile-menu a.mobile-cta:hover { background: #B8972A; color: #0a0a0a; }
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: flex; }
+  .faq-link-bar { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#bap">The Framework</a></li>
+    <li class="has-dropdown">
+      <a href="/working-with-me">Work With Me</a>
+      <div class="dropdown">
+        <a href="/working-with-me#tier1">The Foundation Programme</a>
+        <a href="/working-with-me#tier2">Fathers Coaching</a>
+        <a href="/working-with-me#tier3">Just for Parents</a>
+        <a href="/working-with-me#tier4">The Family Legacy Advisory</a>
+      </div>
+    </li>
+    <li><a href="/books">Books</a></li>
+    <li><a href="/organisations">Organisations</a></li>
+    <li><a href="/insights">Insights</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Free Consultation</a>
+<!-- HAMBURGER BUTTON -->
+<button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+</button>
+
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/working-with-me">Work With Me</a>
+  <a href="/insights">Insights</a>
+  <a href="/faq">FAQ</a>
+  <a href="/books">Books</a>
+  <a href="/organisations">Organisations</a>
+  <a href="/webinar">Webinar</a>
+  <a href="/guide">Free Guide</a>
+  <a href="/speak-with-geoff" class="mobile-cta">Book a Conversation</a>
+</div>
+
+
+</nav><div class="ann-bar">
+  <span>Free Webinar. How to Reduce Parenting Stress for Working Fathers.</span>
+  <a href="/webinar">Join the Waitlist &rarr;</a>
+</div>
+
+
+
+<div class="faq-link-bar"><a href="/faq">FAQ</a></div>
+<div class="page-top">
+
+  <!-- HERO -->
+  <div class="section">
+    <span class="eyebrow">For HR Directors and Chief People Officers</span>
+    <h1>Something is being carried<br><em>into work every morning.</em></h1>
+    <p>A senior leader comes in. A director, a founder, a high performing project manager. Something is off. The output has quietly dipped. The one to ones are going nowhere. There is a referral to the EAP, perhaps an adjustment to targets, a suggestion of some sessions with a counsellor. And a few months later, the situation has not really shifted.</p>
+    <p>In many cases, what is driving it is not the work. It is what is happening at home. And for a significant number of those conversations, the person sitting across from you may be a father who is exhausted in a way he has no framework to resolve, and who has been trying harder and harder to fix something that is not responding to effort.</p>
+    <p>This page is for HR directors and Chief People Officers who are doing everything available to them, and are beginning to wonder whether what is available is actually reaching the right place.</p>
+  </div>
+
+  <!-- P1 -->
+  <div class="section">
+    <span class="eyebrow">What Is Not Working</span>
+    <h2>The standard responses<br><em>may not be reaching the cause.</em></h2>
+    <p>This is offered with real respect for what HR departments do, and for how much care goes into trying to support people well. What follows is not a criticism of the intention. It is an observation about where the current toolkit tends to fall short, and why the same conversations so often come back.</p>
+    <p>Research published in 2025 found that while nearly 85 percent of organisations report at least some effectiveness from their wellbeing efforts, fewer than half rate those efforts as genuinely impactful. The gap between having programmes in place and those programmes making a sustained difference is, for many organisations, quietly significant. The most likely reason for that gap is that the standard responses tend to be directed at the behaviour rather than the cause. And behaviour that has a cause tends to keep signalling until the cause is addressed.</p>
+
+    <div class="stats-row">
+      <div>
+        <div class="stat-number">85%</div>
+        <div class="stat-text">of organisations have wellbeing programmes in place</div>
+        <div class="stat-source">HR.com, 2025</div>
+      </div>
+      <div>
+        <div class="stat-number">41%</div>
+        <div class="stat-text">rate those programmes as highly or very highly effective</div>
+        <div class="stat-source">HR.com, 2025</div>
+      </div>
+      <div>
+        <div class="stat-number">8 in 10</div>
+        <div class="stat-text">parents reporting very high stress say it makes it hard to focus at work</div>
+        <div class="stat-source">Bright Horizons, 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P2 -->
+  <div class="section">
+    <span class="eyebrow">What HR Directors Are Doing</span>
+    <h2>Well intentioned actions.<br><em>And why they may not be enough.</em></h2>
+    <p>Most HR departments facing parenting stress in the workforce will recognise the following responses. Each is offered with genuine care. Each may bring some relief in certain situations. And each tends to fall short of the underlying cause in ways that are worth understanding, not to assign blame, but because understanding this is where a different kind of help becomes possible.</p>
+
+    <div class="tried-block">
+      <span class="tried-label">The current toolkit and where it may fall short</span>
+      <p><strong>EAP referrals and counselling.</strong> These address the emotional experience of the stress, and for some employees that is genuinely valuable. The difficulty is that when the sessions end, the employee returns to the same situation at home with the same framework for managing it. The underlying tension has not shifted, and the cycle tends to restart.</p>
+      <p><strong>Flexible working and adjusted targets.</strong> These reduce immediate pressure and are often genuinely appreciated. The challenge is that the stress is not generated by the workload. It travels with the parent wherever they are, and adjusting the conditions at work does not change what is happening at home each evening.</p>
+      <p><strong>Parenting courses and workshops.</strong> These are often the most thoughtfully offered intervention of all. The difficulty is that most parenting courses give parents more to do. More strategies to apply, more modules to work through, more scripts to learn. For many parents, it is the effort of applying strategies that is already exhausting them. More strategies tend to produce more of the same result.</p>
+      <p><strong>Paid parental leave.</strong> In some situations, time away is exactly what is needed. In others, it sends the parent home to the source of the stress without any new way of understanding it. Without a different framework, the same patterns tend to resume when they return.</p>
+    </div>
+
+    <p>The deeper difficulty is this. Unlike most forms of workplace stress, parenting stress cannot simply be put down. A father who is bone tired cannot hand the situation off and take a break in the way he might step away from a difficult project. The child is still there. The responsibility is continuous. And so the exhaustion accumulates without relief, in a way that most workplace wellbeing frameworks were not designed to address.</p>
+    <p>Research from the Wharton School found that a father's psychological availability directly correlates with his children's behaviour at home. When that availability is low, the tension at home rises. When he arrives home already depleted and the child is difficult or resistant, the instinct is to try harder. But more effort tends to produce more resistance. The friction feeds itself, quietly and relentlessly, and the exhaustion deepens in a way that no amount of workplace adjustment tends to resolve.</p>
+
+    <div class="quote-block">
+      <p>The behaviour being seen in the workplace is a signal. It is telling you something specific about what is missing at home. Managing the signal does not quieten it. Addressing the cause does.</p>
+    </div>
+  </div>
+
+  <!-- COMPARISON -->
+  <div class="section">
+    <span class="eyebrow">Understanding the Difference</span>
+    <h2>Modern parenting<br><em>and why it is so exhausting.</em></h2>
+    <p>In the context of human development, modern parenting is genuinely new. For the vast majority of our existence as a species, parenting was something that happened alongside life. Children were in the midst of things, carried along by the activity of the people around them, immersed in real human work and community. It was not a separate activity requiring dedicated strategies, focused sessions, or conscious management.</p>
+    <p>What many parents are doing today is categorically different. Life stops. The child becomes the centre of everything. Behaviour is managed, scheduled, rewarded, and corrected. Enormous effort goes into doing the right thing, saying the right thing, applying the right approach. And the effort tends to be met with resistance, because it is running against the grain of what a child's biology actually needs.</p>
+    <p>Think of it like walking up a long incline. At first it feels manageable. Gradually, almost imperceptibly, the effort required increases. The body begins to protest. In most situations the body's signal would be heeded and a rest would follow. But in parenting there is no putting it down. The responsibility is continuous. And so many parents keep climbing, past the point where their own biology is telling them something has to change, because they cannot see another way.</p>
+
+    <div class="comparison-grid">
+      <div class="comparison-col modern">
+        <span class="comparison-col-label">Modern Parenting</span>
+        <p>Child becomes the centre of attention and activity. Life reorganises around the child's needs and behaviour.</p>
+        <p>Behaviour is managed through strategies, rewards, consequences, scripts, and scheduled interventions.</p>
+        <p>Parents are given more to do. More courses, more modules, more techniques to learn and apply.</p>
+        <p>Effort is the primary tool. When something is not working, the instinct is to try harder.</p>
+        <p>Resistance is met with more management. The cycle escalates. Exhaustion deepens.</p>
+        <p>Parenting feels like a full-time additional role on top of everything else.</p>
+      </div>
+      <div class="comparison-col bap">
+        <span class="comparison-col-label">Biologically Aligned Parenting</span>
+        <p>Child is in the midst of life, immersed in real human activity, welcomed without being made the constant focus.</p>
+        <p>Behaviour is understood as a signal, not a problem to be managed. The signal is read and the cause addressed.</p>
+        <p>Parents are given a framework, not a workload. Understanding replaces effort.</p>
+        <p>Less effort is required, not more. Less time. Less energy. The approach works with biology rather than against it.</p>
+        <p>Resistance reduces because its cause is being met. The cycle quietens rather than escalates.</p>
+        <p>Parenting becomes a natural part of life again, rather than a separate and exhausting undertaking.</p>
+      </div>
+    </div>
+
+    <p>The tragedy of much of what is currently offered to struggling parents is that it belongs in the left column. It asks more of people who are already running on empty. Biologically Aligned Parenting sits in the right column. It requires less effort, less time, and less energy than anything else available, because it is working with the grain of biology rather than against it.</p>
+
+    <div class="divider"></div>
+
+    <span class="eyebrow">What This Looks Like in Practice</span>
+    <p>My two daughters grew up without school, without curriculum, without set classes or lessons of any kind. At two years old they were lighting fires and using knives and scissors, not because we pushed them toward it, but because they were in the midst of real life, trusted with real things, and their biology did the rest. They learned to read and write entirely by themselves. What we discovered, living this way, is that children are extraordinarily resourceful when they are trusted and immersed in real human activity.</p>
+    <p>This is not a way of parenting that requires a parent to stop working or to be present every moment. It happened alongside our lives, not instead of them. That is the point. Biology designed parenting to be a side activity, something that happens in the midst of everything else, not a dedicated undertaking that requires life to stop.</p>
+    <p>From a biological perspective, quality time has a very precise meaning. It is time when a parent is aligned with their child's biology, present in the way biology designed presence to feel, aware of what their child's state is communicating and able to meet it. When that alignment is there, the time available, however limited, is genuinely enough. When it is not there, no amount of time fills the gap.</p>
+  </div>
+
+  <!-- P3 -->
+  <div class="section">
+    <span class="eyebrow">What Actually Helps</span>
+    <h2>Addressing the cause,<br><em>not the symptom.</em></h2>
+    <p>Biologically Aligned Parenting is a framework I created over forty years, grounded in evolutionary biology and the science of child development. Its central premise is simple: behaviour is not the problem. Behaviour is the signal.</p>
+    <p>Children are born with innate biological expectations shaped over hundreds of thousands of years. When those expectations are not being met, children signal their distress through behaviour. The parent who does not understand this is caught in a cycle of effort and resistance that depletes them steadily and invisibly. The parent who does understand it finds that the tension at home reduces, often considerably, and with it the exhaustion that has been quietly affecting everything else.</p>
+    <p>When a father is given a framework that addresses what is actually happening, something shifts. The guilt begins to lift. The limited time he has with his children becomes genuinely nourishing rather than another thing to manage. He arrives at work differently. Not because the work has changed, but because something that was quietly draining him has begun to resolve.</p>
+    <p>For HR directors and Chief People Officers, this offers something that may not have been available before. Not another referral that addresses the symptom. Not another course that adds to the load. An approach that reaches the root cause of what many parent employees are carrying, so that the signal finally quietens because the cause has been met.</p>
+  </div>
+
+  <!-- OFFERINGS -->
+  <div class="section">
+    <span class="eyebrow">How I Work With Organisations</span>
+    <h2>Five ways to<br><em>engage.</em></h2>
+
+    <div class="offerings">
+      <div class="offering">
+        <div class="offering-number">1</div>
+        <div class="offering-content">
+          <h3>Keynote Talks</h3>
+          <p>An introduction to Biologically Aligned Parenting for parent employees and senior leaders. Accessible, immediately applicable, and designed to shift the way parents understand what is happening at home. Particularly useful as an opening conversation for organisations where parenting stress is visibly affecting the senior team. Requires dedicated time and a fully present room.</p>
+        </div>
+      </div>
+      <div class="offering">
+        <div class="offering-number">2</div>
+        <div class="offering-content">
+          <h3>Workshops for Groups of Parents</h3>
+          <p>Deeper engagement with the BAP framework in a group setting. Participants work through their specific situations with guided teaching and structured discussion. Often most effective where a number of senior parents are experiencing similar pressures and the organisation wants to address the issue collectively and confidentially.</p>
+        </div>
+      </div>
+      <div class="offering">
+        <div class="offering-number">3</div>
+        <div class="offering-content">
+          <h3>One to One Consultancy for Senior Leaders</h3>
+          <p>Private, precise support for executives and senior leaders referred by HR. Full teaching, active coaching, and a guaranteed outcome. Most often requested for high performing fathers in senior roles where the standard referral routes have not resolved what is being observed, and where a more direct and confidential approach is needed.</p>
+        </div>
+      </div>
+      <div class="offering">
+        <div class="offering-number">4</div>
+        <div class="offering-content">
+          <h3>Retained HR Advisory</h3>
+          <p>An ongoing relationship with the HR department to embed BAP understanding across the organisation over time. Equips HR directors and people managers to recognise, interpret, and respond to parenting stress in the workforce with greater precision, rather than defaulting to responses that may not be reaching the cause.</p>
+        </div>
+      </div>
+      <div class="offering">
+        <div class="offering-number">5</div>
+        <div class="offering-content">
+          <h3>Bespoke Programmes</h3>
+          <p>A combination of the above, shaped around the specific needs, culture, and scale of the organisation. Scope and investment are determined by conversation. No standard package is proposed where a tailored approach would serve better.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="format-note">
+      <p>A note on format. I do not offer lunch and learn sessions. What I bring requires proper time and undivided attention. Every session I deliver is designed to be the most important conversation in the building that day, and that requires a room that is fully present for it.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section">
+  <div class="contact-inner">
+    <span class="eyebrow">Start a Conversation</span>
+    <h2 style="font-size:clamp(1.75rem,3.5vw,2.75rem);margin-bottom:1.25rem;">No obligation.<br><em>Just a conversation.</em></h2>
+    <p style="margin-bottom:3rem;">If any of this feels familiar, I am open to a conversation. Tell me a little about your organisation and what is prompting you to reach out, and I will come back to you directly.</p>
+
+    <div id="form-success" class="form-success">
+      <p>Thank you. Your enquiry has been received. Expect to hear from me directly at geoff@geoffreyowen.com.</p>
+    </div>
+
+    <form id="org-form">
+      <div class="field"><label>Title</label>
+        <select name="title">
+          <option value="" disabled selected>Please select</option>
+          <option>Mr</option><option>Mrs</option><option>Ms</option>
+          <option>Miss</option><option>Dr</option><option>Prof</option><option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label>Your Name</label><input type="text" name="name" required></div>
+      <div class="field"><label>Your Role</label>
+        <select name="role" required>
+          <option value="" disabled selected>Please select</option>
+          <option>HR Director</option>
+          <option>Chief People Officer</option>
+          <option>Head of People</option>
+          <option>People Director</option>
+          <option>VP People</option>
+          <option>Head of HR</option>
+          <option>CEO</option>
+          <option>Managing Director</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label>Email Address</label><input type="email" name="email" required></div>
+      <div class="field"><label>Organisation</label><input type="text" name="organisation" required></div>
+      <div class="field">
+        <label>Organisation Size</label>
+        <select name="organisation_size">
+          <option value="" disabled selected>How many people work here</option>
+          <option value="10-50">10 to 50</option>
+          <option value="50-200">50 to 200</option>
+          <option value="200-500">200 to 500</option>
+          <option value="500-1000">500 to 1000</option>
+          <option value="1000+">1000 plus</option>
+        </select>
+      </div>
+      <div class="field"><label>What is prompting you to reach out</label><textarea name="message" required></textarea></div>
+      <button type="submit" class="submit-btn">Send Your Enquiry</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Geoff Owen</span>
+  <p>Founder, Biologically Aligned Parenting</p>
+  <p class="footer-tagline">Your child's difficult behaviour is not the real problem. Not knowing what it means is.</p>
+  <p><a href="mailto:geoff@geoffreyowen.com" style="color:var(--gold);">geoff@geoffreyowen.com</a></p>
+  <p style="margin-top:0.5rem;"><a href="https://www.linkedin.com/in/geoffowen1/" target="_blank">LinkedIn</a></p>
+  <p style="margin-top:0.5rem;"><a href="/faq" style="color:var(--gold);">FAQ</a></p>
+  <p class="copyright">&copy; 2026 Geoff Owen. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.has-dropdown > a').forEach(function(t) {
+  t.addEventListener('click', function(e) {
+    e.preventDefault();
+    var d = this.parentElement.querySelector('.dropdown');
+    var open = d.classList.contains('open');
+    document.querySelectorAll('.dropdown.open').forEach(function(x) { x.classList.remove('open'); });
+    if (!open) d.classList.add('open');
+  });
+});
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.has-dropdown')) {
+    document.querySelectorAll('.dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+  }
+});
+
+document.getElementById('org-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  try {
+    await fetch('https://formspree.io/f/mojzvrzg', {
+      method: 'POST', body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+  } catch(err) {}
+  this.style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+});
+</script>
+
+
+<script>
+function toggleMenu() {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+document.addEventListener('click', function(e) {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  if (m && m.classList.contains('open') && !m.contains(e.target) && !h.contains(e.target)) {
+    h.classList.remove('open');
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+
+</body>
+</html>
