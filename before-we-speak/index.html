@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Before We Speak — Geoff Owen</title>
+<meta name="description" content="A short questionnaire before your conversation with Geoff Owen.">
+<link rel="canonical" href="https://geoffreyowen.com/before-we-speak/">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0a0a0a; }
+:root { --gold: #B8972A; --gold-light: #D4AF45; --black: #0a0a0a; --dark: #1a1a1a; --white: #ffffff; --border: rgba(184,151,42,0.5); --nav-h: 70px; --bar-h: 46px; --offset: 116px; }
+html { scroll-behavior: auto; background: var(--black); }
+
+.page-top, main, .hero, .guide-page, .webinar-page, .download-page {
+}
+body { background: var(--black); color: rgba(232,228,222,0.88); font-family: 'Montserrat', sans-serif; font-weight: 400; }
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--black); height: var(--nav-h); display: flex; align-items: center; padding: 0 2.5rem; border-bottom: 1.5px solid var(--border); }
+.nav-logo { text-decoration: none; white-space: nowrap; margin-right: auto; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-logo .g { color: var(--gold); } .nav-logo .o { color: var(--white); }
+.ann-bar { position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 999; background: #1a1600; height: var(--bar-h); display: flex; align-items: center; justify-content: center; border-bottom: 1.5px solid var(--border); font-size: 0.7rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); gap: 0.5rem; padding: 0 2rem; }
+.ann-bar a { color: var(--gold); text-decoration: none; font-weight: 500; }
+.faq-link-bar { position: fixed; top: var(--offset); right: 0; z-index: 998; display: flex; padding: 0.75rem 1.5rem; }
+.faq-link-bar a { display: inline-flex; align-items: center; height: 28px; padding: 0 0.9rem; font-size: 0.58rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--black); border: 1.5px solid var(--gold); text-decoration: none; transition: background 0.2s, color 0.2s; }
+.faq-link-bar a:hover { background: var(--gold); color: var(--black); }
+.page-top { padding-top: 3rem; }
+
+main { max-width: 680px; margin: 0 auto; padding: 5rem 2rem 6rem; }
+.eyebrow { display: block; font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; font-weight: 500; }
+h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.2; color: var(--white); margin-bottom: 1rem; }
+.gold-rule { width: 40px; height: 1px; background: var(--gold); margin: 1.75rem 0; opacity: 0.5; }
+.intro { font-size: 0.92rem; line-height: 1.9; color: rgba(255,255,255,0.7); margin-bottom: 3rem; max-width: 580px; }
+
+.section-heading { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin: 2.5rem 0 1.25rem; display: block; opacity: 0.8; }
+
+.field { margin-bottom: 1.25rem; }
+.field label { display: block; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.field input:not([type="radio"]), .field select, .field textarea {
+  width: 100%; background: var(--dark); border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(232,228,222,0.88); font-family: 'Montserrat', sans-serif; font-size: 0.9rem;
+  padding: 0.85rem 1rem; outline: none; appearance: none; transition: border-color 0.2s;
+}
+.field input:not([type="radio"]):focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
+.field textarea { resize: vertical; min-height: 100px; line-height: 1.7; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+.field-row .field { margin-bottom: 0; }
+
+.radio-group { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+.radio-option { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; line-height: 1.4; }
+.radio-option input[type="radio"], .radio-option input[type="checkbox"] { width: 14px; height: 14px; min-width: 14px; max-width: 14px; margin: 0; padding: 0; accent-color: var(--gold); flex-shrink: 0; cursor: pointer; appearance: auto; -webkit-appearance: auto; }
+.radio-option span { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.5; padding-left: 0.5rem; }
+
+.children-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.75rem; }
+.children-row .field { margin-bottom: 0; }
+.children-row .field label { font-size: 0.55rem; }
+
+.add-child { background: transparent; border: 1px solid rgba(184,151,42,0.3); color: var(--gold); font-family: 'Montserrat', sans-serif; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.5rem 1rem; cursor: pointer; margin-top: 0.5rem; transition: border-color 0.2s, color 0.2s; }
+.add-child:hover { border-color: var(--gold); }
+
+.submit-btn { width: 100%; background: transparent; border: 1.5px solid var(--gold); color: var(--gold); font-family: 'Montserrat', sans-serif; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; padding: 1.1rem; cursor: pointer; transition: background 0.2s, color 0.2s; margin-top: 2rem; }
+.submit-btn:hover { background: var(--gold); color: var(--black); }
+
+.success { display: none; padding: 3rem 0; }
+.success h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--gold); margin-bottom: 1rem; font-style: italic; }
+.success p { font-size: 0.95rem; color: rgba(255,255,255,0.72); line-height: 1.85; }
+
+footer { background: var(--black); padding: 3rem; text-align: center; border-top: 1.5px solid var(--border); }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.5rem; }
+footer p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+@media (max-width: 600px) { .field-row, .children-row { grid-template-columns: 1fr; } main { padding: 3rem 1.5rem 4rem; } }
+
+/* HAMBURGER — mobile only */
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; cursor: pointer; background: transparent; border: none; padding: 0; margin-left: 1rem; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white, #ffffff); transition: all 0.25s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: #0a0a0a; z-index: 998; flex-direction: column; padding: 2rem 2rem; overflow-y: auto; border-top: 1.5px solid rgba(184,151,42,0.4); }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+.mobile-menu a:hover { color: #B8972A; }
+.mobile-menu a.mobile-cta { color: #B8972A; border: 1.5px solid #B8972A; text-align: center; padding: 1rem; margin-top: 1.5rem; border-bottom: 1.5px solid #B8972A; }
+.mobile-menu a.mobile-cta:hover { background: #B8972A; color: #0a0a0a; }
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: flex; }
+  .faq-link-bar { display: none; }
+}
+
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></a>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/working-with-me">Work With Me</a>
+  <a href="/insights">Insights</a>
+  <a href="/faq">FAQ</a>
+  <a href="/books">Books</a>
+  <a href="/organisations">Organisations</a>
+  <a href="/webinar">Webinar</a>
+  <a href="/guide">Free Guide</a>
+  <a href="/before-we-speak" class="mobile-cta">Book a Conversation</a>
+</div>
+
+<div class="ann-bar">
+  <span>Free Webinar. How to Reduce Parenting Stress for Working Fathers.</span>
+  <a href="/webinar">Join the Waitlist &rarr;</a>
+</div>
+
+
+
+<div class="faq-link-bar"><a href="/faq">FAQ</a></div>
+<div class="page-top">
+<main>
+  <a href="/" style="display:inline-flex;align-items:center;gap:6px;font-family:'Montserrat',sans-serif;font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:2rem;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">&#8592;&nbsp; Back to the site</a>
+  <div id="formArea">
+    <span class="eyebrow">Before We Speak</span>
+    <h1>A little context goes a long way.</h1>
+    <div class="gold-rule"></div>
+    <p class="intro">Thank you for booking a conversation. To make the most of our time together I would be grateful if you could share a little about your situation before we speak. There are no right or wrong answers and nothing you say here will be shared with anyone.</p>
+
+    <span class="section-heading">About You</span>
+
+    <div class="field-row">
+      <div class="field"><label>Your name</label><input type="text" name="name" placeholder="Your full name"></div>
+      <div class="field"><label>Your email address</label><input type="email" name="email" placeholder="Your email"></div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Your role</label>
+        <select name="role">
+          <option value="" disabled selected>Please select</option>
+          <option>Founder</option><option>CEO</option><option>Managing Director</option>
+          <option>Executive</option><option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label>Your industry</label><input type="text" name="industry" placeholder="e.g. Technology, Finance"></div>
+    </div>
+    <div class="field">
+      <label>Approximately how many hours do you work per week?</label>
+      <select name="hours_worked">
+        <option value="" disabled selected>Please select</option>
+        <option>Under 40 hours</option><option>40 to 50 hours</option>
+        <option>50 to 60 hours</option><option>More than 60 hours</option>
+      </select>
+    </div>
+
+    <span class="section-heading">Your Family</span>
+
+    <div class="field">
+      <label>Your family situation</label>
+      <select name="family_status">
+        <option value="" disabled selected>Please select</option>
+        <option>Married</option><option>Living with partner</option>
+        <option>Single parent</option><option>Separated or divorced, co-parenting</option><option>Other</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Does your partner work?</label>
+      <select name="partner_works">
+        <option value="" disabled selected>Please select</option>
+        <option>Yes, full time</option><option>Yes, part time</option>
+        <option>No, they are at home with the children</option><option>Not applicable</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Your children — please add an age for each child</label>
+      <div id="childrenContainer">
+        <div class="children-row">
+          <div class="field"><label>Child 1 — Age</label>
+            <select name="child_age_1"><option value="" disabled selected>Age</option>
+              <option>Under 1</option><option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+              <option>10</option><option>11</option><option>12</option><option>13</option><option>14</option>
+              <option>15</option><option>16</option><option>17</option><option>18+</option>
+            </select>
+          </div>
+          <div class="field"><label>Gender (optional)</label>
+            <select name="child_gender_1"><option value="" disabled selected>Gender</option>
+              <option>Boy</option><option>Girl</option><option>Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="add-child" onclick="addChild()">+ Add another child</button>
+    </div>
+
+    <span class="section-heading">Your Experience at Home</span>
+
+    <div class="field">
+      <label>In a sentence or two, what is happening at home that has brought you here?</label>
+      <textarea name="situation" placeholder="Whatever feels relevant"></textarea>
+    </div>
+    <div class="field">
+      <label>How would you describe your current experience of parenting?</label>
+      <div class="radio-group">
+        <label class="radio-option"><input type="checkbox" name="experience" value="Exhausting and overwhelming"><span>Exhausting and overwhelming</span></label>
+        <label class="radio-option"><input type="checkbox" name="experience" value="Confusing — I know something is not right but cannot put my finger on it"><span>Confusing — I know something is not right but cannot put my finger on it</span></label>
+        <label class="radio-option"><input type="checkbox" name="experience" value="I feel like I am failing despite trying everything"><span>I feel like I am failing despite trying everything</span></label>
+        <label class="radio-option"><input type="checkbox" name="experience" value="I have lost patience and do not know how to get it back"><span>I have lost patience and do not know how to get it back</span></label>
+        <label class="radio-option"><input type="checkbox" name="experience" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+    <div class="field">
+      <label>Do you and your partner generally agree on how to handle things at home with your children?</label>
+      <div class="radio-group">
+        <label class="radio-option"><input type="checkbox" name="partner_alignment" value="Yes, broadly"><span>Yes, broadly</span></label>
+        <label class="radio-option"><input type="checkbox" name="partner_alignment" value="Sometimes but not always"><span>Sometimes but not always</span></label>
+        <label class="radio-option"><input type="checkbox" name="partner_alignment" value="We often see things differently"><span>We often see things differently</span></label>
+        <label class="radio-option"><input type="checkbox" name="partner_alignment" value="This is a significant source of tension between us"><span>This is a significant source of tension between us</span></label>
+        <label class="radio-option"><input type="checkbox" name="partner_alignment" value="Not applicable"><span>Not applicable</span></label>
+      </div>
+    </div>
+    <div class="field">
+      <label>Is there anything else you would like me to know before we speak?</label>
+      <textarea name="anything_else" placeholder="Anything at all"></textarea>
+    </div>
+
+    <button class="submit-btn" onclick="handleSubmit()">Send to Geoff</button>
+  </div>
+
+  <div class="success" id="successArea">
+    <h2>Thank you. I have everything I need.</h2>
+    <p>The next step is to choose a time that suits you for our conversation. Please use the link below to book your 45 minute call.</p>
+    <a href="https://calendly.com/geoffreyowen/45mins" target="_blank" style="display:inline-block;margin-top:1.5rem;border:1.5px solid var(--gold);color:var(--gold);font-family:'Montserrat',sans-serif;font-size:0.62rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--black)'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">Book Your Conversation</a>
+    <p style="margin-top:1.5rem">If anything changes or you would like to add something before we speak, you are welcome to email me directly at <a href="mailto:geoff@geoffreyowen.com" style="color:var(--gold);">geoff@geoffreyowen.com</a>.</p>
+  </div>
+</main>
+</div>
+
+<footer>
+  <span class="footer-logo">Geoff Owen</span>
+  <p style="margin-top:0.5rem;"><a href="/faq" style="color:var(--gold);">FAQ</a></p>
+  <p>&copy; 2026 Geoff Owen. All rights reserved.</p>
+</footer>
+
+<script>
+var childCount = 1;
+function addChild() {
+  childCount++;
+  var container = document.getElementById('childrenContainer');
+  var row = document.createElement('div');
+  row.className = 'children-row';
+  row.style.marginTop = '0.75rem';
+  var ages = ['Under 1','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18+'];
+  var opts = ages.map(function(a) { return '<option>' + a + '</option>'; }).join('');
+  row.innerHTML = '<div class="field"><label>Child ' + childCount + ' — Age</label><select name="child_age_' + childCount + '"><option value="" disabled selected>Age</option>' + opts + '</select></div><div class="field"><label>Gender (optional)</label><select name="child_gender_' + childCount + '"><option value="" disabled selected>Gender</option><option>Boy</option><option>Girl</option><option>Prefer not to say</option></select></div>';
+  container.appendChild(row);
+}
+
+async function handleSubmit() {
+  var btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  var children = [];
+  for (var i = 1; i <= childCount; i++) {
+    var age = document.querySelector('[name="child_age_' + i + '"]');
+    var gender = document.querySelector('[name="child_gender_' + i + '"]');
+    if (age && age.value) children.push('Child ' + i + ': Age ' + age.value + (gender && gender.value ? ', ' + gender.value : ''));
+  }
+  var exp = document.querySelector('input[name="experience"]:checked');
+  var align = document.querySelector('input[name="partner_alignment"]:checked');
+  var data = {
+    name: document.querySelector('[name="name"]').value,
+    email: document.querySelector('[name="email"]').value,
+    role: document.querySelector('[name="role"]').value,
+    industry: document.querySelector('[name="industry"]').value,
+    hours_worked: document.querySelector('[name="hours_worked"]').value,
+    family_status: document.querySelector('[name="family_status"]').value,
+    partner_works: document.querySelector('[name="partner_works"]').value,
+    children: children.join(', '),
+    situation: document.querySelector('[name="situation"]').value,
+    experience: exp ? exp.value : 'Not answered',
+    partner_alignment: align ? align.value : 'Not answered',
+    anything_else: document.querySelector('[name="anything_else"]').value,
+    form: 'before-we-speak'
+  };
+  try {
+    await fetch('https://formspree.io/f/xeewadaa', {
+      method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  } catch(err) {}
+  document.getElementById('formArea').style.display = 'none';
+  document.getElementById('successArea').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+</script>
+
+<script>
+function toggleMenu() {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+document.addEventListener('click', function(e) {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  if (m && m.classList.contains('open') && !m.contains(e.target) && !h.contains(e.target)) {
+    h.classList.remove('open');
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+
+</body>
+</html>
