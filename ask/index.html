@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ask a Question — Geoff Owen</title>
-<meta name="description" content="Ask anything about Biologically Aligned Parenting. Questions about your child's behaviour, your own reactions, or the framework itself.">
+<title>Get Instant Clarity from Geoff</title>
+<meta name="description" content="Instant clarity from Geoff Owen on your child's behaviour, your own reactions, and what's really going on underneath. Ask anything, get an answer right now.">
 <link rel="canonical" href="https://geoffreyowen.com/ask/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +49,7 @@ body { color: var(--text); font-family: 'Montserrat', sans-serif; font-size: 14p
 .faq-link-bar a { display: inline-flex; align-items: center; height: 28px; padding: 0 0.9rem; font-size: 0.58rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--black); border: 1.5px solid var(--gold); text-decoration: none; transition: background 0.2s, color 0.2s; }
 .faq-link-bar a:hover { background: var(--gold); color: var(--black); }
 
-.page-wrap { margin-top: var(--offset); flex: 1; display: flex; flex-direction: column; max-width: 780px; width: 100%; margin-left: auto; margin-right: auto; padding: 2rem 1.5rem 0; }
+.page-wrap { margin-top: var(--nav-h); flex: 1; display: flex; flex-direction: column; max-width: 780px; width: 100%; margin-left: auto; margin-right: auto; padding: 2rem 1.5rem 0; }
 
 .page-eyebrow { display: block; font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; font-weight: 500; }
 .page-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(1.8rem, 3.5vw, 2.4rem); line-height: 1.2; color: var(--white); margin-bottom: 0.6rem; }
@@ -64,6 +64,8 @@ body { color: var(--text); font-family: 'Montserrat', sans-serif; font-size: 14p
 .message.assistant { align-self: flex-start; align-items: flex-start; }
 .message-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .message-body { padding: 0.85rem 1.1rem; line-height: 1.8; font-size: 0.88rem; }
+.pull-quote { display: block; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; line-height: 1.5; color: var(--gold-light); border-left: 2px solid var(--gold); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+.pull-quote-attribution { display: block; font-family: 'Montserrat', sans-serif; font-style: normal; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 0.4rem; }
 .message.user .message-body { background: rgba(184,151,42,0.1); border: 1px solid rgba(184,151,42,0.3); color: var(--white); }
 .message.assistant .message-body { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); color: var(--text); }
 
@@ -102,43 +104,12 @@ footer a:hover { color: var(--gold); }
 <body>
 
 <nav class="site-nav">
-  <a href="/" class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></a>
-  <ul class="nav-links">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#bap">The Framework</a></li>
-    <li><a href="/working-with-me">Work With Me</a></li>
-    <li><a href="/books">Books</a></li>
-    <li><a href="/insights">Insights</a></li>
-    <li><a href="/faq">FAQ</a></li>
-    <li><a href="/#contact">Contact</a></li>
-  </ul>
-  <a href="/#contact" class="nav-cta">Free Consultation</a>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </button>
+  <span class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></span>
+  <a href="/" target="_blank" rel="noopener" class="nav-cta">Visit the Website&nbsp;&#8599;</a>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="/">Home</a>
-  <a href="/working-with-me">Work With Me</a>
-  <a href="/insights">Insights</a>
-  <a href="/faq">FAQ</a>
-  <a href="/books">Books</a>
-  <a href="/organisations">Organisations</a>
-  <a href="/webinar">Webinar</a>
-  <a href="/guide">Free Guide</a>
-  <a href="/speak-with-geoff" class="mobile-cta">Book a Conversation</a>
-</div>
-
-<div class="ann-bar">
-  <span>Free Webinar. How to Reduce Parenting Stress for Working Fathers.</span>
-  <a href="/webinar">Join the Waitlist &rarr;</a>
-</div>
-
-<div class="faq-link-bar"><a href="/faq">FAQ</a></div>
-
 <div class="page-wrap">
-  <span class="page-eyebrow">Ask a Question</span>
+  <span class="page-eyebrow">Get Instant Clarity from Geoff</span>
   <h1 class="page-title">Your child's behaviour is<br><em>a signal to be read.</em></h1>
   <p class="page-intro">Ask anything about your child's behaviour, your own reactions as a parent, or the Biologically Aligned Parenting framework. There are no foolish questions here.</p>
 
@@ -171,7 +142,7 @@ footer a:hover { color: var(--gold); }
     </div>
   </div>
 
-  <p class="disclaimer">This agent draws on Geoff Owen's published work and the principles of Biologically Aligned Parenting. It is not a substitute for professional advice. For a personal conversation, visit the <a href="/speak-with-geoff" style="color:var(--gold);">consultation page</a>.</p>
+  <p class="disclaimer">This agent draws on Geoff Owen's published work and the principles of Biologically Aligned Parenting. It is not a substitute for professional advice. If it would help, you're welcome to book a <a href="/speak-with-geoff" target="_blank" rel="noopener" style="color:var(--gold);">free conversation</a> with Geoff.</p>
 </div>
 
 <footer>
@@ -217,7 +188,8 @@ function addMessage(role, content) {
       .replace(/(https?:\/\/[^\s<]+)/g, function(match) {
         var clean = match.replace(/[.,!?;:]+$/, '');
         return '<a href="' + clean + '" target="_blank" style="color:var(--gold); text-decoration:underline;">' + clean + '</a>';
-      });
+      })
+      .replace(/\{\{([^}]+)\}\}/g, '<blockquote class="pull-quote">&ldquo;$1&rdquo;<span class="pull-quote-attribution">&mdash; Geoff Owen</span></blockquote>');
   div.appendChild(label);
   div.appendChild(body);
   messages.appendChild(div);
