@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Instant Clarity from Geoff</title>
+<meta name="description" content="Instant clarity from Geoff Owen on your child's behaviour, your own reactions, and what's really going on underneath. Ask anything, get an answer right now.">
+<link rel="canonical" href="https://geoffreyowen.com/ask/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold: #B8972A; --gold-light: #D4AF45; --black: #0a0a0a;
+  --near-black: #111111; --dark: #141414; --white: #ffffff;
+  --border: rgba(184,151,42,0.4); --text: rgba(232,228,222,0.88);
+  --muted: rgba(255,255,255,0.45); --nav-h: 70px; --bar-h: 46px; --offset: 116px;
+}
+
+html, body { background: var(--black); height: 100%; }
+body { color: var(--text); font-family: 'Montserrat', sans-serif; font-size: 14px; display: flex; flex-direction: column; min-height: 100vh; }
+
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--black); height: var(--nav-h); display: flex; align-items: center; padding: 0 2.5rem; border-bottom: 1.5px solid var(--border); }
+.nav-logo { text-decoration: none; white-space: nowrap; margin-right: auto; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-logo .g { color: var(--gold); } .nav-logo .o { color: var(--white); }
+.nav-links { display: flex; align-items: center; list-style: none; height: var(--nav-h); }
+.nav-links > li > a { display: flex; align-items: center; height: var(--nav-h); padding: 0 0.9rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; }
+.nav-links > li > a:hover { color: var(--white); }
+.nav-cta { display: inline-flex; align-items: center; height: 32px; padding: 0 1rem; margin-left: 1rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1.5px solid var(--gold); transition: background 0.2s, color 0.2s; }
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+.ann-bar { position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 999; background: #1a1600; height: var(--bar-h); display: flex; align-items: center; justify-content: center; border-bottom: 1.5px solid var(--border); font-size: 0.7rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); gap: 0.5rem; padding: 0 2rem; }
+.ann-bar a { color: var(--gold); text-decoration: none; font-weight: 500; }
+
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; cursor: pointer; background: transparent; border: none; padding: 0; margin-left: 1rem; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white); transition: all 0.25s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: #0a0a0a; z-index: 998; flex-direction: column; padding: 2rem; overflow-y: auto; border-top: 1.5px solid rgba(184,151,42,0.4); }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { display: block; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu a.mobile-cta { color: var(--gold); border: 1.5px solid var(--gold); text-align: center; padding: 1rem; margin-top: 1.5rem; border-bottom: 1.5px solid var(--gold); }
+@media (max-width: 768px) { .nav-links { display: none !important; } .hamburger { display: flex; } .faq-link-bar { display: none; } }
+
+.faq-link-bar { position: fixed; top: var(--offset); right: 0; z-index: 998; display: flex; padding: 0.75rem 1.5rem; }
+.faq-link-bar a { display: inline-flex; align-items: center; height: 28px; padding: 0 0.9rem; font-size: 0.58rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--black); border: 1.5px solid var(--gold); text-decoration: none; transition: background 0.2s, color 0.2s; }
+.faq-link-bar a:hover { background: var(--gold); color: var(--black); }
+
+.page-wrap { margin-top: var(--nav-h); flex: 1; display: flex; flex-direction: column; max-width: 780px; width: 100%; margin-left: auto; margin-right: auto; padding: 2rem 1.5rem 0; }
+
+.page-eyebrow { display: block; font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; font-weight: 500; }
+.page-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(1.8rem, 3.5vw, 2.4rem); line-height: 1.2; color: var(--white); margin-bottom: 0.6rem; }
+.page-title em { font-style: italic; color: var(--gold); }
+.page-intro { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; max-width: 560px; }
+
+.chat-shell { flex: 1; display: flex; flex-direction: column; border: 1.5px solid var(--border); margin-bottom: 1.5rem; background: var(--near-black); min-height: 480px; }
+
+.messages { flex: 1; overflow-y: auto; padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.message { display: flex; flex-direction: column; gap: 0.35rem; max-width: 86%; }
+.message.user { align-self: flex-end; align-items: flex-end; }
+.message.assistant { align-self: flex-start; align-items: flex-start; }
+.message-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.message-body { padding: 0.85rem 1.1rem; line-height: 1.8; font-size: 0.88rem; }
+.pull-quote { display: block; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; line-height: 1.5; color: var(--gold-light); border-left: 2px solid var(--gold); padding: 0.2rem 0 0.2rem 1rem; margin: 1rem 0; }
+.pull-quote-attribution { display: block; font-family: 'Montserrat', sans-serif; font-style: normal; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 0.4rem; }
+.message.user .message-body { background: rgba(184,151,42,0.1); border: 1px solid rgba(184,151,42,0.3); color: var(--white); }
+.message.assistant .message-body { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); color: var(--text); }
+
+.thinking { display: flex; gap: 5px; padding: 0.85rem 1.1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); align-self: flex-start; }
+.thinking span { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); animation: pulse 1.2s ease-in-out infinite; }
+.thinking span:nth-child(2) { animation-delay: 0.2s; }
+.thinking span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes pulse { 0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); } 40% { opacity: 1; transform: scale(1); } }
+
+.suggestions { padding: 0 1.5rem 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.suggestion { background: transparent; border: 1px solid rgba(184,151,42,0.3); color: var(--muted); font-family: 'Montserrat', sans-serif; font-size: 0.68rem; letter-spacing: 0.03em; padding: 0.45rem 0.85rem; cursor: pointer; transition: all 0.2s; text-align: left; }
+.suggestion:hover { border-color: var(--gold); color: var(--gold); }
+
+.input-row { border-top: 1.5px solid var(--border); padding: 0.9rem 1.25rem; display: flex; gap: 0.75rem; align-items: flex-end; background: var(--dark); }
+.input-field { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.88rem; padding: 0.7rem 1rem; resize: none; outline: none; min-height: 42px; max-height: 120px; line-height: 1.5; transition: border-color 0.2s; }
+.input-field:focus { border-color: rgba(184,151,42,0.5); }
+.input-field::placeholder { color: var(--muted); }
+.send-btn { background: var(--gold); border: none; color: var(--black); font-family: 'Montserrat', sans-serif; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 0 1.25rem; height: 42px; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; flex-shrink: 0; }
+.send-btn:hover { opacity: 0.85; }
+.send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.disclaimer { font-size: 0.62rem; color: rgba(255,255,255,0.3); text-align: center; padding: 0.5rem 0 2rem; line-height: 1.6; }
+
+footer { background: var(--black); padding: 3rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; display: block; }
+footer p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem; }
+footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: var(--gold); }
+.footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--gold); margin: 0.6rem 0 0.8rem; }
+.copyright { font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-top: 1.5rem; }
+
+.messages::-webkit-scrollbar { width: 3px; }
+.messages::-webkit-scrollbar-thumb { background: var(--border); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></span>
+  <a href="/" target="_blank" rel="noopener" class="nav-cta">Visit the Website&nbsp;&#8599;</a>
+</nav>
+
+<div class="page-wrap">
+  <span class="page-eyebrow">Get Instant Clarity from Geoff</span>
+  <h1 class="page-title">Your child's behaviour is<br><em>a signal to be read.</em></h1>
+  <p class="page-intro">Ask anything about your child's behaviour, your own reactions as a parent, or the Biologically Aligned Parenting framework. There are no foolish questions here.</p>
+
+  <div class="chat-shell">
+    <div class="messages" id="messages">
+      <div class="message assistant">
+        <span class="message-label">Geoff Owen</span>
+        <div class="message-body">Welcome. This draws on the principles of Biologically Aligned Parenting to answer your questions about your child's behaviour, your own reactions, and what might actually be going on underneath what you are seeing.<br><br>Ask whatever is on your mind.</div>
+      </div>
+    </div>
+
+    <div class="suggestions" id="suggestions">
+      <button class="suggestion" onclick="askSuggestion(this)">Why does my child ignore me when I get home?</button>
+      <button class="suggestion" onclick="askSuggestion(this)">What are the four innate expectations?</button>
+      <button class="suggestion" onclick="askSuggestion(this)">Why do I keep losing my patience?</button>
+      <button class="suggestion" onclick="askSuggestion(this)">What is the Biological Signal Sequence?</button>
+      <button class="suggestion" onclick="askSuggestion(this)">My child has been diagnosed with ODD. What does BAP say about that?</button>
+    </div>
+
+    <div class="input-row">
+      <textarea
+        class="input-field"
+        id="inputField"
+        placeholder="Ask a question..."
+        rows="1"
+        onkeydown="handleKey(event)"
+        oninput="autoResize(this)"
+      ></textarea>
+      <button class="send-btn" id="sendBtn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <p class="disclaimer">This agent draws on Geoff Owen's published work and the principles of Biologically Aligned Parenting. It is not a substitute for professional advice. If it would help, you're welcome to book a <a href="/speak-with-geoff" target="_blank" rel="noopener" style="color:var(--gold);">free conversation</a> with Geoff.</p>
+</div>
+
+<footer>
+  <span class="footer-logo">Geoff Owen</span>
+  <p>Founder, Biologically Aligned Parenting</p>
+  <p class="footer-tagline">Your child's difficult behaviour is not the real problem. Not knowing what it means is.</p>
+  <p><a href="mailto:geoff@geoffreyowen.com" style="color:var(--gold);">geoff@geoffreyowen.com</a></p>
+  <p style="margin-top:0.5rem;"><a href="https://www.linkedin.com/in/geoffowen1/" target="_blank">LinkedIn</a></p>
+  <p style="margin-top:0.5rem;"><a href="/faq" style="color:var(--gold);">FAQ</a></p>
+  <p class="copyright">&copy; 2026 Geoff Owen. All rights reserved.</p>
+</footer>
+
+<script>
+let conversationHistory = [];
+let isLoading = false;
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+
+function askSuggestion(btn) {
+  document.getElementById('inputField').value = btn.textContent;
+  document.getElementById('suggestions').style.display = 'none';
+  sendMessage();
+}
+
+function addMessage(role, content) {
+  const messages = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className = 'message ' + role;
+  const label = document.createElement('span');
+  label.className = 'message-label';
+  label.textContent = role === 'user' ? 'You' : 'Geoff Owen';
+  const body = document.createElement('div');
+  body.className = 'message-body';body.innerHTML = content
+      .replace(/^(My question (?:to|for) you:) (.+)$/gm, '<strong style="color:var(--gold);">$1 $2</strong>')
+      .replace(/\n\n/g, '<br><br>')
+      .replace(/\n/g, '<br>')
+      .replace(/(https?:\/\/[^\s<]+)/g, function(match) {
+        var clean = match.replace(/[.,!?;:]+$/, '');
+        return '<a href="' + clean + '" target="_blank" style="color:var(--gold); text-decoration:underline;">' + clean + '</a>';
+      })
+      .replace(/\{\{([^}]+)\}\}/g, '<blockquote class="pull-quote">&ldquo;$1&rdquo;<span class="pull-quote-attribution">&mdash; Geoff Owen</span></blockquote>');
+  div.appendChild(label);
+  div.appendChild(body);
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function showThinking() {
+  const messages = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className = 'thinking'; div.id = 'thinking';
+  div.innerHTML = '<span></span><span></span><span></span>';
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function removeThinking() {
+  const t = document.getElementById('thinking');
+  if (t) t.remove();
+}
+
+async function sendMessage() {
+  if (isLoading) return;
+  const input = document.getElementById('inputField');
+  const text = input.value.trim();
+  if (!text) return;
+
+  document.getElementById('suggestions').style.display = 'none';
+  input.value = ''; input.style.height = 'auto';
+
+  addMessage('user', text);
+  conversationHistory.push({ role: 'user', content: text });
+
+  isLoading = true;
+  document.getElementById('sendBtn').disabled = true;
+  showThinking();
+
+  try {
+    const response = await fetch('/.netlify/functions/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: conversationHistory })
+    });
+
+    const data = await response.json();
+    removeThinking();
+
+    if (data.reply) {
+      addMessage('assistant', data.reply);
+      conversationHistory.push({ role: 'assistant', content: data.reply });
+    } else {
+      addMessage('assistant', 'Something went wrong. Please try again in a moment.');
+    }
+  } catch (err) {
+    removeThinking();
+    addMessage('assistant', 'Something went wrong. Please try again in a moment.');
+  }
+
+  isLoading = false;
+  document.getElementById('sendBtn').disabled = false;
+  input.focus();
+}
+
+function toggleMenu() {
+  const h = document.getElementById('hamburger');
+  const m = document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+</script>
+
+</body>
+</html>
