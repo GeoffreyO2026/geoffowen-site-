@@ -392,6 +392,32 @@ footer a:hover { color: var(--gold); }
   .faq-link-bar { display: none; }
 }
 
+/* GUARANTEE PAIRS BOX */
+.guarantee-pairs {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: rgba(184,151,42,0.25); border: 1.5px solid var(--gold);
+  margin: 2.5rem 0; text-align: left;
+}
+.guarantee-pair {
+  background: #1a1500; padding: 1.5rem 1.5rem;
+}
+.guarantee-pair-line {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400;
+  color: var(--white); line-height: 1.4;
+}
+.guarantee-pair-line .arrow-word { color: rgba(255,255,255,0.35); font-size: 0.85rem; margin: 0 0.3rem; }
+.guarantee-pair-line .to-word { color: var(--gold-light); font-style: italic; }
+.guarantee-detail { max-width: 680px; margin: 2.5rem auto 0; text-align: left; }
+.guarantee-detail p { font-size: 0.9rem; line-height: 1.85; color: rgba(255,255,255,0.68); margin-bottom: 1.1rem; }
+.guarantee-detail p strong { color: var(--gold-light); font-weight: 500; }
+.guarantee-detail p:last-child { margin-bottom: 0; }
+@media (max-width: 768px) {
+  .guarantee-pairs { grid-template-columns: 1fr; }
+}
+
+/* TIER CTA NOTE */
+.tier-cta-note { font-size: 0.75rem; font-style: italic; color: rgba(255,255,255,0.4); line-height: 1.6; margin-top: 0.85rem; text-align: center; }
+
 </style>
 </head>
 <body>
@@ -405,8 +431,8 @@ footer a:hover { color: var(--gold); }
     <li class="has-dropdown">
       <a href="/working-with-me">Work With Me</a>
       <div class="dropdown">
-        <a href="/working-with-me#tier1">A Focused Conversation</a>
-        <a href="/working-with-me#tier2">Learning the Framework</a>
+        <a href="/working-with-me#tier1">The Turning Point Session</a>
+        <a href="/working-with-me#tier2">The Foundation Programme</a>
       </div>
     </li>
     <li><a href="/books">Books</a></li>
@@ -456,14 +482,11 @@ footer a:hover { color: var(--gold); }
   <div class="page-hero">
     <span class="eyebrow">Working with Me</span>
     <h1>This work begins with<br><em>a conversation,<br>not a programme.</em></h1>
-    <p class="hero-p">Most parents arrive with a situation that is not shifting and a feeling that nothing they have tried is working. From there we look at what is driving it, understand what the child's biology is actually expecting, and begin to replace what has been missing. There are two ways we can work together, depending on where you are and what you need.</p>
   </div>
 
   <div class="story-section" style="max-width:760px; margin:0 auto 4rem;">
-    <p>Before I found what became Biologically Aligned Parenting, I had already spent years researching how children actually develop, long before I became a parent myself. So by the time our own two children arrived, I was already aware of the conventional approach, naughty steps, sent to their room, grounding, rewards for good behaviour and consequences for bad. It is the same basic system used in prisons, in most schools, and a good deal of industry, built on B.F. Skinner's work with rats and pigeons. I understood it. I simply chose not to use it.</p>
-    <p>Instead, our two children learned to read and write largely through trial and error, figuring it out mostly themselves, without formal lessons, without a curriculum, without school at all until they were fifteen and sixteen. Both went on to university.</p>
-    <p>That research, and everything since, became two books. <em>ODD: A Non-Clinical Approach to Children Who Say No</em> takes on what I think is one of the most damaging habits in modern parenting, reaching for a diagnosis, ODD, ADHD, and the rest of what has become an alphabet of labels, and mistaking the label for understanding. A label tells you what to call something. It rarely tells you what it means, or what to actually do. <em>The Parenting Assumption</em> goes further, questioning the assumptions almost every parent absorbs without ever examining them, that behaviour is a conscious choice, that discipline reliably shapes development, that explaining more will fix things.</p>
-    <p>Since then I have worked with parents on the full range of what actually shows up at home, picky eating, aggressive or oppositional behaviour, a child who will not come off the Xbox. In every case, the pattern has been the same: less effort, less time, and less energy than whatever they were doing before, because the work addresses what is actually driving the behaviour, not the behaviour itself.</p>
+    <p>I created Biologically Aligned Parenting after nearly forty years witnessing the ineffectiveness of modern parenting, and wanting to help parents reboot their biology and get back to raising healthy, confident children in a way that gives them more time, less stress, and more energy to actually enjoy life. That was my own experience raising two daughters, applying the same principles I now teach. Modern parenting treats parenting as a role or a job to be managed. But parenting is not a role or a job. It is an ancient, biological responsibility to provide the optimum environment for a child to mature, the same as anywhere else in the animal kingdom. Biology never left us. It is still running underneath everything, constantly reading the environment for safety and certainty. When that is present, a child settles. When it is not, the behaviour that follows is not defiance. It is biology doing exactly what it was built to do.</p>
+    <p>What follows is not a set of tips or tricks. It is closer to a reboot, a return to what was already there before modern parenting moved away from it. If that is something you want for your own children, here is how we might work together.</p>
   </div>
 
   <div class="entry-card" id="tier1">
@@ -473,14 +496,15 @@ footer a:hover { color: var(--gold); }
         <div class="entry-card-headline">You're not a bad parent.</div>
         <div class="entry-card-name">The Turning Point Session</div>
         <div class="entry-card-desc">
-          <p>Some evenings you arrive with little left to give, and it does not take long before something in you reacts in a way you would rather it had not. You know it is not who you are, and the not knowing why it keeps happening can weigh almost as much as the moment itself. This is not the start of a programme. It is a single, focused session to look at your child's behaviour through a different lens, and your own, so what has actually been going on becomes clear.</p>
+          <p>There are moments, for many parents, when something in you reacts in a way you would rather it had not. Perhaps it happens at the end of a long day, perhaps somewhere else entirely, but you know it is not who you are, and not knowing why it keeps happening can weigh almost as much as the moment itself. This is not the start of a programme. It is a single, focused session to look at your child's behaviour through a different lens, and your own, so what has actually been going on becomes clear.</p>
           <p>This is not a diagnosis of your child, and it is not a fix for everything. It is a conversation to discover what is actually driving your reactions toward your child, and how to bring greater calm when there feels like there is little left to give.</p>
         </div>
       </div>
       <div class="entry-card-side">
-        <span class="entry-card-price">&pound;150&ndash;&pound;350</span>
-        <span class="entry-card-price-note">one session &nbsp;&middot;&nbsp; 90 minutes &nbsp;&middot;&nbsp; donation basis</span>
-        <a href="/speak-with-geoff" class="entry-card-btn" target="_blank">Book Your Session</a>
+        <span class="entry-card-price">&pound;175</span>
+        <span class="entry-card-price-note">one session &nbsp;&middot;&nbsp; 90 minutes minimum</span>
+        <a href="mailto:geoff@geoffreyowen.com?subject=The Turning Point Session" class="entry-card-btn">Email to Book</a>
+        <p class="tier-cta-note">Email me to arrange this session. I will reply with the details, and once payment and a preferred date are confirmed you will receive the calendar link.</p>
       </div>
     </div>
   </div>
@@ -490,59 +514,156 @@ footer a:hover { color: var(--gold); }
   <div class="bwb">
     <span class="bwb-label">How every programme begins</span>
     <h2>Before We Begin</h2>
-    <p>Every engagement, regardless of which programme you choose, begins with a dedicated session before any formal work starts. This is not an intake form or an administrative step. It is the first piece of real work. We go deep into your specific situation, your child, your home dynamic, and what you are hoping will change. From there we agree together on a precise and observable outcome. This session sets the foundation and the direction for everything that follows.</p>
+    <p>Every engagement beyond the Turning Point Session begins with a dedicated session before any formal work starts. This is not an intake form or an administrative step. It is the first piece of real work. We go deep into your specific situation, your child, your home dynamic, and what you are hoping will change. From there we agree together on a precise and observable outcome. This session sets the foundation and the direction for everything that follows.</p>
   </div>
 
   <div class="tiers">
 
-    <!-- TIER TWO -->
-    <div class="tier featured" id="tier2">
+    <!-- TIER ONE: FOUNDATION -->
+    <div class="tier" id="tier2">
       <div class="tier-header">
         <div>
-          <span class="tier-label">Tier Two</span>
+          <span class="tier-label">The Foundation Programme</span>
           <div class="tier-name">Learning the Framework</div>
         </div>
         <div class="tier-price-block">
           <span class="tier-price">£500</span>
-          <span class="tier-price-note">per month &nbsp;&middot;&nbsp; minimum three months, then &pound;400 per month</span>
+          <span class="tier-price-note">per month &nbsp;&middot;&nbsp; three month minimum</span>
         </div>
       </div>
       <div class="tier-body">
         <div class="tier-desc">
-          <p>We begin by identifying together the specific, observable outcome you want to see, the actual change you are looking for, not a vague hope but something real and nameable. Then I teach you the Biologically Aligned Parenting framework in full, not just for this one situation, but as a way of reading any situation. You learn to recognise your child's state, locate the signal, check your own broadcast, and respond to the need rather than the behaviour.</p>
-          <p>We stay with it, together, until that outcome has arrived. It always does. That is the guarantee, not a limited number of sessions, but a genuine commitment to the result itself. By the end, you are not dependent on me. You can do this yourself.</p>
+          <p>This is where most parents begin. Over three months of fortnightly conversations I teach you the Biologically Aligned Parenting framework in full. You learn to read what your child's behaviour is actually communicating, understand what their biology is expecting from you, and begin to replace what has been missing.</p>
+          <p>There is no outcome guarantee at this level, but a full satisfaction promise. If at any point you feel the work is not delivering value, you can stop. Credit applies toward the tiers above if you choose to go further, paying only the difference.</p>
+        </div>
+        <div class="tier-side">
+          <span class="tier-side-label">What's Included</span>
+          <p>Fortnightly conversations. The full BAP framework, taught to apply yourself, not dependent on ongoing sessions.</p>
+          <a href="https://calendly.com/geoffreyowen/45mins?a1=Foundation+Programme" class="tier-btn" target="_blank">Book a Free Conversation</a>
+          <p class="tier-cta-note">No obligation. We talk through whether this is the right starting point, and any arrangement is agreed on the call.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER TWO: FATHERS COACHING -->
+    <div class="tier featured" id="tier3">
+      <div class="tier-header">
+        <div>
+          <span class="tier-label">Individual Coaching</span>
+          <div class="tier-name">Fathers Coaching</div>
+        </div>
+        <div class="tier-price-block">
+          <span class="tier-price">£5,000</span>
+          <span class="tier-price-note">six months &nbsp;&middot;&nbsp; individual</span>
+        </div>
+      </div>
+      <div class="tier-body">
+        <div class="tier-desc">
+          <p>This includes everything in the Foundation Programme, extended to six months, with more frequent contact and active coaching applied directly to your situation as it unfolds in real time. At the start we agree together on a specific and observable outcome.</p>
         </div>
         <div class="tier-side">
           <span class="tier-side-label">Before We Begin</span>
           <p>A dedicated session before the work starts. We go deep into your specific situation and agree a precise and observable outcome.</p>
           <div class="tier-guarantee">
             <strong>Outcome Guaranteed</strong>
-            We agree the outcome together at the start. If it has not arrived, I stay until it does at no extra charge.
+            If it has not arrived by the end of six months, I stay until it does at no extra charge.
           </div>
-          <a href="/speak-with-geoff" class="tier-btn" target="_blank">Book a Conversation</a>
+          <a href="https://calendly.com/geoffreyowen/45mins?a1=Fathers+Coaching" class="tier-btn" target="_blank">Book a Free Conversation</a>
+          <p class="tier-cta-note">No obligation. We talk through fit and how the arrangement would work, agreed on the call.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER THREE: JUST FOR PARENTS -->
+    <div class="tier" id="tier4">
+      <div class="tier-header">
+        <div>
+          <span class="tier-label">For Both Partners</span>
+          <div class="tier-name">Just for Parents</div>
+        </div>
+        <div class="tier-price-block">
+          <span class="tier-price">£6,000</span>
+          <span class="tier-price-note">six months &nbsp;&middot;&nbsp; both partners</span>
+        </div>
+      </div>
+      <div class="tier-body">
+        <div class="tier-desc">
+          <p>This includes everything in Fathers Coaching, extended to bring both partners into the work together. It is not relationship counselling and it is not couples therapy. It is parenting alignment. Both parents learn to read the same signals, understand the same biology, and respond from the same place.</p>
+        </div>
+        <div class="tier-side">
+          <span class="tier-side-label">Before We Begin</span>
+          <p>A dedicated session before the work starts, with both partners present, to agree a precise and observable outcome.</p>
+          <div class="tier-guarantee">
+            <strong>Outcome Guaranteed</strong>
+            If it has not arrived by the end of six months, I stay until it does at no extra charge.
+          </div>
+          <a href="https://calendly.com/geoffreyowen/45mins?a1=Just+for+Parents" class="tier-btn" target="_blank">Book a Free Conversation</a>
+          <p class="tier-cta-note">No obligation. We talk through fit for you both, agreed on the call.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER FOUR: FAMILY LEGACY ADVISORY -->
+    <div class="tier" id="tier5">
+      <div class="tier-header">
+        <div>
+          <span class="tier-label">Private Mentorship</span>
+          <div class="tier-name">The Family Legacy Advisory</div>
+        </div>
+        <div class="tier-price-block">
+          <span class="tier-price">£25,000</span>
+          <span class="tier-price-note">first two years &nbsp;&middot;&nbsp; whole family</span>
+        </div>
+      </div>
+      <div class="tier-body">
+        <div class="tier-desc">
+          <p>This includes everything above, extended into a private mentorship relationship covering the first two years. We work together weekly to begin, moving to fortnightly as stability is established. Beyond the coaching itself, this work extends into the family dynamic and into structuring the legacy you are building, not just mentoring you individually.</p>
+        </div>
+        <div class="tier-side">
+          <span class="tier-side-label">Before We Begin</span>
+          <p>A dedicated session before the work starts, to understand the whole family picture and agree a precise and observable outcome.</p>
+          <div class="tier-guarantee">
+            <strong>Outcome Guaranteed</strong>
+            Most relationships continue well beyond the two years, because the work earns its place.
+          </div>
+          <a href="https://calendly.com/geoffreyowen/45mins?a1=Family+Legacy+Advisory" class="tier-btn" target="_blank">Book a Free Conversation</a>
+          <p class="tier-cta-note">No obligation. We talk through the right level of commitment for where you are, agreed on the call.</p>
         </div>
       </div>
     </div>
 
   </div>
 
-  <div class="legacy-note" style="max-width:680px; margin:0 auto 4rem; text-align:center;">
-    <p style="font-size:0.95rem; color:rgba(255,255,255,0.6); line-height:1.8;">For a small number of families, longer-term, more bespoke work is available. If that sounds like what you need, <a href="/speak-with-geoff" target="_blank" style="color:var(--gold);">get in touch</a> to talk it through.</p>
-  </div>
-
   <div class="guarantee-wrap">
     <div class="guarantee-inner">
       <span class="eyebrow">The Guarantee</span>
       <h2>If it has not arrived,<br><em>I stay until it does.</em></h2>
-      <p>At the start of Tier Two, we agree on a specific observable outcome together. If it has not arrived by the end of the initial period, I stay with you until it does, at no extra charge.</p>
-      <p>I have never needed to invoke this. But it matters that it is there.</p>
+      <p>At the start of Fathers Coaching, Just for Parents, and The Family Legacy Advisory, we agree together on what the shift will actually look like for your family, named clearly and specifically, not a vague hope. If that shift has not arrived by the end of the initial period, I stay with you until it does, at no extra charge. I have never needed to invoke this. But it matters that it is there.</p>
+
+      <div class="guarantee-pairs">
+        <div class="guarantee-pair"><div class="guarantee-pair-line">Reactive <span class="arrow-word">&rarr;</span> <span class="to-word">Calm</span></div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-line">Confused <span class="arrow-word">&rarr;</span> <span class="to-word">Clear</span></div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-line">Guilt-ridden <span class="arrow-word">&rarr;</span> <span class="to-word">Understanding</span></div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-line">Avoidant <span class="arrow-word">&rarr;</span> <span class="to-word">Certain</span></div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-line">Exhausted <span class="arrow-word">&rarr;</span> <span class="to-word">Energised</span></div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-line">Disconnected <span class="arrow-word">&rarr;</span> <span class="to-word">Close</span></div></div>
+      </div>
+
+      <div class="guarantee-detail">
+        <p><strong>Reactive to Calm.</strong> Where before a small thing could tip you into a reaction you regretted, you find yourself able to see the moment coming and respond to it rather than being pulled along by it.</p>
+        <p><strong>Confused to Clear.</strong> Where before your child's behaviour felt unpredictable or impossible to make sense of, you begin to read it as a signal, and know what it is actually telling you.</p>
+        <p><strong>Guilt-ridden to Understanding.</strong> Where before every difficult moment left you wondering what you had done wrong, you start to see what was actually happening, and the guilt that came from not knowing begins to lift.</p>
+        <p><strong>Avoidant to Certain.</strong> Where before you found yourself putting off the harder conversations or the harder moments, you know what is required of you and are able to meet it directly.</p>
+        <p><strong>Exhausted to Energised.</strong> Where before parenting felt like something that drained you further every day, it stops costing you what it used to, and some of what it takes begins to come back.</p>
+        <p><strong>Disconnected to Close.</strong> Where before you and your child felt like you were moving further apart, you find your way back toward each other, and the relationship starts to feel like one again.</p>
+      </div>
     </div>
   </div>
 
   <div class="cta-wrap">
     <h2>If any of this feels relevant,<br><em>I am open to a conversation.</em></h2>
     <p>No obligation. Forty five minutes. We simply talk about what is happening at home and whether there might be a different way of looking at things.</p>
-    <a href="/speak-with-geoff" class="cta-btn" target="_blank">Book a Conversation</a>
+    <a href="https://calendly.com/geoffreyowen/45mins" class="cta-btn" target="_blank">Book a Conversation</a>
   </div>
 
 </div>
