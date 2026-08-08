@@ -233,7 +233,9 @@ h1 em { font-style: italic; color: var(--gold-light); }
   background: #1a1500; border: 1.5px solid var(--gold);
   font-size: 0.85rem; color: rgba(255,255,255,0.85); line-height: 1.7;
   padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;
+  display: block; text-decoration: none; transition: background 0.2s, border-color 0.2s;
 }
+.tier-guarantee:hover { background: #241d00; border-color: var(--gold-light); }
 .tier-guarantee strong {
   color: var(--gold); font-weight: 600; display: block;
   font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem;
@@ -303,6 +305,14 @@ h1 em { font-style: italic; color: var(--gold-light); }
 .tier.featured .tier-btn { background: transparent; color: var(--gold); }
 .tier.featured .tier-btn:hover { background: var(--gold); color: var(--black); }
 
+.guarantee-top-link {
+  display: inline-block; font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem; color: var(--gold-light); text-decoration: none;
+  border-bottom: 1.5px solid var(--gold); padding-bottom: 3px;
+  transition: color 0.2s;
+}
+.guarantee-top-link:hover { color: var(--white); }
+
 /* ─── GUARANTEE SECTION ─── */
 .guarantee-wrap {
   padding: 5rem 3rem; max-width: 900px; margin: 0 auto;
@@ -319,10 +329,10 @@ h1 em { font-style: italic; color: var(--gold-light); }
 }
 .guarantee-wrap h2 em { font-style: italic; color: #0a0a0a; }
 .guarantee-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: #0a0a0a; margin-bottom: 1.25rem; }
-.guarantee-followon { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #333333; margin-bottom: 1.5rem; }
-.guarantee-bridge { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-style: italic; color: #5a5a5a; line-height: 1.7; max-width: 600px; margin: 0 auto 1.25rem; }
-.guarantee-condition { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #333333; line-height: 1.8; max-width: 600px; margin: 0 auto 1.25rem; }
-.guarantee-explain { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #333333; line-height: 1.85; max-width: 600px; margin: 0 auto 2rem; }
+.guarantee-followon { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #1a1a1a; margin-bottom: 1.5rem; }
+.guarantee-bridge { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-style: italic; color: #333333; line-height: 1.7; max-width: 600px; margin: 0 auto 1.25rem; }
+.guarantee-condition { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #1a1a1a; line-height: 1.8; max-width: 600px; margin: 0 auto 1.25rem; }
+.guarantee-explain { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #1a1a1a; line-height: 1.85; max-width: 600px; margin: 0 auto 2rem; }
 
 /* ─── CTA ─── */
 .cta-wrap {
@@ -419,7 +429,7 @@ footer a:hover { color: var(--gold); }
   font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; color: #0a0a0a;
 }
 .guarantee-detail { max-width: 680px; margin: 0 auto 2.5rem; text-align: left; }
-.guarantee-detail p { font-size: 0.88rem; line-height: 1.8; color: #333333; margin-bottom: 1rem; }
+.guarantee-detail p { font-size: 0.88rem; line-height: 1.8; color: #1a1a1a; margin-bottom: 1rem; }
 .guarantee-detail p strong { color: #0a0a0a; font-weight: 600; }
 .guarantee-detail p:last-child { margin-bottom: 0; }
 @media (max-width: 768px) {
@@ -500,6 +510,10 @@ footer a:hover { color: var(--gold); }
     <p>What follows is not a set of tips or tricks. It is closer to a reboot, a return to what was already there before modern parenting moved away from it. If that is something you want for your own children, here is how we might work together.</p>
   </div>
 
+  <div style="text-align:center; margin:0 auto 4rem;">
+    <a href="#guarantee" class="guarantee-top-link">Every programme beyond this comes with a real guarantee &nbsp;&rarr;&nbsp; See what I guarantee</a>
+  </div>
+
   <div class="entry-card" id="tier1">
     <div class="entry-card-inner">
       <div>
@@ -575,10 +589,10 @@ footer a:hover { color: var(--gold); }
         <div class="tier-side">
           <span class="tier-side-label">Before We Begin</span>
           <p>A dedicated session before the work starts. We go deep into your specific situation and agree a precise and observable outcome.</p>
-          <div class="tier-guarantee">
+          <a href="#guarantee" class="tier-guarantee">
             <strong>Outcome Guaranteed</strong>
             If it has not arrived by the end of six months, I stay until it does at no extra charge.
-          </div>
+          </a>
           <a href="https://calendly.com/geoffreyowen/45mins?a1=Fathers+Coaching" class="tier-btn" target="_blank">Book a Free Conversation</a>
           <p class="tier-cta-note">No obligation. We talk through fit and how the arrangement would work, agreed on the call.</p>
         </div>
@@ -604,10 +618,10 @@ footer a:hover { color: var(--gold); }
         <div class="tier-side">
           <span class="tier-side-label">Before We Begin</span>
           <p>A dedicated session before the work starts, with both partners present, to agree a precise and observable outcome.</p>
-          <div class="tier-guarantee">
+          <a href="#guarantee" class="tier-guarantee">
             <strong>Outcome Guaranteed</strong>
             If it has not arrived by the end of six months, I stay until it does at no extra charge.
-          </div>
+          </a>
           <a href="https://calendly.com/geoffreyowen/45mins?a1=Just+for+Parents" class="tier-btn" target="_blank">Book a Free Conversation</a>
           <p class="tier-cta-note">No obligation. We talk through fit for you both, agreed on the call.</p>
         </div>
@@ -633,10 +647,10 @@ footer a:hover { color: var(--gold); }
         <div class="tier-side">
           <span class="tier-side-label">Before We Begin</span>
           <p>A dedicated session before the work starts, to understand the whole family picture and agree a precise and observable outcome.</p>
-          <div class="tier-guarantee">
+          <a href="#guarantee" class="tier-guarantee">
             <strong>Outcome Guaranteed</strong>
             Most relationships continue well beyond the two years, because the work earns its place.
-          </div>
+          </a>
           <a href="https://calendly.com/geoffreyowen/45mins?a1=Family+Legacy+Advisory" class="tier-btn" target="_blank">Book a Free Conversation</a>
           <p class="tier-cta-note">No obligation. We talk through the right level of commitment for where you are, agreed on the call.</p>
         </div>
@@ -645,7 +659,7 @@ footer a:hover { color: var(--gold); }
 
   </div>
 
-  <div class="guarantee-wrap">
+  <div class="guarantee-wrap" id="guarantee">
     <div class="guarantee-inner">
       <span class="eyebrow">The Guarantee</span>
       <h2>I guarantee a real shift<br><em>in how your child behaves.</em></h2>
