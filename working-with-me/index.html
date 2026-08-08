@@ -305,20 +305,23 @@ h1 em { font-style: italic; color: var(--gold-light); }
 
 /* ─── GUARANTEE SECTION ─── */
 .guarantee-wrap {
-  padding: 5rem 3rem; max-width: 860px; margin: 0 auto;
+  padding: 5rem 3rem; max-width: 900px; margin: 0 auto;
 }
 .guarantee-inner {
-  background: #1a1500; border: 2px solid var(--gold);
-  padding: 3rem 3rem; text-align: center;
+  background: #F5EDD6; border: 3px solid var(--gold);
+  padding: 3.5rem 3rem; text-align: center;
 }
-.guarantee-inner .eyebrow { text-align: center; }
+.guarantee-inner .eyebrow { text-align: center; color: var(--gold); }
 .guarantee-wrap h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 400; font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  color: var(--white); margin-bottom: 1.5rem; line-height: 1.2;
+  font-weight: 400; font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+  color: #1a1a1a; margin-bottom: 1.25rem; line-height: 1.3;
 }
-.guarantee-wrap h2 em { font-style: italic; color: var(--gold-light); }
-.guarantee-wrap p { font-size: 0.95rem; color: rgba(255,255,255,0.72); line-height: 1.9; max-width: 600px; margin-bottom: 1rem; margin-left: auto; margin-right: auto; }
+.guarantee-wrap h2 em { font-style: italic; color: #7a5c14; }
+.guarantee-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: #7a5c14; margin-bottom: 1.25rem; }
+.guarantee-followon { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #4a4a4a; margin-bottom: 1.5rem; }
+.guarantee-bridge { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-style: italic; color: #8a7648; line-height: 1.7; max-width: 600px; margin: 0 auto 1.25rem; }
+.guarantee-explain { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #5a5a5a; line-height: 1.85; max-width: 600px; margin: 0 auto 2rem; }
 
 /* ─── CTA ─── */
 .cta-wrap {
@@ -393,23 +396,30 @@ footer a:hover { color: var(--gold); }
 }
 
 /* GUARANTEE PAIRS BOX */
+.guarantee-section-label {
+  text-align: left; font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600; margin-bottom: 0.75rem;
+}
 .guarantee-pairs {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-  background: rgba(184,151,42,0.25); border: 1.5px solid var(--gold);
-  margin: 2.5rem 0; text-align: left;
+  background: var(--gold); border: 1.5px solid var(--gold);
+  margin-bottom: 1.75rem; text-align: center;
 }
 .guarantee-pair {
-  background: #1a1500; padding: 1.5rem 1.5rem;
+  background: #ffffff; padding: 1.25rem 0.75rem;
 }
-.guarantee-pair-line {
-  font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400;
-  color: var(--white); line-height: 1.4;
+.guarantee-pair-before {
+  font-family: 'Montserrat', sans-serif; font-size: 0.78rem; color: #8a8a8a;
+  text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.4rem;
 }
-.guarantee-pair-line .arrow-word { color: rgba(255,255,255,0.35); font-size: 0.85rem; margin: 0 0.3rem; }
-.guarantee-pair-line .to-word { color: var(--gold-light); font-style: italic; }
-.guarantee-detail { max-width: 680px; margin: 2.5rem auto 0; text-align: left; }
-.guarantee-detail p { font-size: 0.9rem; line-height: 1.85; color: rgba(255,255,255,0.68); margin-bottom: 1.1rem; }
-.guarantee-detail p strong { color: var(--gold-light); font-weight: 500; }
+.guarantee-pair-arrow { color: var(--gold); font-size: 1rem; margin-bottom: 0.4rem; }
+.guarantee-pair-after {
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; color: #7a5c14;
+}
+.guarantee-detail { max-width: 680px; margin: 0 auto 2.5rem; text-align: left; }
+.guarantee-detail p { font-size: 0.88rem; line-height: 1.8; color: #5a5a5a; margin-bottom: 1rem; }
+.guarantee-detail p strong { color: #7a5c14; font-weight: 600; }
 .guarantee-detail p:last-child { margin-bottom: 0; }
 @media (max-width: 768px) {
   .guarantee-pairs { grid-template-columns: 1fr; }
@@ -637,16 +647,20 @@ footer a:hover { color: var(--gold); }
   <div class="guarantee-wrap">
     <div class="guarantee-inner">
       <span class="eyebrow">The Guarantee</span>
-      <h2>If it has not arrived,<br><em>I stay until it does.</em></h2>
-      <p>At the start of Fathers Coaching, Just for Parents, and The Family Legacy Advisory, we agree together on what the shift will actually look like for your family, named clearly and specifically, not a vague hope. If that shift has not arrived by the end of the initial period, I stay with you until it does, at no extra charge. I have never needed to invoke this. But it matters that it is there.</p>
+      <h2>I guarantee a real shift<br><em>in how your child behaves.</em></h2>
+      <p class="guarantee-tagline">Not a promise to try. A guarantee that it arrives.</p>
+      <p class="guarantee-followon">Or I stay until it arrives. No extra charge. No fine print.</p>
+      <p class="guarantee-bridge">This shift happens because you learn to read, and align, the actual channels through which you and your child communicate, tone, presence, touch, pace, and more, not just the words you use.</p>
+      <p class="guarantee-explain">At the start of Fathers Coaching, Just for Parents, and The Family Legacy Advisory, we agree together on what the shift will actually look like for your family, named clearly and specifically, not a vague hope.</p>
 
+      <div class="guarantee-section-label">What Shifts in You</div>
       <div class="guarantee-pairs">
-        <div class="guarantee-pair"><div class="guarantee-pair-line">Reactive <span class="arrow-word">&rarr;</span> <span class="to-word">Calm</span></div></div>
-        <div class="guarantee-pair"><div class="guarantee-pair-line">Confused <span class="arrow-word">&rarr;</span> <span class="to-word">Clear</span></div></div>
-        <div class="guarantee-pair"><div class="guarantee-pair-line">Guilt-ridden <span class="arrow-word">&rarr;</span> <span class="to-word">Understanding</span></div></div>
-        <div class="guarantee-pair"><div class="guarantee-pair-line">Avoidant <span class="arrow-word">&rarr;</span> <span class="to-word">Certain</span></div></div>
-        <div class="guarantee-pair"><div class="guarantee-pair-line">Exhausted <span class="arrow-word">&rarr;</span> <span class="to-word">Energised</span></div></div>
-        <div class="guarantee-pair"><div class="guarantee-pair-line">Disconnected <span class="arrow-word">&rarr;</span> <span class="to-word">Close</span></div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Reactive</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Calm</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Confused</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Clear</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Guilt-ridden</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Understanding</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Avoidant</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Certain</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Exhausted</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Energised</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Disconnected</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Close</div></div>
       </div>
 
       <div class="guarantee-detail">
@@ -656,6 +670,25 @@ footer a:hover { color: var(--gold); }
         <p><strong>Avoidant to Certain.</strong> Where before you found yourself putting off the harder conversations or the harder moments, you know what is required of you and are able to meet it directly.</p>
         <p><strong>Exhausted to Energised.</strong> Where before parenting felt like something that drained you further every day, it stops costing you what it used to, and some of what it takes begins to come back.</p>
         <p><strong>Disconnected to Close.</strong> Where before you and your child felt like you were moving further apart, you find your way back toward each other, and the relationship starts to feel like one again.</p>
+      </div>
+
+      <div class="guarantee-section-label">What Shifts in Your Child</div>
+      <div class="guarantee-pairs">
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Rude / back-chat</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Respectful listening</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Ignoring what's asked</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Actually taking it in</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Constant arguing</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Willing to talk it through</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Storming off</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Staying in the room</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Withdrawn</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Coming to find you</div></div>
+        <div class="guarantee-pair"><div class="guarantee-pair-before">Meltdowns</div><div class="guarantee-pair-arrow">&darr;</div><div class="guarantee-pair-after">Handles disappointment</div></div>
+      </div>
+
+      <div class="guarantee-detail">
+        <p><strong>Rude or back-chatting to Respectful listening.</strong> Where before a request was met with attitude or a smart response, your child begins to actually hear what you're saying, and responds accordingly.</p>
+        <p><strong>Ignoring what's asked to Actually taking it in.</strong> Where before things had to be repeated three or four times before they landed, what you say starts to register the first time.</p>
+        <p><strong>Constant arguing to Willing to talk it through.</strong> Where before every request turned into a negotiation or a fight, your child becomes someone you can actually reason with.</p>
+        <p><strong>Slamming doors, storming off to Staying in the room.</strong> Where before conflict meant your child physically removed themselves, they begin to stay present, even when things are hard.</p>
+        <p><strong>Withdrawn, won't engage to Coming to find you.</strong> Where before your child pulled away and shut you out, they start seeking you out again, wanting to be near you.</p>
+        <p><strong>Meltdowns over small things to Able to handle disappointment.</strong> Where before a small setback could trigger a huge reaction, your child begins to absorb life's normal frustrations without falling apart.</p>
       </div>
     </div>
   </div>
