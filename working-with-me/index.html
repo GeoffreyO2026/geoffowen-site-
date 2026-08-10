@@ -305,13 +305,31 @@ h1 em { font-style: italic; color: var(--gold-light); }
 .tier.featured .tier-btn { background: transparent; color: var(--gold); }
 .tier.featured .tier-btn:hover { background: var(--gold); color: var(--black); }
 
-.guarantee-top-link {
-  display: inline-block; font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem; color: var(--gold-light); text-decoration: none;
-  border-bottom: 1.5px solid var(--gold); padding-bottom: 3px;
-  transition: color 0.2s;
+.guarantee-teaser {
+  display: block; max-width: 620px; margin: 0 auto 4rem;
+  background: #ffffff; border: 2.5px solid var(--gold);
+  padding: 2rem 2.25rem; text-align: center; text-decoration: none;
+  transition: border-color 0.2s;
 }
-.guarantee-top-link:hover { color: var(--white); }
+.guarantee-teaser:hover { border-color: var(--gold-light); }
+.guarantee-teaser-label {
+  display: block; font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600; margin-bottom: 0.9rem;
+}
+.guarantee-teaser-headline {
+  font-family: 'Cormorant Garamond', serif; font-weight: 400;
+  font-size: 1.5rem; color: #0a0a0a; line-height: 1.3; margin-bottom: 0.5rem;
+}
+.guarantee-teaser-tagline {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 1rem; color: #333333; margin-bottom: 1.1rem;
+}
+.guarantee-teaser-cta {
+  display: inline-block; font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); border-bottom: 1.5px solid var(--gold); padding-bottom: 2px;
+}
 
 /* ─── GUARANTEE SECTION ─── */
 .guarantee-wrap {
@@ -510,9 +528,12 @@ footer a:hover { color: var(--gold); }
     <p>What follows is not a set of tips or tricks. It is closer to a reboot, a return to what was already there before modern parenting moved away from it. If that is something you want for your own children, here is how we might work together.</p>
   </div>
 
-  <div style="text-align:center; margin:0 auto 4rem;">
-    <a href="#guarantee" class="guarantee-top-link">Every programme beyond this comes with a real guarantee &nbsp;&rarr;&nbsp; See what I guarantee</a>
-  </div>
+  <a href="#guarantee" class="guarantee-teaser">
+    <span class="guarantee-teaser-label">The Guarantee</span>
+    <div class="guarantee-teaser-headline">I guarantee a real shift in how your child behaves.</div>
+    <div class="guarantee-teaser-tagline">Not a promise to try. A guarantee that it arrives.</div>
+    <span class="guarantee-teaser-cta">See the Full Guarantee &darr;</span>
+  </a>
 
   <div class="entry-card" id="tier1">
     <div class="entry-card-inner">
