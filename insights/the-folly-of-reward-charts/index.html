@@ -1,1 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Folly of Reward Charts — Geoff Owen</title>
+<meta name="description" content="Take away the incentive and watch what's left. Geoff Owen on why reward charts train compliance rather than build the motivation they promise.">
+<link rel="canonical" href="https://geoffreyowen.com/insights/the-folly-of-reward-charts/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --gold: #B8972A; --gold-light: #D4AF45; --black: #0a0a0a; --near-black: #111111; --dark: #1a1a1a; --white: #ffffff; --border: rgba(184,151,42,0.25); --nav-h: 70px; --bar-h: 46px; }
+html { scroll-behavior: auto; }
+html, body { background: #0a0a0a; }
+body { color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 400; }
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--black); height: var(--nav-h); display: flex; align-items: center; padding: 0 2.5rem; border-bottom: 1px solid var(--border); }
+.nav-logo { text-decoration: none; white-space: nowrap; margin-right: auto; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-logo .g { color: var(--gold); } .nav-logo .o { color: var(--white); }
+.nav-links { display: flex; align-items: center; list-style: none; height: var(--nav-h); }
+.nav-links > li { position: relative; height: var(--nav-h); display: flex; align-items: center; }
+.nav-links > li > a { display: flex; align-items: center; height: var(--nav-h); padding: 0 0.9rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; transition: color 0.2s; }
+.nav-links > li > a:hover { color: var(--white); }
+.nav-links > li.has-dropdown > a::after { content: ''; display: inline-block; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: 4px; flex-shrink: 0; }
+.dropdown { display: none; position: absolute; top: calc(100% + 4px); left: 0; background: var(--dark); border: 1px solid var(--border); min-width: 220px; z-index: 1001; }
+.dropdown.open { display: block; }
+.dropdown a { display: block; padding: 0.85rem 1.25rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.2s, background 0.2s; }
+.dropdown a:last-child { border-bottom: none; }
+.dropdown a:hover { color: var(--gold-light); background: rgba(184,151,42,0.06); }
+.nav-cta { display: inline-flex; align-items: center; height: 32px; padding: 0 1rem; margin-left: 1rem; align-self: center; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1.5px solid var(--gold); white-space: nowrap; transition: background 0.2s, color 0.2s; }
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+.ann-bar { position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 999; background: #1a1600; height: var(--bar-h); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); font-size: 0.7rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); gap: 0.5rem; padding: 0 2rem; }
+.ann-bar a { color: var(--gold); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.ann-bar a:hover { color: var(--white); }
+.article-hero { padding: 5rem 3rem 3rem; max-width: 800px; margin: 0 auto; }
+.article-tag { display: block; font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; font-weight: 500; }
+h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.2; color: var(--white); margin-bottom: 2rem; }
+.divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 3rem; }
+.article-body { max-width: 680px; margin: 0 auto; padding: 0 3rem 5rem; }
+.back-link { display: inline-block; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 3rem; transition: color 0.2s; }
+.back-link:hover { color: var(--gold); }
+.article-body p { font-size: 1rem; line-height: 1.95; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; }
+.section-marker { display: block; font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin: 3rem 0 1.5rem; font-weight: 500; opacity: 0.8; }
+.pull-quote { border-left: 3px solid var(--gold); padding: 1.5rem 2rem; margin: 2.5rem 0; background: rgba(184,151,42,0.04); }
+.pull-quote p { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-style: italic; color: var(--gold-light); line-height: 1.7; margin: 0; }
+.article-cta { border: 1.5px solid var(--border); background: rgba(255,255,255,0.02); padding: 3rem; margin-top: 4rem; }
+.article-cta h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; line-height: 1.3; }
+.article-cta p { font-size: 0.95rem; color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; }
+.btn { display: inline-block; border: 1.5px solid var(--gold); color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.9rem 2rem; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 500; transition: background 0.2s, color 0.2s; }
+.btn:hover { background: var(--gold); color: var(--black); }
+footer { background: var(--black); padding: 4rem 3rem; text-align: center; border-top: 1.5px solid var(--border); }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+footer p { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; }
+footer a { color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: var(--gold); }
+.footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--gold); margin: 0.75rem 0 1rem; }
+.copyright { font-size: 0.8rem; color: rgba(255,255,255,0.35); margin-top: 2rem; }
+@media (max-width: 768px) { .article-hero { padding: 3rem 1.5rem 2rem; } .article-body { padding: 0 1.5rem 4rem; } .article-cta { padding: 2rem 1.5rem; } footer { padding: 3rem 1.5rem; } }
 
+/* HAMBURGER — mobile only */
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; cursor: pointer; background: transparent; border: none; padding: 0; margin-left: 1rem; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white, #ffffff); transition: all 0.25s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: #0a0a0a; z-index: 998; flex-direction: column; padding: 2rem 2rem; overflow-y: auto; border-top: 1.5px solid rgba(184,151,42,0.4); }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+.mobile-menu a:hover { color: #B8972A; }
+.mobile-menu a.mobile-cta { color: #B8972A; border: 1.5px solid #B8972A; text-align: center; padding: 1rem; margin-top: 1.5rem; border-bottom: 1.5px solid #B8972A; }
+.mobile-menu a.mobile-cta:hover { background: #B8972A; color: #0a0a0a; }
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: flex; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#bap">The Framework</a></li>
+    <li><a href="/working-with-me">Work With Me</a></li>
+    <li><a href="/books">Books</a></li>
+    <li><a href="/organisations">Organisations</a></li>
+    <li class="has-dropdown">
+      <a href="/insights">Insights &amp; Media</a>
+      <div class="dropdown">
+        <a href="/insights">Insights</a>
+        <a href="/media">Media &amp; Press</a>
+      </div>
+    </li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Free Consultation</a>
+<!-- HAMBURGER BUTTON -->
+<button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+</button>
+
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/working-with-me">Work With Me</a>
+  <a href="/insights">Insights</a>
+  <a href="/media">Media &amp; Press</a>
+  <a href="/books">Books</a>
+  <a href="/organisations">Organisations</a>
+  <a href="/webinar">The Parenting Reboot</a>
+  <a href="/guide">Free Guide</a>
+  <a href="/before-we-speak" class="mobile-cta">Book a Conversation</a>
+</div>
+
+
+<div class="ann-bar">
+  <span>The Parenting Reboot. Free Webinar &amp; Live Q&amp;A.</span>
+  <a href="/webinar">Join the Waitlist &rarr;</a>
+</div>
+
+<div class="article-hero">
+  <span class="article-tag">Take away the incentive and watch what&rsquo;s left.</span>
+  <h1>The Folly of Reward Charts</h1>
+  <div class="divider"></div>
+</div>
+
+<div class="article-body">
+  <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  <p>Take the star chart down tomorrow. Ask yourself honestly whether the good behaviour survives the removal, or whether it was only ever the star&rsquo;s, never really the child&rsquo;s.</p>
+
+  <p>I think reward charts are one of the most seductive mistakes a parent can make, precisely because they appear to work so fast. A chart goes up, behaviour visibly improves within days, and everyone involved feels like something real has been achieved. I want to argue plainly that, in the overwhelming majority of cases, nothing real has been built at all.</p>
+
+  <div class="pull-quote">
+    <p>A child who is rewarded for a behaviour begins, gradually, to associate that behaviour with the reward rather than with any genuine internal reason for doing it.</p>
+  </div>
+
+  <h2 class="section-marker">What a Reward Chart Actually Teaches</h2>
+
+  <p>A reward chart says something to a child that no parent would ever say out loud, and I think it is worth saying it out loud here, because the chart says it anyway. It says, this behaviour is not worth doing for its own reasons. It is worth doing because I am paying you to do it. Brushing teeth stops being about looking after yourself. Kindness to a sibling stops being about the relationship. Both become transactions, performed for a sticker, and the moment the transaction ends, so does the reason for doing either one.</p>
+
+  <p>I do not think this is a minor side effect. I think it is the entire mechanism of the reward chart, quietly replacing whatever internal reason a child might have developed with an external one that has an expiry date built into it from the start.</p>
+
+  <h2 class="section-marker">Why the Chart Eventually Stops Working</h2>
+
+  <p>Every parent who has used a reward chart has watched this happen. The chart works, and then it stops. The prize that once motivated stops being exciting enough, and a bigger one is needed. Or the behaviour returns to exactly where it started the moment the chart comes down. I think this is entirely predictable, not a failure of a particular chart or a particular child, but the inevitable outcome of building a behaviour on a foundation that was never actually load bearing.</p>
+
+  <h2 class="section-marker">What Reward Charts Refuse to Ask</h2>
+
+  <p>Here is what troubles me most about the reward chart as a method. It never asks why. It never asks why getting dressed has become a daily battle, or why kindness toward a sibling does not currently come easily. It simply offers a bribe for the desired outcome and calls the difficulty solved, while whatever was actually driving it, a morning rushed with too little warning, a child feeling quietly displaced by a sibling&rsquo;s arrival, goes completely unaddressed.</p>
+
+  <p>A child who resists getting dressed each morning is very often responding to genuine rush and pressure, not a lack of motivation. A child who struggles to be kind to a sibling is very often struggling with something about their own place in the family, not a lack of incentive. A sticker offers nothing for either of these. It simply asks a child to override what is actually happening to them, in exchange for a prize, and calls the resulting compliance success.</p>
+
+  <h2 class="section-marker">What Tends to Help Instead</h2>
+
+  <p>I would ask, every time, not how do I incentivise this behaviour, but what is actually making this hard for my child right now. A rushed morning tends to respond far better to more time and less urgency than to any reward on offer. Tension between siblings tends to respond far better to each child feeling genuinely seen than to a prize for being nice to the other one.</p>
+
+  <p>This does not mean withholding warmth or acknowledgement. Naming, specifically and warmly, what a child has actually done well, without a prize attached to it, tends to support real motivation in a way no chart ever could, because it speaks to the child, not to a transaction sitting on top of them.</p>
+
+  <h2 class="section-marker">A Different Way of Reading Behaviour</h2>
+
+  <p>Reward charts are one example of a much bigger habit, shaping behaviour from the outside instead of asking what it is actually responding to underneath. I think once you start looking at behaviour that way, a great deal of what modern parenting recommends starts to look considerably less convincing.</p>
+
+  <p>If you have a chart on your fridge right now, I am not asking you to feel foolish about it. I am asking you to consider what might actually be happening underneath the behaviour it is trying to manage.</p>
+
+  <div class="article-cta">
+    <h2>See what your child&rsquo;s behaviour is actually asking for.</h2>
+    <p>I&rsquo;ve built a free AI Agent that lets you explore what this might mean for your own child, in your own home, right now, drawing directly on nearly forty years of research, raising my own two daughters, and hands-on experience with the families I have worked with since. No pressure, no commitment.</p>
+    <a href="/ask" class="btn">Try the Free Agent</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Geoff Owen</span>
+  <p>Founder, Biologically Aligned Parenting</p>
+  <p class="footer-tagline">Problem behaviour is not the real problem.</p>
+  <p><a href="mailto:geoff@geoffreyowen.com" style="color:var(--gold);">geoff@geoffreyowen.com</a></p>
+  <p style="margin-top:0.5rem;"><a href="https://www.linkedin.com/in/geoffowen1/" target="_blank">LinkedIn</a></p>
+  <p class="copyright">&copy; 2026 Geoff Owen. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.has-dropdown > a').forEach(function(t) {
+  t.addEventListener('click', function(e) {
+    e.preventDefault();
+    var d = this.parentElement.querySelector('.dropdown');
+    var open = d.classList.contains('open');
+    document.querySelectorAll('.dropdown.open').forEach(function(x) { x.classList.remove('open'); });
+    if (!open) d.classList.add('open');
+  });
+});
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.has-dropdown')) {
+    document.querySelectorAll('.dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+  }
+});
+</script>
+
+<script>
+function toggleMenu() {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+document.addEventListener('click', function(e) {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  if (m && m.classList.contains('open') && !m.contains(e.target) && !h.contains(e.target)) {
+    h.classList.remove('open');
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+
+</body>
+</html>
