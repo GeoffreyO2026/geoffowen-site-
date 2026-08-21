@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Folly of Managing Behaviour — Geoff Owen</title>
+<meta name="description" content="Four institutions. One method. Nobody ever places them side by side. Geoff Owen on the shared error underneath school, prison, the workplace, and home.">
+<link rel="canonical" href="https://geoffreyowen.com/insights/the-folly-of-managing-behaviour/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --gold: #B8972A; --gold-light: #D4AF45; --black: #0a0a0a; --near-black: #111111; --dark: #1a1a1a; --white: #ffffff; --border: rgba(184,151,42,0.25); --nav-h: 70px; --bar-h: 46px; }
+html { scroll-behavior: auto; }
+html, body { background: #0a0a0a; }
+body { color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 400; }
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--black); height: var(--nav-h); display: flex; align-items: center; padding: 0 2.5rem; border-bottom: 1px solid var(--border); }
+.nav-logo { text-decoration: none; white-space: nowrap; margin-right: auto; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-logo .g { color: var(--gold); } .nav-logo .o { color: var(--white); }
+.nav-links { display: flex; align-items: center; list-style: none; height: var(--nav-h); }
+.nav-links > li { position: relative; height: var(--nav-h); display: flex; align-items: center; }
+.nav-links > li > a { display: flex; align-items: center; height: var(--nav-h); padding: 0 0.9rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; transition: color 0.2s; }
+.nav-links > li > a:hover { color: var(--white); }
+.nav-links > li.has-dropdown > a::after { content: ''; display: inline-block; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: 4px; flex-shrink: 0; }
+.dropdown { display: none; position: absolute; top: calc(100% + 4px); left: 0; background: var(--dark); border: 1px solid var(--border); min-width: 220px; z-index: 1001; }
+.dropdown.open { display: block; }
+.dropdown a { display: block; padding: 0.85rem 1.25rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.2s, background 0.2s; }
+.dropdown a:last-child { border-bottom: none; }
+.dropdown a:hover { color: var(--gold-light); background: rgba(184,151,42,0.06); }
+.nav-cta { display: inline-flex; align-items: center; height: 32px; padding: 0 1rem; margin-left: 1rem; align-self: center; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1.5px solid var(--gold); white-space: nowrap; transition: background 0.2s, color 0.2s; }
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+.ann-bar { position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 999; background: #1a1600; height: var(--bar-h); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); font-size: 0.7rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); gap: 0.5rem; padding: 0 2rem; }
+.ann-bar a { color: var(--gold); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.ann-bar a:hover { color: var(--white); }
+.article-hero { padding: 5rem 3rem 3rem; max-width: 800px; margin: 0 auto; }
+.article-tag { display: block; font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; font-weight: 500; }
+h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.2; color: var(--white); margin-bottom: 2rem; }
+.divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 3rem; }
+.article-body { max-width: 680px; margin: 0 auto; padding: 0 3rem 5rem; }
+.back-link { display: inline-block; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 3rem; transition: color 0.2s; }
+.back-link:hover { color: var(--gold); }
+.article-body p { font-size: 1rem; line-height: 1.95; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; }
+.section-marker { display: block; font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin: 3rem 0 1.5rem; font-weight: 500; opacity: 0.8; }
+.pull-quote { border-left: 3px solid var(--gold); padding: 1.5rem 2rem; margin: 2.5rem 0; background: rgba(184,151,42,0.04); }
+.pull-quote p { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-style: italic; color: var(--gold-light); line-height: 1.7; margin: 0; }
+.article-cta { border: 1.5px solid var(--border); background: rgba(255,255,255,0.02); padding: 3rem; margin-top: 4rem; }
+.article-cta h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; line-height: 1.3; }
+.article-cta p { font-size: 0.95rem; color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; }
+.btn { display: inline-block; border: 1.5px solid var(--gold); color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.9rem 2rem; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 500; transition: background 0.2s, color 0.2s; }
+.btn:hover { background: var(--gold); color: var(--black); }
+footer { background: var(--black); padding: 4rem 3rem; text-align: center; border-top: 1.5px solid var(--border); }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+footer p { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; }
+footer a { color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: var(--gold); }
+.footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--gold); margin: 0.75rem 0 1rem; }
+.copyright { font-size: 0.8rem; color: rgba(255,255,255,0.35); margin-top: 2rem; }
+@media (max-width: 768px) { .article-hero { padding: 3rem 1.5rem 2rem; } .article-body { padding: 0 1.5rem 4rem; } .article-cta { padding: 2rem 1.5rem; } footer { padding: 3rem 1.5rem; } }
 
+/* HAMBURGER — mobile only */
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; cursor: pointer; background: transparent; border: none; padding: 0; margin-left: 1rem; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white, #ffffff); transition: all 0.25s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: #0a0a0a; z-index: 998; flex-direction: column; padding: 2rem 2rem; overflow-y: auto; border-top: 1.5px solid rgba(184,151,42,0.4); }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+.mobile-menu a:hover { color: #B8972A; }
+.mobile-menu a.mobile-cta { color: #B8972A; border: 1.5px solid #B8972A; text-align: center; padding: 1rem; margin-top: 1.5rem; border-bottom: 1.5px solid #B8972A; }
+.mobile-menu a.mobile-cta:hover { background: #B8972A; color: #0a0a0a; }
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: flex; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#bap">The Framework</a></li>
+    <li><a href="/working-with-me">Work With Me</a></li>
+    <li><a href="/books">Books</a></li>
+    <li><a href="/organisations">Organisations</a></li>
+    <li class="has-dropdown">
+      <a href="/insights">Insights &amp; Media</a>
+      <div class="dropdown">
+        <a href="/insights">Insights</a>
+        <a href="/media">Media &amp; Press</a>
+      </div>
+    </li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Free Consultation</a>
+<!-- HAMBURGER BUTTON -->
+<button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+</button>
+
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/working-with-me">Work With Me</a>
+  <a href="/insights">Insights</a>
+  <a href="/media">Media &amp; Press</a>
+  <a href="/books">Books</a>
+  <a href="/organisations">Organisations</a>
+  <a href="/webinar">The Parenting Reboot</a>
+  <a href="/guide">Free Guide</a>
+  <a href="/before-we-speak" class="mobile-cta">Book a Conversation</a>
+</div>
+
+
+<div class="ann-bar">
+  <span>The Parenting Reboot. Free Webinar &amp; Live Q&amp;A.</span>
+  <a href="/webinar">Join the Waitlist &rarr;</a>
+</div>
+
+<div class="article-hero">
+  <span class="article-tag">Four institutions. One method. Nobody ever places them side by side.</span>
+  <h1>The Folly of Managing Behaviour</h1>
+  <div class="divider"></div>
+</div>
+
+<div class="article-body">
+  <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  <p>School. Prison. The workplace. The home. Four completely different settings, four completely different populations, and, I think, the exact same underlying method for handling behaviour that has not been asked to explain itself. Remove the person. Isolate the person. Sanction the person. Manage the surface, and never once ask what the surface was actually made of.</p>
+
+  <p>I want to walk through each setting in turn, because I think seeing them lined up together does something no single comparison could do alone.</p>
+
+  <h2 class="section-marker">Where This Actually Comes From</h2>
+
+  <p>Reward, punishment, and removal as behaviour management tools trace back largely to the work of B.F. Skinner, studying rats and pigeons in laboratory boxes, learning which schedules of reinforcement most reliably shaped an animal&rsquo;s behaviour. That framework, built for a species with no language, no context, and no relational needs beyond food, quietly became the backbone of how humans manage other humans, in the four settings that follow.</p>
+
+  <h2 class="section-marker">The Workplace</h2>
+
+  <p>An employee&rsquo;s output drops. Deadlines slip. They seem withdrawn, occasionally short with colleagues. The response, more often than not, is entirely aimed at the behaviour itself. A warning. Reduced responsibility. Quiet exclusion from the meetings that matter, until the person either leaves or is pushed toward leaving.</p>
+
+  <p>Read through a different lens, the question changes completely. This is not a person who has simply become worse at their job. Something in the environment around them, unclear expectations, a workload quietly increased without support to match it, a management style that shifted without explanation, has very likely made it harder for the same competence that got them hired to keep showing up. The behaviour is smoke. Almost nobody goes looking for the fire.</p>
+
+  <h2 class="section-marker">The Prison</h2>
+
+  <p>A person breaks a rule inside a prison and is placed in solitary confinement, alone, for a period someone else decides. The psychological effects are well documented enough that international bodies have set limits on how long it can be used before it counts as inhumane treatment.</p>
+
+  <p>I want to be careful here, because this is not a question of excusing behaviour that has caused real harm to others, and it is not an argument about criminal justice policy, which is a far larger and more contested conversation than this piece can hold. What I am pointing at is narrower and, I think, harder to dispute. The method used inside the system, once someone is already there, removal, isolation, further removal for further rule breaking, is built on the same behaviourist foundation as everything else in this piece. It manages the surface of a person&rsquo;s conduct without ever being designed to ask what produced it. Whatever the fire actually was, and it is very often long before that person ever entered the building, the method has no mechanism for finding it, only for containing the smoke once it appears.</p>
+
+  <h2 class="section-marker">The School</h2>
+
+  <p>A child struggles to sit still, blurts out, or shuts down entirely in a classroom, and the response follows a familiar shape, a coloured behaviour chart moving toward red, time in an isolation room euphemistically called something gentler, exclusion from the classroom, sometimes exclusion from the school itself.</p>
+
+  <p>Seen through a different lens, a child who cannot sit still or stay regulated in a classroom is not choosing disruption. Their environment, sensory overload, a mismatch between what is being asked of them and what they can currently manage, an unmet need carried in from home that morning, has made the classroom&rsquo;s expectations genuinely unreachable in that moment. The chart, the isolation room, and the exclusion all treat the visible behaviour as the target. None of them ask what that behaviour was actually signalling, and I think that is precisely why the same children so often cycle through the same consequences without the underlying pattern ever shifting.</p>
+
+  <h2 class="section-marker">The Home</h2>
+
+  <p>And then there is the setting this whole series returns to, again and again, because it is where the method is first learned, by every single person who later builds it into a school, a prison, or a workplace without ever questioning where it came from. A child&rsquo;s difficult behaviour is met with a time out, a consequence, a raised voice, a bedroom door closed on a small, overwhelmed body, and the exact same question goes unasked here as everywhere else. What actually changed in this child&rsquo;s environment.</p>
+
+  <h2 class="section-marker">The Pattern Underneath All Four</h2>
+
+  <p>I think this is the real point of placing these four settings side by side. It is not that school, prison, the workplace, and the home are the same in severity or consequence, they clearly are not. It is that they share the same underlying error, treating behaviour as the problem to be managed, rather than as smoke rising from a fire that nobody has been trained, or asked, to go looking for. A method built in a laboratory, on animals with no relational needs at all, has quietly become the default response to human beings at every stage of life, in nearly every institution that shapes it.</p>
+
+  <div class="pull-quote">
+    <p>Nobody trained to look for the fire ever gets asked to. Only to make sure the smoke stops showing.</p>
+  </div>
+
+  <h2 class="section-marker">What Tends to Help Instead</h2>
+
+  <p>I am not arguing that behaviour never needs a response, in any of these four settings. I am arguing that the response arrives at the wrong layer almost every time. The more useful question, whether it is a child, a student, an employee, or someone inside a system with far less freedom than any of them, is what changed in the environment around this person, and what would it take to actually meet that, rather than simply removing the person until the smoke stops being visible.</p>
+
+  <h2 class="section-marker">A Different Way of Reading Behaviour</h2>
+
+  <p>Once you have seen this pattern in one setting, I think it becomes very difficult not to see it everywhere else it is quietly operating too. The home is where most of us first learn it, long before we ever hand it on, unknowingly, to a classroom, a boardroom, or a system built to contain rather than understand.</p>
+
+  <div class="article-cta">
+    <h2>See where this pattern shows up in your own home.</h2>
+    <p>I&rsquo;ve built a free AI Agent that lets you explore what this might mean for your own child, in your own home, right now, drawing directly on nearly forty years of research, raising my own two daughters, and hands-on experience with the families I have worked with since. No pressure, no commitment.</p>
+    <a href="/ask" class="btn">Try the Free Agent</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Geoff Owen</span>
+  <p>Founder, Biologically Aligned Parenting</p>
+  <p class="footer-tagline">Problem behaviour is not the real problem.</p>
+  <p><a href="mailto:geoff@geoffreyowen.com" style="color:var(--gold);">geoff@geoffreyowen.com</a></p>
+  <p style="margin-top:0.5rem;"><a href="https://www.linkedin.com/in/geoffowen1/" target="_blank">LinkedIn</a></p>
+  <p class="copyright">&copy; 2026 Geoff Owen. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.has-dropdown > a').forEach(function(t) {
+  t.addEventListener('click', function(e) {
+    e.preventDefault();
+    var d = this.parentElement.querySelector('.dropdown');
+    var open = d.classList.contains('open');
+    document.querySelectorAll('.dropdown.open').forEach(function(x) { x.classList.remove('open'); });
+    if (!open) d.classList.add('open');
+  });
+});
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.has-dropdown')) {
+    document.querySelectorAll('.dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+  }
+});
+</script>
+
+<script>
+function toggleMenu() {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+document.addEventListener('click', function(e) {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  if (m && m.classList.contains('open') && !m.contains(e.target) && !h.contains(e.target)) {
+    h.classList.remove('open');
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+
+</body>
+</html>
