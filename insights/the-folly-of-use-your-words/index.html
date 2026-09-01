@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Folly of "Use Your Words" — Geoff Owen</title>
+<meta name="description" content="You cannot ask for a sentence from a body that has none left. Geoff Owen on why language is the last thing to return, not the first.">
+<link rel="canonical" href="https://geoffreyowen.com/insights/the-folly-of-use-your-words/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --gold: #B8972A; --gold-light: #D4AF45; --black: #0a0a0a; --near-black: #111111; --dark: #1a1a1a; --white: #ffffff; --border: rgba(184,151,42,0.25); --nav-h: 70px; --bar-h: 46px; }
+html { scroll-behavior: auto; }
+html, body { background: #0a0a0a; }
+body { color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 400; }
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--black); height: var(--nav-h); display: flex; align-items: center; padding: 0 2.5rem; border-bottom: 1px solid var(--border); }
+.nav-logo { text-decoration: none; white-space: nowrap; margin-right: auto; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-logo .g { color: var(--gold); } .nav-logo .o { color: var(--white); }
+.nav-links { display: flex; align-items: center; list-style: none; height: var(--nav-h); }
+.nav-links > li { position: relative; height: var(--nav-h); display: flex; align-items: center; }
+.nav-links > li > a { display: flex; align-items: center; height: var(--nav-h); padding: 0 0.9rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; transition: color 0.2s; }
+.nav-links > li > a:hover { color: var(--white); }
+.nav-links > li.has-dropdown > a::after { content: ''; display: inline-block; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); margin-left: 4px; flex-shrink: 0; }
+.dropdown { display: none; position: absolute; top: calc(100% + 4px); left: 0; background: var(--dark); border: 1px solid var(--border); min-width: 220px; z-index: 1001; }
+.dropdown.open { display: block; }
+.dropdown a { display: block; padding: 0.85rem 1.25rem; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.2s, background 0.2s; }
+.dropdown a:last-child { border-bottom: none; }
+.dropdown a:hover { color: var(--gold-light); background: rgba(184,151,42,0.06); }
+.nav-cta { display: inline-flex; align-items: center; height: 32px; padding: 0 1rem; margin-left: 1rem; align-self: center; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border: 1.5px solid var(--gold); white-space: nowrap; transition: background 0.2s, color 0.2s; }
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+.ann-bar { position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 999; background: #1a1600; height: var(--bar-h); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); font-size: 0.7rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); gap: 0.5rem; padding: 0 2rem; }
+.ann-bar a { color: var(--gold); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.ann-bar a:hover { color: var(--white); }
+.article-hero { padding: 5rem 3rem 3rem; max-width: 800px; margin: 0 auto; }
+.article-tag { display: block; font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; font-weight: 500; }
+h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.2; color: var(--white); margin-bottom: 2rem; }
+.divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 3rem; }
+.article-body { max-width: 680px; margin: 0 auto; padding: 0 3rem 5rem; }
+.back-link { display: inline-block; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 3rem; transition: color 0.2s; }
+.back-link:hover { color: var(--gold); }
+.article-body p { font-size: 1rem; line-height: 1.95; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; }
+.section-marker { display: block; font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin: 3rem 0 1.5rem; font-weight: 500; opacity: 0.8; }
+.pull-quote { border-left: 3px solid var(--gold); padding: 1.5rem 2rem; margin: 2.5rem 0; background: rgba(184,151,42,0.04); }
+.pull-quote p { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-style: italic; color: var(--gold-light); line-height: 1.7; margin: 0; }
+.article-cta { border: 1.5px solid var(--border); background: rgba(255,255,255,0.02); padding: 3rem; margin-top: 4rem; }
+.article-cta h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; line-height: 1.3; }
+.article-cta p { font-size: 0.95rem; color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; }
+.btn { display: inline-block; border: 1.5px solid var(--gold); color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.9rem 2rem; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 500; transition: background 0.2s, color 0.2s; }
+.btn:hover { background: var(--gold); color: var(--black); }
+footer { background: var(--black); padding: 4rem 3rem; text-align: center; border-top: 1.5px solid var(--border); }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+footer p { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; }
+footer a { color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: var(--gold); }
+.footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--gold); margin: 0.75rem 0 1rem; }
+.copyright { font-size: 0.8rem; color: rgba(255,255,255,0.35); margin-top: 2rem; }
+@media (max-width: 768px) { .article-hero { padding: 3rem 1.5rem 2rem; } .article-body { padding: 0 1.5rem 4rem; } .article-cta { padding: 2rem 1.5rem; } footer { padding: 3rem 1.5rem; } }
+
+/* HAMBURGER — mobile only */
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; cursor: pointer; background: transparent; border: none; padding: 0; margin-left: 1rem; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white, #ffffff); transition: all 0.25s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: #0a0a0a; z-index: 998; flex-direction: column; padding: 2rem 2rem; overflow-y: auto; border-top: 1.5px solid rgba(184,151,42,0.4); }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+.mobile-menu a:hover { color: #B8972A; }
+.mobile-menu a.mobile-cta { color: #B8972A; border: 1.5px solid #B8972A; text-align: center; padding: 1rem; margin-top: 1.5rem; border-bottom: 1.5px solid #B8972A; }
+.mobile-menu a.mobile-cta:hover { background: #B8972A; color: #0a0a0a; }
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: flex; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span class="g">Geoff</span><span class="o">&nbsp;Owen</span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#bap">The Framework</a></li>
+    <li><a href="/working-with-me">Work With Me</a></li>
+    <li><a href="/books">Books</a></li>
+    <li><a href="/organisations">Organisations</a></li>
+    <li class="has-dropdown">
+      <a href="/insights">Insights &amp; Media</a>
+      <div class="dropdown">
+        <a href="/insights">Insights</a>
+        <a href="/media">Media &amp; Press</a>
+      </div>
+    </li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Free Consultation</a>
+<!-- HAMBURGER BUTTON -->
+<button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+</button>
+
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/working-with-me">Work With Me</a>
+  <a href="/insights">Insights</a>
+  <a href="/media">Media &amp; Press</a>
+  <a href="/books">Books</a>
+  <a href="/organisations">Organisations</a>
+  <a href="/webinar">The Parenting Reboot</a>
+  <a href="/guide">Free Guide</a>
+  <a href="/before-we-speak" class="mobile-cta">Book a Conversation</a>
+</div>
+
+
+<div class="ann-bar">
+  <span>The Parenting Reboot. Free Webinar &amp; Live Q&amp;A.</span>
+  <a href="/webinar">Join the Waitlist &rarr;</a>
+</div>
+
+<div class="article-hero">
+  <span class="article-tag">You cannot ask for a sentence from a body that has none left.</span>
+  <h1>The Folly of &ldquo;Use Your Words&rdquo;</h1>
+  <div class="divider"></div>
+</div>
+
+<div class="article-body">
+  <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  <p>A child is mid-meltdown, red-faced, past the point of sentences, and a parent crouches down and says it calmly. Use your words. I think this is one of the kindest sounding instructions in modern parenting, and one of the most impossible to actually follow, because it asks a child to do the one thing their body has, at that exact moment, made completely unavailable to them.</p>
+
+  <div class="pull-quote">
+    <p>The absence of words is not defiance or a refusal to communicate properly. It is itself the communication.</p>
+  </div>
+
+  <h2 class="section-marker">What &ldquo;Use Your Words&rdquo; Actually Demands</h2>
+  <p>Language is one of the last things a nervous system does once it has settled, not one of the first things it can reach for while still overwhelmed. Speaking clearly, choosing words, forming a sentence that explains what is wrong, all of this requires a level of regulation a child in genuine distress simply does not have access to yet. I think asking for words in that moment is asking a drowning person to first explain, calmly and articulately, exactly which stroke they would like assistance with.</p>
+
+  <h2 class="section-marker">Why This Feels Reasonable to Ask</h2>
+  <p>I understand why this instruction feels fair to a parent reaching for it. It sounds patient. It sounds like the opposite of shouting or punishing. It offers the child a genuine alternative to the meltdown, use this instead of that. I think the reasoning is sound. I think the biology underneath it is simply being ignored.</p>
+
+  <p>A child who could access words right now would very often already be using them. The absence of words is not defiance or a refusal to communicate properly. It is itself the communication, the clearest signal available to a body that has, in this moment, nothing more sophisticated left to offer.</p>
+
+  <h2 class="section-marker">What Actually Happens Instead</h2>
+  <p>Asked for words they cannot currently produce, a child tends toward one of two things. They escalate further, because the demand itself becomes one more thing their already overwhelmed system has to somehow process. Or they shut down, going quiet in a way that looks like compliance but is closer to giving up on being understood at all, since the one thing being offered, use your words, was never actually available to reach for.</p>
+
+  <h2 class="section-marker">The Wind Knocked Out of You</h2>
+  <p>Think of someone who has just had the wind knocked out of them, doubled over, unable to draw a proper breath, and being asked, calmly and reasonably, to explain exactly where it hurts and how it happened. Nobody would consider that a fair request in that moment, however gently it was phrased, because the capacity being asked for has been temporarily taken by the very thing being asked about.</p>
+
+  <p>&ldquo;Use your words&rdquo; asks a child in exactly this state to somehow produce the one thing their body has, for now, made unavailable to them.</p>
+
+  <h2 class="section-marker">A Different Lens</h2>
+  <p>Your child has been asked twice to put their shoes on, and the third time triggers a full collapse, screaming, thrashing, nothing coherent coming out at all.</p>
+
+  <p>The thought that runs through most parents&rsquo; minds in that moment is immediate. I need them to tell me what&rsquo;s actually wrong so we can sort this out and get moving. What follows is a calm but insistent request for words, repeated, gently, while the child becomes more distressed rather than less.</p>
+
+  <p>Every child arrives already expecting a calm, confident adult who can read what is happening without requiring a full explanation first. When a child is asked to produce words their body cannot currently generate, the demand itself becomes one more thing pressing down on an already overwhelmed system.</p>
+
+  <p>They weren&rsquo;t refusing to explain. They had nothing left to explain with, and what they needed was not a request for words, but a calm presence willing to wait until words were possible again.</p>
+
+  <h2 class="section-marker">The Trap This Sets for Well Meaning Parents</h2>
+  <p>&ldquo;Use your words&rdquo; feels like the responsible, mature alternative to losing your temper, and I think that is exactly what makes it so easy to lean on without noticing it isn&rsquo;t landing. It sounds like teaching emotional literacy. In the actual moment it is asked, it is often simply another demand placed on a system that has no capacity left to meet it.</p>
+
+  <h2 class="section-marker">What Tends to Help Instead</h2>
+  <p>I am not arguing against helping a child develop language for their feelings, and that work matters enormously, just not in the middle of the storm itself. In the moment, presence does more than prompting. Stay near, stay calm, and let the words come later, once the body has actually settled enough to produce them, rather than demanding them as the price of your attention right now.</p>
+
+  <h2 class="section-marker">A Different Way of Reading Behaviour</h2>
+  <p>&ldquo;Use your words&rdquo; assumes a child in distress has simply misplaced their vocabulary, rather than lost access to it entirely for the moment. Once you start seeing the absence of words as part of the signal rather than a failure to communicate properly, I think it becomes very hard to reach for the phrase in the middle of a meltdown again.</p>
+
+  <div class="article-cta">
+    <h2>See what your child&rsquo;s silence is actually telling you.</h2>
+    <p>I&rsquo;ve built a free AI Agent that lets you explore what this might mean for your own child, in your own home, right now, drawing directly on nearly forty years of research, raising my own two daughters, and hands-on experience with the families I have worked with since. No pressure, no commitment.</p>
+    <a href="/ask" class="btn">Try the Free Agent</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Geoff Owen</span>
+  <p>Founder, Biologically Aligned Parenting</p>
+  <p class="footer-tagline">Problem behaviour is not the real problem.</p>
+  <p><a href="mailto:geoff@geoffreyowen.com" style="color:var(--gold);">geoff@geoffreyowen.com</a></p>
+  <p style="margin-top:0.5rem;"><a href="https://www.linkedin.com/in/geoffowen1/" target="_blank">LinkedIn</a></p>
+  <p class="copyright">&copy; 2026 Geoff Owen. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.has-dropdown > a').forEach(function(t) {
+  t.addEventListener('click', function(e) {
+    e.preventDefault();
+    var d = this.parentElement.querySelector('.dropdown');
+    var open = d.classList.contains('open');
+    document.querySelectorAll('.dropdown.open').forEach(function(x) { x.classList.remove('open'); });
+    if (!open) d.classList.add('open');
+  });
+});
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.has-dropdown')) {
+    document.querySelectorAll('.dropdown.open').forEach(function(d) { d.classList.remove('open'); });
+  }
+});
+</script>
+
+<script>
+function toggleMenu() {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+document.addEventListener('click', function(e) {
+  var h = document.getElementById('hamburger');
+  var m = document.getElementById('mobileMenu');
+  if (m && m.classList.contains('open') && !m.contains(e.target) && !h.contains(e.target)) {
+    h.classList.remove('open');
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+
+</body>
+</html>
