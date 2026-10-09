@@ -588,24 +588,12 @@ footer a:hover { color: var(--gold); }
         </div>
       </div>
       <div class="entry-card-side">
-        <div id="tpFormArea">
+        <div id="tpPaymentArea">
           <span class="entry-card-price">&pound;175</span>
           <span class="entry-card-price-note">one session &nbsp;&middot;&nbsp; 90 minutes</span>
-          <input type="text" id="tpName" placeholder="Your name" class="tp-input">
-          <input type="email" id="tpEmail" placeholder="Your email" class="tp-input">
-          <button onclick="submitTurningPoint()" class="entry-card-btn tp-submit-btn" id="tpSubmitBtn">Book a Turning Point Conversation</button>
-          <p class="tier-cta-note">Submit your details and you'll immediately see how to pay and where to find everything you need ahead of the session.</p>
-        </div>
-        <div id="tpSuccessArea" style="display:none;">
-          <p class="tp-success-heading">Thank you, here's everything you need.</p>
-          <p class="tp-success-text">Please pay &pound;175 by bank transfer to the details below, then reply to the confirmation email you'll receive to let me know you've sent it, and I'll send you the calendar link to pick a time.</p>
-          <div class="tp-bank-details">
-            <p><strong>Account Name</strong><br>London Capital Credit Union</p>
-            <p><strong>Sort Code</strong><br>08-92-50</p>
-            <p><strong>Account Number</strong><br>67003299</p>
-            <p><strong>Reference</strong><br>30064 S1</p>
-          </div>
-          <p class="tp-success-text">These two documents are a genuine part of the work itself, not optional background. Please complete both properly before we speak, and bring them with you to the session, nothing needs to be sent back to me beforehand.</p>
+          <a href="https://link.revrepeat.com/payment-link/6ac94fe6075ea22a20cdd813" class="entry-card-btn">Book a Turning Point Conversation</a>
+          <p class="tier-cta-note">Continue to secure checkout to pay &pound;175. After payment, I will be in touch to arrange your conversation.</p>
+          <p class="tp-success-text">Read and complete these two short documents before we speak. Keep your answers and bring them to the call; we go through them together, and you do not need to send them beforehand.</p>
           <a href="/working-with-me/turning-point-background-history.pdf" target="_blank" class="tp-doc-link">What&#39;s Going On &rarr;</a>
           <a href="/working-with-me/turning-point-environment-check.pdf" target="_blank" class="tp-doc-link">Home Life &rarr;</a>
         </div>
@@ -752,28 +740,7 @@ document.addEventListener('click', function(e) {
 });
 </script>
 
-<script>
-async function submitTurningPoint() {
-  var name = document.getElementById('tpName').value.trim();
-  var email = document.getElementById('tpEmail').value.trim();
-  if (!name || !email) {
-    alert('Please enter both your name and email before booking.');
-    return;
-  }
-  var btn = document.getElementById('tpSubmitBtn');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  try {
-    await fetch('https://formspree.io/f/mqpkggye', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: name, email: email, form: 'turning-point-session' })
-    });
-  } catch (err) {}
-  document.getElementById('tpFormArea').style.display = 'none';
-  document.getElementById('tpSuccessArea').style.display = 'block';
-}
-</script>
+
 
 
 <script>
