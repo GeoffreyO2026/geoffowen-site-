@@ -61,6 +61,14 @@ Respond with ONLY this JSON structure: {"category": "...", "note": "...", "summa
   return JSON.parse(cleaned);
 }
 
+function eveningLine() {
+  const link = '<a href="https://whyismychildsoangry.co.uk" style="color:#B8972A;">whyismychildsoangry.co.uk</a>';
+  if (Date.now() < Date.UTC(2026, 10, 13)) {
+    return `If you'd like to go deeper, I'm running an online evening, Behind the Anger, on Thursday 12 November at 8pm. It's 75 minutes, cameras off, and I'll show what a child's anger is really asking for: ${link}`;
+  }
+  return `If you'd like to go deeper, my evening Behind the Anger is available to watch whenever suits you: ${link}`;
+}
+
 async function sendViaResend(email, note, transcriptText) {
   const html = `
     <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1a1a1a; max-width: 600px; margin: 0 auto; line-height: 1.7;">
@@ -70,7 +78,8 @@ async function sendViaResend(email, note, transcriptText) {
       <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">Your full conversation</p>
       <div style="white-space: pre-wrap; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #1a1a1a;">${transcriptText.replace(/\n/g, '<br>')}</div>
       <hr style="border: none; border-top: 1px solid #ddd; margin: 28px 0;">
-      <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; color: #1a1a1a; margin-bottom: 16px;">If you'd like to go deeper on this, my free guide is a good next step: <a href="https://geoffreyowen.com/guide/download" style="color:#B8972A;">https://geoffreyowen.com/guide/download</a></p>
+      <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; color: #1a1a1a; margin-bottom: 16px;">${eveningLine()}</p>
+      <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; color: #1a1a1a; margin-bottom: 16px;">You may also find my free guide helpful: <a href="https://geoffreyowen.com/guide/download" style="color:#B8972A;">https://geoffreyowen.com/guide/download</a></p>
     </div>
   `;
 
