@@ -77,6 +77,19 @@ tr:last-child td{border-bottom:0}
 .card .unmet b{color:var(--ink);font-weight:600}
 section{display:flex;flex-direction:column;gap:14px}
 section > p{color:var(--muted);max-width:68ch}
+.intro{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--moss);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:18px}
+.intro .label{color:var(--moss)}
+.intro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.intro-grid div{display:flex;flex-direction:column;gap:8px}
+.intro-grid p{color:var(--ink);font-size:.95rem;line-height:1.7}
+.card.r{padding:0}
+.card.r > button{font:inherit;color:inherit;background:none;border:0;text-align:left;cursor:pointer;padding:16px;display:flex;flex-direction:column;gap:8px;width:100%;border-radius:12px}
+.card.r > button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.card.r .more{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+.card.r.open{grid-column:1/-1;border-color:var(--amber)}
+.depth{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;padding:0 16px 18px}
+.depth div{background:var(--amber-soft);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.depth .label{color:var(--amber)}
 footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:16px}
 @media (max-width:760px){.explorer{grid-template-columns:1fr}.picker{flex-direction:row;flex-wrap:wrap}.picker button{flex:1 1 140px}.compare{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:no-preference){.panel{transition:border-color .2s}}
@@ -92,6 +105,15 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
     <p>Your child's five innate expectations are what's required. Your nine channels are how they're provided. When a channel is off, the child's biology signals it through one of four instinctive responses. The shift begins with the channel you lean on most.</p>
     <div class="flow"><b>Your channel</b><span class="arrow">→</span><b>Expectation met or unmet</b><span class="arrow">→</span><b>Your child settles or signals</b><span class="arrow">→</span><b>One shift to begin</b></div>
   </header>
+
+  <section class="intro" aria-label="Read this first">
+    <span class="label">Read this first</span>
+    <div class="intro-grid">
+      <div><h3>What BAP is</h3><p>Biologically Aligned Parenting starts from one position. Your child arrives exquisitely social. They aren't a blank slate waiting to be shaped. They're more like a seed that already knows it will become an oak tree, as long as the conditions are there. Every child is born with five innate expectations, and these are required for that inbuilt sociality to express itself. Your child is primed to become capable and competent, and so to be trusted and valued. The ideal environment is pregnant with one notion: everyone here is worthy and welcome. Worthy means capable and competent. Welcome means trusted and valued. And it's your child's body, not their intellect, that reads the environment. It reads how you show up through nine channels, among them your voice, your face, your touch, your breath and the rhythm of your home. Your child doesn't receive your words so much as the whole of you.</p></div>
+      <div><h3>How it differs from modern parenting</h3><p>Modern parenting manages behaviour. It offers strategies, scripts and consequences, all aimed at the signal and not the cause. None of us chose this. We absorbed it through informed conditioning: from how we were raised, from family and friends, from experts, books and the culture around us. It's so ordinary that nobody questions it. Take the most accepted notion of all, that children don't come with a manual. They do. It's written in their biology, not in words. Their behaviour is them reading from it, and telling you when what they expect isn't arriving.</p></div>
+      <div><h3>How to use the map</h3><p>Start with the channel you lean on most. For most parents it's Hearing: explaining, repeating, justifying. Read the difference between performing and being present on that channel. See which expectations it provides and how your child is likely to respond when it's off. Then take the one first shift and stay with it for a week or two before moving on. Further down, click any of the four responses to understand what your child's body is doing. This isn't a checklist for monitoring yourself. It shows you where to begin.</p></div>
+    </div>
+  </section>
 
   <div class="explorer">
     <nav class="picker" id="picker" aria-label="Choose a channel"></nav>
@@ -112,7 +134,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
 
   <section>
     <h2>The four instinctive responses</h2>
-    <p>How the body signals that what it expects isn't arriving. None of these is a decision made against you.</p>
+    <p>How the body signals that what it expects isn't arriving. None of these is a decision made against you. Click any response to see what's going on.</p>
     <div class="ref" id="resps"></div>
   </section>
 
@@ -128,10 +150,10 @@ const EXP=[
  {id:"trusted",name:"Trusted, not rescued",need:"Treated as capable and given real responsibility.",unmet:"Refusing to try, “do it for me”, giving up instantly."}
 ];
 const RESP=[
- {id:"fight",name:"Fight",does:"Seeks to control the situation.",looks:"Defiance, rudeness, backchat, anger."},
- {id:"flight",name:"Flight",does:"Avoids it.",looks:"Storming off, screens, the bedroom door."},
- {id:"freeze",name:"Freeze",does:"Withdraws until the danger seems to pass.",looks:"Going quiet, blank refusal, “I don't know”."},
- {id:"fawn",name:"Fawn",does:"Appeases to restore peace.",looks:"People-pleasing, performing, over-compliance."}
+ {id:"fight",name:"Fight",does:"Seeks to control the situation.",looks:"Defiance, rudeness, backchat, anger.",what:"Your child's body has registered that something it expects isn't there, and it moves to take control of the situation. This isn't defiance by choice. It's biology trying to restore what's missing, usually leadership or trust.",animal:"A cornered cat arches and hisses. It isn't aggressive by nature. It's trying to control a moment that feels unsafe. Give it room and a settled presence and the hissing stops.",home:"You ask for shoes on for the third time, and your voice is tighter each time. Your child kicks the shoe across the hall and shouts “You're so annoying.” The words are aimed at you. The cause isn't."},
+ {id:"flight",name:"Flight",does:"Avoids it.",looks:"Storming off, screens, the bedroom door.",what:"Your child's body chooses distance over confrontation. When the atmosphere carries pressure, the safest move is to get out of it.",animal:"A deer bolts at the snap of a twig. It doesn't weigh it up. The body moves first and thinks later.",home:"Talk at dinner turns to homework. Your child leaves the table, the bedroom door closes and the headphones go on. It looks like rejection. It's a body leaving a room that felt too charged."},
+ {id:"freeze",name:"Freeze",does:"Withdraws until the danger seems to pass.",looks:"Going quiet, blank refusal, “I don't know”.",what:"When neither fighting nor leaving feels possible, the body goes still and waits for the danger to pass. Your child isn't being difficult. They've gone offline.",animal:"A rabbit in an open field goes completely still when a hawk passes overhead. Stillness is its best protection.",home:"You ask what happened at school, worry written all over your face. You get “I don't know,” a blank look and shoulders up. The more you ask, the stiller they become."},
+ {id:"fawn",name:"Fawn",does:"Appeases to restore peace.",looks:"People-pleasing, performing, over-compliance.",what:"Your child's body tries to restore peace by keeping you happy. It's the easiest response to miss, because it looks like good behaviour.",animal:"A young wolf lowers itself and rolls onto its back before the pack leader, to keep the peace and stay safe within the group.",home:"The child who is endlessly helpful, checks your face before speaking and says sorry for things that aren't theirs. They're often praised as easy. Underneath, they're working hard to keep the atmosphere safe."}
 ];
 const CH=[
  {id:"hearing",name:"Hearing",start:true,carries:"What your child hears from you: explaining, repeating, lecturing, justifying.",off:"A stream of explanation and repetition. “How many times have I told you?”",on:"Said once, briefly, and then quiet.",exp:["led","trusted"],resp:["fight","freeze"],shows:"Testing every instruction, tuning you out.",shift:"Say it once, in fewer words. Then stop, and let your presence carry it. Explain only when your child genuinely asks why."},
@@ -176,7 +198,13 @@ function renderGrid(){
 }
 function renderRef(){
   document.getElementById("exps").innerHTML=EXP.map(e=>`<div class="card"><h3>${esc(e.name)}</h3><p>${esc(e.need)}</p><p class="unmet"><b>When unmet:</b> ${esc(e.unmet)}</p></div>`).join("");
-  document.getElementById("resps").innerHTML=RESP.map(r=>`<div class="card r"><h3>${r.name}</h3><p>${esc(r.does)}</p><p class="unmet"><b>Often looks like:</b> ${esc(r.looks)}</p></div>`).join("");
+  renderResps();
+}
+let openResp=null;
+function renderResps(){
+  const el=document.getElementById("resps");
+  el.innerHTML=RESP.map(r=>{const o=r.id===openResp;return `<div class="card r${o?' open':''}"><button type="button" id="resp-${r.id}" data-id="${r.id}" aria-expanded="${o}"><h3>${r.name}</h3><p>${esc(r.does)}</p><p class="unmet"><b>Often looks like:</b> ${esc(r.looks)}</p><span class="more">${o?'Close':'What’s going on'}</span></button>${o?`<div class="depth"><div><span class="label">What’s going on</span><p>${esc(r.what)}</p></div><div><span class="label">In the animal kingdom</span><p>${esc(r.animal)}</p></div><div><span class="label">At home</span><p>${esc(r.home)}</p></div></div>`:''}</div>`;}).join("");
+  el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{openResp=openResp===b.dataset.id?null:b.dataset.id;renderResps();document.getElementById("resp-"+b.dataset.id).focus();}));
 }
 function select(id){current=id;try{localStorage.setItem("shiftmap-channel",id)}catch(e){};renderPicker();renderPanel();renderGrid();}
 renderPicker();renderPanel();renderGrid();renderRef();
