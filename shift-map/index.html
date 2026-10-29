@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Shift Map | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a working tool. Channel picker on the left, the selected channel's story on the right, the full grid and reference below. */
+:root{
+  --bg:#0a0a0a; --surface:#141414; --ink:#ECE8E1; --muted:#A39E95; --line:rgba(184,151,42,0.28);
+  --moss:#B8972A; --moss-soft:rgba(184,151,42,0.12); --amber:#D9A06B; --amber-soft:rgba(217,160,107,0.12); --off:#D98C7A; --off-soft:rgba(217,140,122,0.10);
+  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --body:"Montserrat","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6}
+.brand{font-family:var(--body);font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}.brand span{color:var(--moss)}
+h1{font-weight:400}
+.wrap{max-width:1120px;margin:0 auto;padding-block:32px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:36px}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;text-wrap:balance;line-height:1.15}
+h1{font-size:clamp(2rem,4.5vw,2.9rem)}
+h2{font-size:1.6rem}
+h3{font-size:1.2rem}
+p{margin:0}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:12px;max-width:68ch}
+header p{color:var(--muted);font-size:1.05rem}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.92rem;color:var(--muted)}
+.flow b{color:var(--ink);font-weight:600}
+.flow span.arrow{color:var(--moss)}
+/* explorer */
+.explorer{display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;align-items:start}
+.picker{display:flex;flex-direction:column;gap:6px}
+.picker button{font:inherit;text-align:left;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.picker button:hover{border-color:var(--moss)}
+.picker button[aria-pressed="true"]{background:var(--moss);color:#0a0a0a;border-color:var(--moss)}
+.picker button:focus-visible,.grid button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.badge{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:999px;background:var(--amber-soft);color:var(--amber);white-space:nowrap}
+.picker button[aria-pressed="true"] .badge{background:#0a0a0a;color:var(--moss)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.panel .carries{color:var(--muted)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.compare div{border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.compare .offc{background:var(--off-soft)}
+.compare .onc{background:var(--moss-soft)}
+.compare .offc .label{color:var(--off)}
+.compare .onc .label{color:var(--moss)}
+.row{display:flex;flex-direction:column;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.85rem;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip.exp.on{background:var(--moss-soft);border-color:var(--moss);color:var(--moss)}
+.chip.resp.on{background:var(--amber-soft);border-color:var(--amber);color:var(--amber)}
+.shift{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:8px}
+.shift p.big{font-family:var(--display);font-size:1.35rem;line-height:1.35}
+/* grid */
+.gridwrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:.9rem}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:center}
+th{font-weight:600;font-size:.82rem;color:var(--muted);vertical-align:bottom}
+th.ch,td.ch{text-align:left}
+td.ch button{font:inherit;font-weight:600;background:none;border:0;color:var(--ink);cursor:pointer;padding:0;text-align:left}
+tr.sel td{background:var(--moss-soft)}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--moss)}
+.resp-cell{color:var(--amber);font-weight:600;font-size:.82rem;text-align:left}
+tr:last-child td{border-bottom:0}
+/* reference */
+.ref{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{color:var(--moss)}
+.card.r h3{color:var(--amber)}
+.card .unmet{font-size:.88rem;color:var(--muted)}
+.card .unmet b{color:var(--ink);font-weight:600}
+section{display:flex;flex-direction:column;gap:14px}
+section > p{color:var(--muted);max-width:68ch}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:760px){.explorer{grid-template-columns:1fr}.picker{flex-direction:row;flex-wrap:wrap}.picker button{flex:1 1 140px}.compare{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){.panel{transition:border-color .2s}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a>
+    <span class="label">Biologically Aligned Parenting · for clients</span>
+    <h1>The Shift Map</h1>
+    <p>Your child's five innate expectations are what's required. Your nine channels are how they're provided. When a channel is off, the child's biology signals it through one of four instinctive responses. The shift begins with the channel you lean on most.</p>
+    <div class="flow"><b>Your channel</b><span class="arrow">→</span><b>Expectation met or unmet</b><span class="arrow">→</span><b>Your child settles or signals</b><span class="arrow">→</span><b>One shift to begin</b></div>
+  </header>
+
+  <div class="explorer">
+    <nav class="picker" id="picker" aria-label="Choose a channel"></nav>
+    <article class="panel" id="panel" aria-live="polite"></article>
+  </div>
+
+  <section>
+    <h2>All nine channels at a glance</h2>
+    <p>Each dot shows an expectation the channel mainly provides. Select a channel to explore it above.</p>
+    <div class="gridwrap"><table id="grid"></table></div>
+  </section>
+
+  <section>
+    <h2>The five innate expectations</h2>
+    <p>What every child's biology arrives expecting, felt rather than thought. When one goes unmet, the behaviour you see is the signal.</p>
+    <div class="ref" id="exps"></div>
+  </section>
+
+  <section>
+    <h2>The four instinctive responses</h2>
+    <p>How the body signals that what it expects isn't arriving. None of these is a decision made against you.</p>
+    <div class="ref" id="resps"></div>
+  </section>
+
+  <footer>A starting point, not a diagnosis. A child receives the whole person, not one channel at a time; the map shows where to begin, not a list to monitor. © 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+
+<script>
+const EXP=[
+ {id:"contact",name:"Contact, not separation",need:"Physical closeness and proximity to a settled adult.",unmet:"Clinginess, difficulty separating, following you room to room, or withdrawal."},
+ {id:"attention",name:"Immediate attention, not delayed",need:"Needs noticed and answered promptly.",unmet:"Escalating whining, interrupting until finally addressed."},
+ {id:"watching",name:"Watching, not watched",need:"Included in real life and activity, not made the constant centre of managed focus.",unmet:"Performing for attention, constant narration, “watch me”."},
+ {id:"led",name:"Led, not followed",need:"A confident, clearly-in-charge adult.",unmet:"Testing every instruction, ignoring boundaries again and again."},
+ {id:"trusted",name:"Trusted, not rescued",need:"Treated as capable and given real responsibility.",unmet:"Refusing to try, “do it for me”, giving up instantly."}
+];
+const RESP=[
+ {id:"fight",name:"Fight",does:"Seeks to control the situation.",looks:"Defiance, rudeness, backchat, anger."},
+ {id:"flight",name:"Flight",does:"Avoids it.",looks:"Storming off, screens, the bedroom door."},
+ {id:"freeze",name:"Freeze",does:"Withdraws until the danger seems to pass.",looks:"Going quiet, blank refusal, “I don't know”."},
+ {id:"fawn",name:"Fawn",does:"Appeases to restore peace.",looks:"People-pleasing, performing, over-compliance."}
+];
+const CH=[
+ {id:"hearing",name:"Hearing",start:true,carries:"What your child hears from you: explaining, repeating, lecturing, justifying.",off:"A stream of explanation and repetition. “How many times have I told you?”",on:"Said once, briefly, and then quiet.",exp:["led","trusted"],resp:["fight","freeze"],shows:"Testing every instruction, tuning you out.",shift:"Say it once, in fewer words. Then stop, and let your presence carry it. Explain only when your child genuinely asks why."},
+ {id:"voice",name:"Voice",carries:"How you sound: volume, pace and the amount of language aimed at your child.",off:"Unusually controlled, carrying pressure and repetition.",on:"Fewer words, with spaciousness in them.",exp:["led"],resp:["fight"],shows:"Pushing back, raised voices in return.",shift:"Notice the moment your voice tightens or speeds up, and let it slow before you go on."},
+ {id:"sight",name:"Sight",carries:"Where your eyes and attention really are.",off:"“I'm listening”, while your eyes and posture are elsewhere.",on:"Attention that is actually there.",exp:["attention"],resp:["fight"],shows:"Escalating whining, interrupting until noticed.",shift:"When your child comes to you, turn your eyes and body towards them first, even briefly, before anything else."},
+ {id:"face",name:"Facial expression",carries:"Tension, hesitation, warmth, withdrawal, urgency and availability.",off:"Reassuring words over a face that conveys worry.",on:"Warmth and availability that match the words.",exp:["trusted","attention"],resp:["freeze","fawn"],shows:"Giving up, “do it for me”.",shift:"When your child struggles, let your face show confidence in them rather than worry for them."},
+ {id:"touch",name:"Touch and proximity",carries:"Whether contact is available, imposed, withheld or uncertain.",off:"Contact that is imposed, withheld or uncertain.",on:"Contact and proximity that stay available.",exp:["contact"],resp:["flight","freeze"],shows:"Clinging, following you room to room, or withdrawing.",shift:"Stay near without making it a moment. Be in the same room, getting on with something of your own."},
+ {id:"smell",name:"Smell",carries:"Your state, taken in below anyone's awareness.",off:"Stress the child takes in below awareness, even behind a calm face.",on:"The familiar scent of a settled parent, close by.",exp:["contact"],resp:[],shows:"Unsettled and hard to soothe, for reasons nobody can name.",shift:"Settle yourself before you come close. Your body's state arrives before your words do."},
+ {id:"breath",name:"Breath",carries:"Activation, which shows in your breathing before you've noticed it yourself.",off:"Shallow, changing before the parent has noticed.",on:"A completed breath before doing more.",exp:["contact","led"],resp:["fight","flight"],shows:"Picking up your agitation and amplifying it.",shift:"Complete one full breath before you respond."},
+ {id:"movement",name:"Movement",carries:"The pace of your inner state, carried into the room.",off:"Standing at the door, checking the clock, visibly impatient.",on:"A settled pace carried into the room.",exp:["led","watching"],resp:["flight"],shows:"Rushing, resisting, storming off.",shift:"Slow your own pace on the way in. Arrive before you ask."},
+ {id:"rhythm",name:"Rhythm of the home",carries:"The wider pace of family life: transitions, delays, mistakes.",off:"Every transition rushed, every delay consequential.",on:"Room for people to arrive, participate and recover.",exp:["watching","trusted"],resp:["fawn","freeze"],shows:"Performing, “watch me”, or shutting down.",shift:"Build ten spare minutes into one daily transition, and let your child take a real part in it."}
+];
+const byId=(a,id)=>a.find(x=>x.id===id);
+let current="hearing";
+try{const s=localStorage.getItem("shiftmap-channel"); if(s&&byId(CH,s)) current=s;}catch(e){}
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+
+function renderPicker(){
+  const p=document.getElementById("picker");
+  p.innerHTML=CH.map(c=>`<button type="button" id="pick-${c.id}" data-id="${c.id}" aria-pressed="${c.id===current}">${esc(c.name)}${c.start?'<span class="badge">Most common start</span>':''}</button>`).join("");
+  p.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>select(b.dataset.id)));
+}
+function renderPanel(){
+  const c=byId(CH,current);
+  const expChips=EXP.map(e=>`<span class="chip exp ${c.exp.includes(e.id)?'on':''}">${esc(e.name)}</span>`).join("");
+  const respChips=RESP.map(r=>`<span class="chip resp ${c.resp.includes(r.id)?'on':''}">${r.name}</span>`).join("");
+  document.getElementById("panel").innerHTML=`
+    <div class="row"><span class="label">Channel</span><h2>${esc(c.name)}</h2><p class="carries">${esc(c.carries)}</p></div>
+    <div class="compare">
+      <div class="offc"><span class="label">When you're performing</span><p>${esc(c.off)}</p></div>
+      <div class="onc"><span class="label">When you're present</span><p>${esc(c.on)}</p></div>
+    </div>
+    <div class="row"><span class="label">Mainly provides</span><div class="chips">${expChips}</div></div>
+    <div class="row"><span class="label">When it's off, your child tends to show</span><p>${esc(c.shows)}</p><div class="chips">${respChips}</div>${c.resp.length?'':'<p class="carries">Below anyone’s awareness, so it rarely shows as one clear response.</p>'}</div>
+    <div class="shift"><span class="label">Your first shift</span><p class="big">${esc(c.shift)}</p></div>`;
+}
+function renderGrid(){
+  const head=`<thead><tr><th class="ch">Channel</th>${EXP.map(e=>`<th>${esc(e.name)}</th>`).join("")}<th class="ch">When off</th></tr></thead>`;
+  const body=CH.map(c=>`<tr class="${c.id===current?'sel':''}"><td class="ch"><button type="button" id="grid-${c.id}" data-id="${c.id}">${esc(c.name)}</button></td>${EXP.map(e=>`<td>${c.exp.includes(e.id)?'<span class="dot" role="img" aria-label="provides"></span>':''}</td>`).join("")}<td class="resp-cell">${c.resp.map(r=>byId(RESP,r).name).join(", ")||"Below awareness"}</td></tr>`).join("");
+  const g=document.getElementById("grid"); g.innerHTML=head+"<tbody>"+body+"</tbody>";
+  g.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{select(b.dataset.id);document.getElementById("panel").scrollIntoView({behavior:"smooth",block:"start"});}));
+}
+function renderRef(){
+  document.getElementById("exps").innerHTML=EXP.map(e=>`<div class="card"><h3>${esc(e.name)}</h3><p>${esc(e.need)}</p><p class="unmet"><b>When unmet:</b> ${esc(e.unmet)}</p></div>`).join("");
+  document.getElementById("resps").innerHTML=RESP.map(r=>`<div class="card r"><h3>${r.name}</h3><p>${esc(r.does)}</p><p class="unmet"><b>Often looks like:</b> ${esc(r.looks)}</p></div>`).join("");
+}
+function select(id){current=id;try{localStorage.setItem("shiftmap-channel",id)}catch(e){};renderPicker();renderPanel();renderGrid();}
+renderPicker();renderPanel();renderGrid();renderRef();
+</script>
+
+</body>
+</html>
