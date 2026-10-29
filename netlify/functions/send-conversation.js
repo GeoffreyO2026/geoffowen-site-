@@ -153,6 +153,20 @@ async function addToMailchimp(email, category, note, summary) {
   }
 }
 
+async function addToRevRepeat(email, category, note, summary) {
+  const url = process.env.REVREPEAT_WEBHOOK_URL;
+  if (!url) throw new Error('REVREPEAT_WEBHOOK_URL is not set');
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, category, note, summary, source: 'BAP Agent' })
+  });
+  if (!response.ok) {
+    const errText = await response.text();
+    throw new Error('RevRepeat webhook error: ' + errText);
+  }
+}
+
 exports.handler = async function(event, context) {
   if (event.httpMethod === 'OPTIONS') {
     return {
@@ -185,7 +199,11 @@ exports.handler = async function(event, context) {
     const transcriptText = formatConversationForEmail(messages);
 
     await sendViaResend(email, note, transcriptText);
-    await addToMailchimp(email, category, note, summary);
+    try {
+      await addToRevRepeat(email, category, note, summary);
+    } catch (crmErr) {
+      console.error('RevRepeat error:', crmErr);
+    }
 
     return {
       statusCode: 200,
