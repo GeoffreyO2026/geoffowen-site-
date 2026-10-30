@@ -55,6 +55,9 @@ header p{color:var(--muted);font-size:1.05rem}
 .chip{font-size:.85rem;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
 .chip.exp.on{background:var(--moss-soft);border-color:var(--moss);color:var(--moss)}
 .chip.resp.on{background:var(--amber-soft);border-color:var(--amber);color:var(--amber)}
+button.chip{font-family:inherit;cursor:pointer}
+button.chip:hover{filter:brightness(1.15);text-decoration:underline}
+button.chip:focus-visible{outline:3px solid currentColor;outline-offset:2px}
 .shift{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:8px}
 .shift p.big{font-family:var(--display);font-size:1.35rem;line-height:1.35}
 /* grid */
@@ -87,6 +90,9 @@ section > p{color:var(--muted);max-width:68ch}
 .card.r > button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 .card.r .more{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
 .card.r.open{grid-column:1/-1;border-color:var(--amber)}
+.card.e h3,.card.e .more{color:var(--moss)}
+.card.e.open{border-color:var(--moss)}
+.card.e > button:focus-visible{outline-color:var(--moss)}
 .depth{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;padding:0 16px 18px}
 .depth div{background:var(--amber-soft);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px}
 .depth .label{color:var(--amber)}
@@ -128,7 +134,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
 
   <section>
     <h2>The five innate expectations</h2>
-    <p>What every child's biology arrives expecting, felt rather than thought. When one goes unmet, the behaviour you see is the signal.</p>
+    <p>What every child's biology arrives expecting, felt rather than thought. When one goes unmet, the behaviour you see is the signal. Click any expectation to go deeper.</p>
     <div class="ref" id="exps"></div>
   </section>
 
@@ -143,11 +149,31 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
 
 <script>
 const EXP=[
- {id:"contact",name:"Contact, not separation",need:"Physical closeness and proximity to a settled adult.",unmet:"Clinginess, difficulty separating, following you room to room, or withdrawal."},
- {id:"attention",name:"Immediate attention, not delayed",need:"Needs noticed and answered promptly.",unmet:"Escalating whining, interrupting until finally addressed."},
- {id:"watching",name:"Watching, not watched",need:"Included in real life and activity, not made the constant centre of managed focus.",unmet:"Performing for attention, constant narration, “watch me”."},
- {id:"led",name:"Led, not followed",need:"A confident, clearly-in-charge adult.",unmet:"Testing every instruction, ignoring boundaries again and again."},
- {id:"trusted",name:"Trusted, not rescued",need:"Treated as capable and given real responsibility.",unmet:"Refusing to try, “do it for me”, giving up instantly."}
+ {id:"contact",name:"Contact, not separation",need:"Physical closeness and proximity to a settled adult.",unmet:"Clinginess, difficulty separating, following you room to room, or withdrawal.",
+  origin:"For almost all of human history, a baby spent its first months in arms: carried, held, sleeping beside its mother and moving through the day with the adults around it. Jean Liedloff saw this in the Yequana, and it's what a newborn's body still expects. A cot in another room or long days apart doesn't register as independence. It registers as something missing.",
+  grows:"Contact changes shape as a child grows, but it never goes away. At two it's a lap. At nine it's you in the same room while they play. At fifteen it's a parent who is reliably around, in the kitchen or in the car, not hovering but simply there.",
+  home:"You're on your laptop all evening in the next room. Your child keeps appearing at the door with small questions, then knocks a drink over. It isn't clumsiness and it isn't neediness. Their body is closing the distance.",
+  meets:"A settled adult nearby, asking nothing. Being alongside rather than face to face. Contact is a presence, not an activity."},
+ {id:"attention",name:"Immediate attention, not delayed",need:"Needs noticed and answered promptly.",unmet:"Escalating whining, interrupting until finally addressed.",
+  origin:"When a baby signals, its body expects an answer straight away. Not because it's spoiled, but because a prompt answer is what tells it the world is safe. Delay teaches the body one thing: signal louder.",
+  grows:"For an older child it means a real response in the moment it's asked for: a look, a word, a simple “yes, I see it”. Not endless attention. Attention that arrives when it's needed. And then the child gets on with things.",
+  home:"“Mum. Mum. Mum.” You say “in a minute” four times. By the fifth it's a whine and by the sixth a shout. The volume didn't come from nowhere. The waiting taught it.",
+  meets:"Turning towards your child fully, even briefly, when they reach for you. A few seconds given now is what makes the twenty minutes of escalation unnecessary."},
+ {id:"watching",name:"Watching, not watched",need:"Included in real life and activity, not made the constant centre of managed focus.",unmet:"Performing for attention, constant narration, “watch me”.",
+  origin:"Children learn by watching adults live real lives: cooking, working, talking, mending. In the continuum, a baby is carried through all of it, at the edge of the action, taking it in. The adult is busy and the child watches. It's never the centre of attention, and it doesn't need to be.",
+  grows:"Modern parenting turns this upside down. The child becomes the project: observed, praised, entertained and assessed. And a child who is constantly watched has nothing real to watch. So they start to perform.",
+  home:"You sit on the floor to play and comment on every brick. Your child says “watch me” again and again, and nothing holds them for long. Bring them into making dinner instead, peeling, stirring, passing things, and they settle.",
+  meets:"Real life, with your child included in it. You get on with what you're doing and they're part of it, at their own pace. You lead the day. They take part in it."},
+ {id:"led",name:"Led, not followed",need:"A confident, clearly-in-charge adult.",unmet:"Testing every instruction, ignoring boundaries again and again.",
+  origin:"A child arrives expecting to join a group that is already going somewhere, led by adults who know what they're doing. This is benign authority: calm, clear and kind. Not harsh. Not pleading. Simply in charge.",
+  grows:"When every decision is put to the child, or the adult negotiates, persuades and explains, the child's body reads that nobody is leading. So it tests, again and again, to find out who is. The testing isn't defiance. It's a search for the edge.",
+  home:"“Shall we get ready for bed now, darling? OK?” The question invites a no, and it gets one. “Bed now,” said calmly as you're already walking to the stairs, gets a child following.",
+  meets:"Deciding, then acting. Few words, a steady pace and no need for your child's agreement. Leadership is felt in how you move, not in what you say."},
+ {id:"trusted",name:"Trusted, not rescued",need:"Treated as capable and given real responsibility.",unmet:"Refusing to try, “do it for me”, giving up instantly.",
+  origin:"Every child is built to become capable. In The Continuum Concept, Liedloff describes small children around fires and sharp tools, trusted to take care of themselves, and taking it. A child's competence grows to meet the trust it's given.",
+  grows:"Rescuing, doing it for them, warning, reminding and finishing the job, tells a child's body it isn't capable. And before long it agrees. Worthy means capable and competent, and a child can only feel worthy if they're allowed to be.",
+  home:"Homework. You hover, correct and all but hand over the answer. Your child says “I can't” before they've tried. Step back, say “I think you've got this” and leave the room, and very often the effort comes back.",
+  meets:"Real responsibility, real tasks and room to struggle a little. Your confidence in them, shown rather than said, becomes their confidence in themselves."}
 ];
 const RESP=[
  {id:"fight",name:"Fight",does:"Seeks to control the situation.",looks:"Defiance, rudeness, backchat, anger.",what:"Your child's body has registered that something it expects isn't there, and it moves to take control of the situation. This isn't defiance by choice. It's biology trying to restore what's missing, usually leadership or trust.",animal:"A cornered cat arches and hisses. It isn't aggressive by nature. It's trying to control a moment that feels unsafe. Give it room and a settled presence and the hissing stops.",home:"You ask for shoes on for the third time, and your voice is tighter each time. Your child kicks the shoe across the hall and shouts “You're so annoying.” The words are aimed at you. The cause isn't."},
@@ -178,8 +204,8 @@ function renderPicker(){
 }
 function renderPanel(){
   const c=byId(CH,current);
-  const expChips=EXP.map(e=>`<span class="chip exp ${c.exp.includes(e.id)?'on':''}">${esc(e.name)}</span>`).join("");
-  const respChips=RESP.map(r=>`<span class="chip resp ${c.resp.includes(r.id)?'on':''}">${r.name}</span>`).join("");
+  const expChips=EXP.map(e=>c.exp.includes(e.id)?`<button type="button" class="chip exp on" data-go="exp" data-id="${e.id}" title="Go deeper">${esc(e.name)}</button>`:`<span class="chip exp">${esc(e.name)}</span>`).join("");
+  const respChips=RESP.map(r=>c.resp.includes(r.id)?`<button type="button" class="chip resp on" data-go="resp" data-id="${r.id}" title="What’s going on">${r.name}</button>`:`<span class="chip resp">${r.name}</span>`).join("");
   document.getElementById("panel").innerHTML=`
     <div class="row"><span class="label">Channel</span><h2>${esc(c.name)}</h2><p class="carries">${esc(c.carries)}</p></div>
     <div class="compare">
@@ -197,8 +223,14 @@ function renderGrid(){
   g.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{select(b.dataset.id);document.getElementById("panel").scrollIntoView({behavior:"smooth",block:"start"});}));
 }
 function renderRef(){
-  document.getElementById("exps").innerHTML=EXP.map(e=>`<div class="card"><h3>${esc(e.name)}</h3><p>${esc(e.need)}</p><p class="unmet"><b>When unmet:</b> ${esc(e.unmet)}</p></div>`).join("");
+  renderExps();
   renderResps();
+}
+let openExp=null;
+function renderExps(){
+  const el=document.getElementById("exps");
+  el.innerHTML=EXP.map(e=>{const o=e.id===openExp;const chans=CH.filter(c=>c.exp.includes(e.id)).map(c=>c.name).join(", ");return `<div class="card r e${o?' open':''}"><button type="button" id="exp-${e.id}" data-id="${e.id}" aria-expanded="${o}"><h3>${esc(e.name)}</h3><p>${esc(e.need)}</p><p class="unmet"><b>When unmet:</b> ${esc(e.unmet)}</p><span class="more">${o?'Close':'Go deeper'}</span></button>${o?`<div class="depth"><div><span class="label">Where it comes from</span><p>${esc(e.origin)}</p></div><div><span class="label">As your child grows</span><p>${esc(e.grows)}</p></div><div><span class="label">At home</span><p>${esc(e.home)}</p></div><div><span class="label">What meets it</span><p>${esc(e.meets)}</p>${chans?`<p class="unmet"><b>Channels that provide it:</b> ${esc(chans)}</p>`:''}</div></div>`:''}</div>`;}).join("");
+  el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{openExp=openExp===b.dataset.id?null:b.dataset.id;renderExps();document.getElementById("exp-"+b.dataset.id).focus();}));
 }
 let openResp=null;
 function renderResps(){
@@ -207,6 +239,9 @@ function renderResps(){
   el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{openResp=openResp===b.dataset.id?null:b.dataset.id;renderResps();document.getElementById("resp-"+b.dataset.id).focus();}));
 }
 function select(id){current=id;try{localStorage.setItem("shiftmap-channel",id)}catch(e){};renderPicker();renderPanel();renderGrid();}
+document.getElementById("panel").addEventListener("click",ev=>{const b=ev.target.closest("button[data-go]");if(!b)return;const id=b.dataset.id;
+ if(b.dataset.go==="exp"){openExp=id;renderExps();}else{openResp=id;renderResps();}
+ const t=document.getElementById(b.dataset.go+"-"+id);t.closest(".card").scrollIntoView({behavior:"smooth",block:"start"});t.focus({preventScroll:true});});
 renderPicker();renderPanel();renderGrid();renderRef();
 </script>
 
