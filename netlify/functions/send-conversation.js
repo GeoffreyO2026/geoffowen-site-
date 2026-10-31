@@ -3,7 +3,8 @@ const CATEGORIES = [
   "Specific behaviour and not listening",
   "Diagnosis and labels",
   "Teens and older children",
-  "Founders and high achievers"
+  "Founders and high achievers",
+  "Anger, defiance and rudeness"
 ];
 
 function getMailchimpDatacenter(apiKey) {
