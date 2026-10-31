@@ -61,7 +61,11 @@ Respond with ONLY this JSON structure: {"category": "...", "note": "...", "summa
   const data = await response.json();
   const text = data.content[0].text.trim();
   const cleaned = text.replace(/^```json\s*|\s*```$/g, '');
-  return JSON.parse(cleaned);
+  const result = JSON.parse(cleaned);
+  const noDashes = t => (t || '').replace(/\s*[\u2013\u2014]\s*/g, ', ');
+  result.note = noDashes(result.note);
+  result.summary = noDashes(result.summary);
+  return result;
 }
 
 function eveningLine() {
@@ -69,7 +73,7 @@ function eveningLine() {
   if (Date.now() < Date.UTC(2026, 10, 13)) {
     return `If you'd like to go deeper, I'm running an online evening, Behind the Anger, on Thursday 12 November at 8pm. It's 75 minutes, cameras off, and I'll show what a child's anger is really asking for: ${link}`;
   }
-  return `If you'd like to go deeper, my evening Behind the Anger is available to watch whenever suits you: ${link}`;
+  return `If you'd like to go deeper, I run an online evening, Behind the Anger, every two weeks. It's 75 minutes, cameras off, and I'll show what a child's anger is really asking for: ${link}`;
 }
 
 async function sendViaResend(email, note, transcriptText) {
