@@ -200,6 +200,25 @@ let autoFinishTriggered = false;
 const STORAGE_KEY = 'bap_ask_conversation';
 const STORAGE_MAX_AGE_MS = 30 * 60 * 1000;
 const GATE_PENDING_KEY = 'bap_gate_pending';
+const MEMBER_KEY = 'bap_member_access';
+const MEMBER_CODE = 'QLfDTtBaNyx5';
+let isMember = false;
+try {
+  const accessParam = new URLSearchParams(window.location.search).get('access');
+  if (accessParam === MEMBER_CODE) {
+    localStorage.setItem(MEMBER_KEY, MEMBER_CODE);
+    localStorage.removeItem(GATE_PENDING_KEY);
+    history.replaceState(null, '', window.location.pathname);
+  }
+  isMember = localStorage.getItem(MEMBER_KEY) === MEMBER_CODE;
+} catch (e) {}
+if (isMember) {
+  const memberSubtext = document.querySelector('.hero-subtext');
+  if (memberSubtext) memberSubtext.textContent = 'Members\u2019 access: unlimited conversations, no email needed.';
+  const memberStyle = document.createElement('style');
+  memberStyle.textContent = '.finish-box, .app-main.started .finish-box { display: none !important; }';
+  document.head.appendChild(memberStyle);
+}
 
 function saveConversation() {
   try {
@@ -260,6 +279,7 @@ function handleKey(e) {
 }
 
 function openFinishForm() {
+  if (isMember) return;
   autoFinishTriggered = true;
   try { localStorage.setItem(GATE_PENDING_KEY, 'true'); } catch (e) {}
   document.getElementById('finishPromptBtn').style.display = 'none';
@@ -545,7 +565,7 @@ async function sendMessage() {
         const assistantReplyCount = conversationHistory.filter(function(m) { return m.role === 'assistant'; }).length;
         let gateThreshold = 3;
         try { if (localStorage.getItem(GATE_PENDING_KEY) === 'true') gateThreshold = 1; } catch (e) {}
-        if (assistantReplyCount === gateThreshold && !autoFinishTriggered) {
+        if (!isMember && assistantReplyCount === gateThreshold && !autoFinishTriggered) {
           openFinishForm();
         }
       } else {
