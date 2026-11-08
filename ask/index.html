@@ -563,9 +563,8 @@ async function sendMessage() {
         saveConversation();
 
         const assistantReplyCount = conversationHistory.filter(function(m) { return m.role === 'assistant'; }).length;
-        let gateThreshold = 3;
-        try { if (localStorage.getItem(GATE_PENDING_KEY) === 'true') gateThreshold = 1; } catch (e) {}
-        if (!isMember && assistantReplyCount === gateThreshold && !autoFinishTriggered) {
+        const gateThreshold = 3;
+        if (!isMember && assistantReplyCount >= gateThreshold && !autoFinishTriggered) {
           openFinishForm();
         }
       } else {
