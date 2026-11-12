@@ -217,6 +217,7 @@ const RESP=[
     "name": "Fight",
     "does": "Pushing back against pressure.",
     "what": "A protective response can come through as protest, anger or a sharper voice.",
+    "animal": "A cornered cat arches and hisses. It isn't aggressive by nature. It's trying to control a moment that feels unsafe. Give it room and a settled presence and the hissing stops.",
     "home": "Think of a moment when a request turns into an argument. What was happening around the two of you before voices changed?"
   },
   {
@@ -224,6 +225,7 @@ const RESP=[
     "name": "Flight",
     "does": "Moving away from pressure.",
     "what": "Distance can be a way of finding relief when an exchange feels difficult.",
+    "animal": "A deer bolts at the snap of a twig. It doesn't weigh it up. The body moves first and thinks later.",
     "home": "Think of a conversation that ended with your child leaving the room. What was the pace of the exchange? How much room was there to pause and come back to it?"
   },
   {
@@ -231,6 +233,7 @@ const RESP=[
     "name": "Freeze",
     "does": "Becoming still or quiet under pressure.",
     "what": "A child may go quiet or find it hard to speak or act when a moment feels overwhelming.",
+    "animal": "A rabbit in an open field goes completely still when a hawk passes overhead. Stillness is its best protection.",
     "home": "Think of a moment when you asked a question and there was a long silence. What did the silence bring up in you? How much time was there for an answer?"
   },
   {
@@ -238,6 +241,7 @@ const RESP=[
     "name": "Fawn",
     "does": "Trying to ease tension by pleasing others.",
     "what": "Agreement or helpfulness can sometimes be a way of easing tension. Both can also come from a genuine wish to take part.",
+    "animal": "A young wolf lowers itself and rolls onto its back before the pack leader, to keep the peace and stay safe within the group.",
     "home": "Think of a moment when your child agreed readily while you were tense. How much room was there for them to disagree, ask for time or offer a different view?"
   }
 ];
@@ -292,7 +296,7 @@ function renderExps(){
 let openResp=null;
 function renderResps(){
   const el=document.getElementById("resps");
-  el.innerHTML=RESP.map(r=>{const o=r.id===openResp;return `<div class="card r${o?' open':''}"><button type="button" id="resp-${r.id}" data-id="${r.id}" aria-expanded="${o}"><h3>${r.name}</h3><p>${esc(r.does)}</p><span class="more">${o?'Close':'What’s going on'}</span></button>${o?`<div class="depth"><div><span class="label">What’s going on</span><p>${esc(r.what)}</p></div><div><span class="label">A moment to consider</span><p>${esc(r.home)}</p></div></div>`:''}</div>`;}).join("");
+  el.innerHTML=RESP.map(r=>{const o=r.id===openResp;return `<div class="card r${o?' open':''}"><button type="button" id="resp-${r.id}" data-id="${r.id}" aria-expanded="${o}"><h3>${r.name}</h3><p>${esc(r.does)}</p><span class="more">${o?'Close':'What’s going on'}</span></button>${o?`<div class="depth"><div><span class="label">What’s going on</span><p>${esc(r.what)}</p></div><div><span class="label">Animal example</span><p>${esc(r.animal)}</p></div><div><span class="label">A moment to consider</span><p>${esc(r.home)}</p></div></div>`:''}</div>`;}).join("");
   el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{openResp=openResp===b.dataset.id?null:b.dataset.id;renderResps();document.getElementById("resp-"+b.dataset.id).focus();}));
 }
 function select(id){current=id;try{localStorage.setItem("shiftmap-preview-selection",id)}catch(e){};renderPicker();renderPanel();renderGrid();}
