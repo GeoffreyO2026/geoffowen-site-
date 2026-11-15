@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Where Your Eyes Go | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/shift-map/">The Shift Map</a> &nbsp;/&nbsp; <a href="/presence-signals/">Presence signals</a></div></div>
+<span class="label">Presence signal &middot; Where our eyes go</span>
+<h1>Where Your Eyes Go</h1>
+<p class="sub">Where our eyes go, and what your child reads in them</p>
+<h2 id="im-listening">“I’m listening”</h2>
+<p>Your child knows where your eyes are. They always have.</p>
+<p>Picture it. Your child comes to you with something that matters to
+them. You’re at the laptop, or the phone is in your hand, or you’re
+halfway through the washing up. You say “I’m listening” or “What?” and
+you carry on. And you probably are listening, in a way. But your eyes
+are elsewhere, your body is turned away and your attention is somewhere
+else entirely. And your child reads that far more clearly than they hear
+the words.</p>
+<p>Where our eyes go is one of the nine presence signals I talk about in
+the Shift Map: nine presence signals, five innate expectations, four
+instinctive responses. It carries where your eyes and your attention
+actually are. When it’s off, a child tends to escalate: whining,
+interrupting, getting louder, until finally they are noticed. When it’s
+on, something quite simple happens. The child feels met, and they
+settle.</p>
+<p>This piece looks at what the research says about this presence
+signal, and why it might be one of the easiest places to begin.</p>
+<h2 id="what-the-eyes-carry">What the eyes carry</h2>
+<p>In 1978 Edward Tronick and his colleagues ran one of the best known
+experiments in child development. A mother played face to face with her
+baby, smiling and responding. Then, on a signal, she kept looking at her
+baby but let her face go completely still and unresponsive. The babies
+tried everything to bring her back: smiling, reaching, calling out. When
+nothing worked, they became distressed, looked away and withdrew. At the
+time it was still widely assumed that babies didn’t really interact with
+their mothers in any meaningful way. Tronick showed they were doing it
+all along.</p>
+<p>And it isn’t only babies. Tronick’s team later found that two and a
+half year olds showed the same pattern: more distress, looking away,
+trying to get closer to the mother and asking for her attention. The
+upset also carried over once the mother came back, with some children
+moving away from her. The researchers suggested the children were trying
+to make sense of something that simply didn’t fit what they expected
+from her.</p>
+<p>In the first piece in this series we met the Cambridge study by
+Victoria Leong and Sam Wass. When an adult looked directly at a baby,
+the adult’s brain activity had a stronger influence on the baby’s brain,
+drawing the two into a shared state built for communication and
+learning. Eyes aren’t decoration in a relationship. They are one of the
+main ways two nervous systems find each other.</p>
+<h2 id="the-phone-in-the-room">The phone in the room</h2>
+<p>The still face used to be something you set up in a laboratory. Now
+most of us carry one in our pocket.</p>
+<p>In 2013 Jenny Radesky and her colleagues at Boston Medical Center
+quietly sat near families eating in fast food restaurants and wrote down
+what they saw. Of the 55 adults eating with young children, 40 used a
+phone or device during the meal, and almost a third used one throughout.
+The adults who were most absorbed tended to have more negative or less
+engaged interactions with the children, and sometimes responded harshly
+when a child tried to get their attention.</p>
+<p>Researchers at Brigham Young University then turned the still face
+into a phone experiment. Instead of going blank, the parent looked down
+at a phone. The babies reacted in much the same way as in Tronick’s
+original study: more upset, fewer smiles, more self-soothing and more
+attempts to turn away. A 2025 study of mothers and young children found
+something similar, with repeated phone use affecting how well children
+managed their feelings and the quality of the time together.</p>
+<p>Brandon McDaniel and Jenny Radesky gave all this a name:
+technoference, the everyday interruptions to time with your child caused
+by devices. In families with children of around three, they found that
+even small amounts were linked with more behaviour problems:
+frustration, hyperactivity, whining, sulking and tantrums. And they
+found it ran both ways. Parents who were stressed by a child’s difficult
+behaviour tended to retreat into their phones, and the retreat tended to
+make the behaviour worse. These are associations, and the studies can’t
+prove cause and effect. But the pattern is consistent, and most parents
+will recognise it.</p>
+<p>And please hear this without blame. A phone can be a refuge for a
+tired parent, a moment of escape at the end of a long day. That makes
+complete sense. It’s simply worth knowing what it may cost.</p>
+<h2 id="why-your-child-gets-louder">Why your child gets louder</h2>
+<p>Every child comes into the world expecting immediate attention, not
+delayed. Not constant attention, and not being watched all the time.
+Simply that when they turn to you, you turn to them.</p>
+<p>When that doesn’t happen, the biology does what it was built to do.
+It signals louder. Think of the shyest person you know, abandoned on a
+desert island, who suddenly sees a ship on the horizon. They’ll scream
+and wave and jump up and down, not because they’ve become a different
+person, but because everything in them is working to be seen. The
+whining, the interrupting, the “Mum, Mum, Mum, MUM” is often exactly
+that. It isn’t manipulation. It’s a flare going up.</p>
+<p>And here’s the part that can feel unfair. Once the flare goes up, the
+behaviour tends to draw the very attention it was asking for, usually in
+the form of irritation. So the child learns that getting louder works,
+and the parent learns that their child is “attention seeking”. Both are
+caught on a roundabout neither chose.</p>
+<p>The Shift Map points to a simpler way off. When your child comes to
+you, turn your eyes and your body towards them first, even briefly,
+before anything else. A few seconds of real attention, given early,
+often does what ten minutes of escalation never can.</p>
+<h2 id="what-this-means-in-your-home">What this means in your home</h2>
+<p>Most of us believe we are paying attention when we’re not. We’re
+listening with half an ear, eyes on the screen, mind on the next thing.
+And we tell ourselves it’s enough, because the words are going in. But
+your child isn’t checking whether the words went in. They’re checking
+whether you turned towards them.</p>
+<p>This isn’t about putting your phone in a drawer forever, or giving
+your child your undivided attention every waking minute. Nobody can do
+that, and it isn’t what children need anyway. A child expects to be part
+of your life, watching you get on with things, not the constant centre
+of it. What they need is that when they reach for you, you’re actually
+there, even for a moment.</p>
+<p>So I wonder if it might be worth noticing, over the next few days,
+what your eyes do when your child comes to you. Do they come up from the
+screen first, or do your words come first? Do you turn your body, or
+just your head? Not to judge yourself. Just to see. In my experience,
+this is often the quickest of all the presence signals to shift, and
+children tend to respond to it almost straight away.</p>
+<p>If by any chance you’d like to explore this further, bring it to the
+monthly Q&amp;A. I’d really like to hear what you notice.</p>
+<section class="quiz"><span class="label">A moment to listen to yourself</span><h2>Where are my eyes?</h2><p>This isn&#x27;t a test and there are no right answers. It&#x27;s a quiet moment to listen to yourself. Read each line and tick the box that feels most true for you at the moment. Try not to tick the one you think you should.</p><form id="quiz"><div class="q" data-rev="0"><p>1. When my child talks to me, I answer before I look up.</p><div class="opts" role="radiogroup" aria-label="Line 1"><label><input type="radio" name="q1" value="often"><span>Often</span></label><label><input type="radio" name="q1" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q1" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>2. My phone is in my hand or on the table during meals or play.</p><div class="opts" role="radiogroup" aria-label="Line 2"><label><input type="radio" name="q2" value="often"><span>Often</span></label><label><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>3. I say &quot;I&#x27;m listening&quot; while I carry on with what I&#x27;m doing.</p><div class="opts" role="radiogroup" aria-label="Line 3"><label><input type="radio" name="q3" value="often"><span>Often</span></label><label><input type="radio" name="q3" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q3" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>4. My child has to ask several times, or get louder, before I respond.</p><div class="opts" role="radiogroup" aria-label="Line 4"><label><input type="radio" name="q4" value="often"><span>Often</span></label><label><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>5. I reach for my phone when my child&#x27;s behaviour is getting to me.</p><div class="opts" role="radiogroup" aria-label="Line 5"><label><input type="radio" name="q5" value="often"><span>Often</span></label><label><input type="radio" name="q5" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q5" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>6. When my child comes to me, I turn my eyes and body towards them first.</p><div class="opts" role="radiogroup" aria-label="Line 6"><label><input type="radio" name="q6" value="often"><span>Often</span></label><label><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>7. There are times each day when my phone is out of reach and out of sight.</p><div class="opts" role="radiogroup" aria-label="Line 7"><label><input type="radio" name="q7" value="often"><span>Often</span></label><label><input type="radio" name="q7" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q7" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>8. I notice the moment my child wants to be seen, before they have to escalate.</p><div class="opts" role="radiogroup" aria-label="Line 8"><label><input type="radio" name="q8" value="often"><span>Often</span></label><label><input type="radio" name="q8" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q8" value="rarely"><span>Rarely</span></label></div></div></form><div class="result" id="result" aria-live="polite"></div><p style="margin-top:18px"><em>What did you notice about yourself as you answered?</em></p></section>
+<div class="back"><a class="btn solid" href="/shift-map/#signal-sight">Explore this signal in the Shift Map</a><a class="btn" href="/presence-signals/">All presence signals</a></div><h2>The research behind this</h2><div class="refs"><ul>
+<li>Tronick, E., Als, H., Adamson, L., Wise, S. and Brazelton, T. B. (1978). The infant’s response to entrapment between contradictory messages in face-to-face interaction. <em>Journal of the American Academy of Child Psychiatry</em>, 17(1).</li>
+<li>Weinberg, M. K., Beeghly, M., Olson, K. L. and Tronick, E. A still-face paradigm for young children: 2½ year-olds’ reactions to maternal unavailability during the still-face.</li>
+<li>Mesman, J., van IJzendoorn, M. H. and Bakermans-Kranenburg, M. J. (2009). The many faces of the Still-Face Paradigm: A review and meta-analysis. <em>Developmental Review</em>, 29(2), 120–162.</li>
+<li>Leong, V. et al. (2017). Speaker gaze increases information coupling between infant and adult brains. <em>PNAS</em>.</li>
+<li>Radesky, J. S. et al. (2014). Patterns of mobile device use by caregivers and children during meals in fast food restaurants. <em>Pediatrics</em>, 133(4), e843–e849.</li>
+<li>Stockdale, L. A., Porter, C. L., Coyne, S. M. et al. (2020). Infants’ response to a mobile phone modified still-face paradigm: Links to maternal behaviors and beliefs regarding technoference. <em>Infancy</em>, 25(5), 571–592.</li>
+<li>“Just a second, mommy’s here”: the impact of mothers’ smartphone use on children’s affect regulation and the quality of mother–child interactions (2025). <em>Frontiers in Psychology</em>.</li>
+<li>McDaniel, B. T. and Radesky, J. S. (2018). Technoference: Parent distraction with technology and associations with child behavior problems. <em>Child Development</em>.</li>
+<li>McDaniel, B. T. and Radesky, J. S. (2018). Longitudinal associations between parent technology use and child behaviour. <em>Pediatric Research</em>.</li>
+<li>McDaniel, B. T. Technoference: Parent mobile device use and implications for children and parent–child relationships. Zero to Three.</li>
+</ul>
+</div><footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+<script>
+(function(){
+  var READ=[["0 to 5","Your child probably feels seen much of the time. It might be interesting to notice the moments when that slips, and what is usually pulling your eyes away."],["6 to 10","Like most parents today, your attention is probably split more often than you'd like. I wonder which line above caught you. That one might be worth carrying with you this week."],["11 to 16","It may be that your child is often having to send up a flare to be seen. Please don't take this as blame. Devices are designed to hold our eyes. It might simply be the place where your noticing begins."]];
+  var form=document.getElementById('quiz'); if(!form) return;
+  function update(){
+    var total=0, answered=0, n=form.querySelectorAll('.q').length;
+    form.querySelectorAll('.q').forEach(function(q){
+      var c=q.querySelector('input:checked'); if(!c) return; answered++;
+      var rev=q.dataset.rev==='1', v=c.value;
+      if(!rev){ total+= v==='often'?2:(v==='sometimes'?1:0); }
+      else { total+= v==='rarely'?2:(v==='sometimes'?1:0); }
+    });
+    var out=document.getElementById('result');
+    if(answered<n){ out.innerHTML='Answered '+answered+' of '+n+'. Your reflection appears when you have answered every line.'; return; }
+    var r= total<=5?READ[0]:(total<=10?READ[1]:READ[2]);
+    out.innerHTML='<b>Your total: '+total+' ('+r[0]+')</b><br>'+r[1];
+  }
+  form.addEventListener('change',update); update();
+})();
+</script>
+</body>
+</html>
