@@ -253,7 +253,7 @@ const RESP=[
 const CH=[
  {"id":"hearing","name":"What we say","example":"A request about shoes becomes a reminder about yesterday, followed by an explanation of why you’re late. What are you conveying by the time you finish?","exp":["led","trusted"],"resp":["fight","freeze"]},
  {"id":"voice","name":"How we sound","example":"As you repeat yourself, your voice gets quicker and tighter. What has changed in the sound of what you’re saying?","exp":["led"],"resp":["fight"]},
- {"id":"sight","name":"Where our attention goes","example":"You’re listening to your child while finishing something on your phone. Where are your eyes, your body and your attention?","exp":["attention"],"resp":["fight"]},
+ {"id":"sight","name":"Where our eyes go","example":"You’re listening to your child while finishing something on your phone. Where are your eyes, your body and your attention?","exp":["attention"],"resp":["fight"]},
  {"id":"face","name":"What our face conveys","example":"A drink spills. You mean to reassure your child, and you notice your face tighten. What might your expression convey alongside your words?","exp":["trusted","attention"],"resp":["freeze","fawn"]},
  {"id":"touch","name":"Touch and proximity","example":"You reach for a hug while sitting beside your child. What do you notice about the space between you and what you’re bringing to that moment?","exp":["contact"],"resp":["flight","freeze"]},
  {"id":"smell","name":"Smell","example":"Stress can change the scent our bodies give off. That scent can be subtle enough to go unnoticed. Imagine you’re sitting close to your child after a difficult day. You’re making an effort to sound calm, and you can still feel the tension in your body. What might your body be conveying in that moment, including through scent?","exp":["contact"],"resp":[]},
@@ -282,7 +282,7 @@ function renderPanel(){
     <div class="row"><span class="label">Explore instinctive responses</span><div class="chips">${respChips}</div></div>`;
 }
 function renderGrid(){
-  const observations = ["The words you use", "Tone, pace and volume", "Where your attention goes", "Tension and warmth in your expression", "How closeness is offered", "Scent you may barely notice", "What your breathing broadcasts", "How your movements affect the ease of the room", "How time and space are shared across the day"];
+  const observations = ["The words you use", "Tone, pace and volume", "Where your eyes go", "Tension and warmth in your expression", "How closeness is offered", "Scent you may barely notice", "What your breathing broadcasts", "How your movements affect the ease of the room", "How time and space are shared across the day"];
   const head=`<thead><tr><th class="ch">Way of relating</th>${EXP.map(e=>`<th>${esc(e.name)}</th>`).join("")}<th scope="col">What to notice</th></tr></thead>`;
   const body=CH.map((c,index)=>`<tr class="${c.id===current?'sel':''}"><td class="ch"><button type="button" id="grid-${c.id}" data-id="${c.id}">${esc(c.name)}</button></td>${EXP.map(e=>`<td>${c.exp.includes(e.id)?'<span class="dot" role="img" aria-label="related expectation"></span>':''}</td>`).join("")}<td class="resp-cell">${esc(observations[index])}</td></tr>`).join("");
   const g=document.getElementById("grid"); g.innerHTML=head+"<tbody>"+body+"</tbody>";
