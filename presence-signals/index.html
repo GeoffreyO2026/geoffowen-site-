@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Presence Signals | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/shift-map/">The Shift Map</a></div></div>
+<span class="label">Biologically Aligned Parenting &middot; for clients</span>
+<h1>The Nine Presence Signals</h1>
+<p class="trio">Nine presence signals. Five innate expectations. Four instinctive responses.</p>
+<p class="lead">Your child reads your presence long before they take in your words. These pieces look at each of the nine presence signals in turn: what it carries, what the research shows and how it tends to show up in your child. Each one ends with a quiet moment to listen to yourself.</p>
+<p>Read them alongside <a href="/shift-map/">the Shift Map</a>. Start with whichever signal you lean on most.</p>
+<div class="cards"><div class="card soon"><span class="label">Presence signal</span><h3>What we say</h3><p>What your child hears from you: explaining, repeating, justifying.</p><span class="go">Coming soon</span></div><div class="card soon"><span class="label">Presence signal</span><h3>How we sound</h3><p>Tone, pace and volume, and how much language is aimed at your child.</p><span class="go">Coming soon</span></div><a class="card" href="/presence-signals/where-our-eyes-go/"><span class="label">Presence signal</span><h3>Where our eyes go</h3><p>Where your eyes and attention actually are when your child comes to you.</p><span class="go">Read the piece &rarr;</span></a><div class="card soon"><span class="label">Presence signal</span><h3>What our face conveys</h3><p>Tension, warmth, worry or confidence, showing alongside your words.</p><span class="go">Coming soon</span></div><div class="card soon"><span class="label">Presence signal</span><h3>Touch and proximity</h3><p>Whether closeness is available, imposed, withheld or uncertain.</p><span class="go">Coming soon</span></div><div class="card soon"><span class="label">Presence signal</span><h3>Smell</h3><p>Your state, taken in below anyone&#x27;s awareness.</p><span class="go">Coming soon</span></div><div class="card soon"><span class="label">Presence signal</span><h3>Breath</h3><p>Activation that shows in your breathing before you have noticed it.</p><span class="go">Coming soon</span></div><div class="card soon"><span class="label">Presence signal</span><h3>Movement</h3><p>The pace of your inner state, carried into the room.</p><span class="go">Coming soon</span></div><div class="card soon"><span class="label">Presence signal</span><h3>Rhythm of the home</h3><p>The wider pace of family life: transitions, delays and mistakes.</p><span class="go">Coming soon</span></div></div>
+<div class="back"><a class="btn solid" href="/shift-map/">Back to the Shift Map</a></div>
+<footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+
+</body>
+</html>
