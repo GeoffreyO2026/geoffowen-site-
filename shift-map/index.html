@@ -151,6 +151,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
   <section class="nine-ways-intro">
     <h2>The Nine Presence Signals</h2>
     <p><strong>Nine presence signals. Five innate expectations. Four instinctive responses.</strong></p>
+    <p><a href="/presence-signals/">Read the presence signal pieces</a></p>
     <p><strong>It’s not what we say but what we convey that matters.</strong></p>
     <p>Imagine you’re getting ready to leave. You want to give your child time, and you’re already standing at the door with your keys in your hand, glancing at the clock. What might your words, your posture and those glances convey together?</p>
   </section>
@@ -264,6 +265,9 @@ const CH=[
 const byId=(a,id)=>a.find(x=>x.id===id);
 let current="hearing";
 try{const s=localStorage.getItem("shiftmap-preview-selection"); if(s&&byId(CH,s)) current=s;}catch(e){}
+const SIGNAL_FROM_LINK=(location.hash.indexOf("#signal-")===0)?location.hash.slice(8):"";
+if(SIGNAL_FROM_LINK&&byId(CH,SIGNAL_FROM_LINK)) current=SIGNAL_FROM_LINK;
+const ARTICLES={sight:"/presence-signals/where-our-eyes-go/"};
 const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
 
 function renderPicker(){
@@ -279,7 +283,7 @@ function renderPanel(){
     <div class="row"><h2>${esc(c.name)}</h2></div>
     <div class="shift"><span class="label">A moment to consider</span><p class="big">${esc(c.example)}</p>${c.id==="breath"?'<p><a href="#mine-to-carry">What is mine to carry?</a></p>':""}</div>
     <div class="row"><span class="label">Related innate expectations</span><div class="chips">${expChips}</div></div>
-    <div class="row"><span class="label">Explore instinctive responses</span><div class="chips">${respChips}</div></div>`;
+    <div class="row"><span class="label">Explore instinctive responses</span><div class="chips">${respChips}</div></div>${ARTICLES[c.id]?`<div class="row"><a href="${ARTICLES[c.id]}">Read more about this presence signal &rarr;</a></div>`:""}`;
 }
 function renderGrid(){
   const observations = ["The words you use", "Tone, pace and volume", "Where your eyes go", "Tension and warmth in your expression", "How closeness is offered", "Scent you may barely notice", "What your breathing broadcasts", "How your movements affect the ease of the room", "How time and space are shared across the day"];
@@ -309,6 +313,7 @@ document.getElementById("panel").addEventListener("click",ev=>{const b=ev.target
  if(b.dataset.go==="exp"){openExp=id;renderExps();}else{openResp=id;renderResps();}
  const t=document.getElementById(b.dataset.go+"-"+id);t.closest(".card").scrollIntoView({behavior:"smooth",block:"start"});t.focus({preventScroll:true});});
 renderPicker();renderPanel();renderGrid();renderRef();
+if(SIGNAL_FROM_LINK){try{document.getElementById("picker").scrollIntoView({block:"start"});}catch(e){}}
 </script>
 
 </body>
