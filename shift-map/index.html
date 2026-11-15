@@ -116,12 +116,12 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
         <div><h3>How it differs from modern parenting</h3><p>Modern parenting manages behaviour. It offers strategies, scripts and consequences, all aimed at the signal and not the cause. None of us chose this. We absorbed it through informed conditioning: from how we were raised, from family and friends, from experts, books and the culture around us. It's so ordinary that nobody questions it. Take the most accepted notion of all, that children don't come with a manual. They do. It's written in their biology, not in words. Their behaviour is them reading from it, and telling you when what they expect isn't arriving.</p></div>
       </div>
     </section>
-    <p>Your child’s five innate expectations describe what they need from their environment. The nine ways of relating show how your presence helps shape that experience. When something is missing, your child’s behaviour can signal it through an instinctive response. The shift begins by noticing the way of relating you lean on most.</p>
+    <p>Your child’s five innate expectations describe what they need from their environment. The nine presence signals show how your presence helps shape that experience. When something is missing, your child’s behaviour can signal it through an instinctive response. The shift begins by noticing the presence signal you lean on most.</p>
     <div class="flow"><b>What you convey</b><span class="arrow">→</span><b>Expectation met or unmet</b><span class="arrow">→</span><b>Your child settles or signals</b><span class="arrow">→</span><b>One shift to begin</b></div>
     <section aria-labelledby="how-to-use">
       <h2 id="how-to-use">How to use the map</h2>
       <p>Please read what follows before trying the steps below. It explains what your child’s biology expects from the environment and how your presence helps shape what they experience.</p>
-      <p>Start with your own presence. How are you when you’re with your child? What are you bringing into the room through your voice, your pace or where your attention is? How might that be affecting the environment your child is in?</p><p>Choose <a href="#picker">one of the nine ways of relating</a>, such as <strong>How we sound</strong> or <strong>Movement</strong>. Read the example and see whether it brings to mind a moment in your own home.</p><p>Then look at <a href="#innate-expectations">the five innate expectations</a>. They describe what your child’s biology expects from the environment. <strong>In that moment, what might your child’s biology have expected that your way of being made harder for them to experience, without you realising it?</strong> From the example, you can also explore the four instinctive responses.</p>
+      <p>Start with your own presence. How are you when you’re with your child? What are you bringing into the room through your voice, your pace or where your attention is? How might that be affecting the environment your child is in?</p><p>Choose <a href="#picker">one of the nine presence signals</a>, such as <strong>How we sound</strong> or <strong>Movement</strong>. Read the example and see whether it brings to mind a moment in your own home.</p><p>Then look at <a href="#innate-expectations">the five innate expectations</a>. They describe what your child’s biology expects from the environment. <strong>In that moment, what might your child’s biology have expected that your way of being made harder for them to experience, without you realising it?</strong> From the example, you can also explore the four instinctive responses.</p>
       <p><a href="#map-introduction">Read the introduction</a></p>
     </section>
     <h2 id="map-introduction">How We Relate to Our Environment</h2>
@@ -149,18 +149,19 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padd
   </header>
 
   <section class="nine-ways-intro">
-    <h2>Nine Ways We Relate to Our Environment</h2>
+    <h2>The Nine Presence Signals</h2>
+    <p><strong>Nine presence signals. Five innate expectations. Four instinctive responses.</strong></p>
     <p><strong>It’s not what we say but what we convey that matters.</strong></p>
     <p>Imagine you’re getting ready to leave. You want to give your child time, and you’re already standing at the door with your keys in your hand, glancing at the clock. What might your words, your posture and those glances convey together?</p>
   </section>
 
   <div class="explorer">
-    <nav class="picker" id="picker" aria-label="Choose a way of relating"></nav>
+    <nav class="picker" id="picker" aria-label="Choose a presence signal"></nav>
     <article class="panel" id="panel" aria-live="polite"></article>
   </div>
 
   <section>
-    <h2>The nine ways at a glance</h2>
+    <h2>The nine presence signals at a glance</h2>
     <p>Each dot shows a related innate expectation. Select an entry to explore it above.</p>
     <div class="gridwrap"><table id="grid"></table></div>
   </section>
@@ -294,7 +295,7 @@ function renderRef(){
 let openExp=null;
 function renderExps(){
   const el=document.getElementById("exps");
-  el.innerHTML=EXP.map(e=>{const o=e.id===openExp;const chans=CH.filter(c=>c.exp.includes(e.id)).map(c=>c.name).join(", ");return `<div class="card r e${o?' open':''}"><button type="button" id="exp-${e.id}" data-id="${e.id}" aria-expanded="${o}"><h3>${esc(e.name)}</h3><p>${esc(e.need)}</p><p class="unmet"><b>Something to notice</b><br>${esc(e.unmet)}</p><span class="more">${o?'Close':'Go deeper'}</span></button>${o?`<div class="depth"><div><span class="label">Where it comes from</span><p>${esc(e.origin)}</p></div><div><span class="label">As your child grows</span><p>${esc(e.grows)}</p></div><div><span class="label">At home</span><p>${esc(e.home)}</p></div><div><span class="label">What meets it</span><p>${esc(e.meets)}</p>${["led","trusted"].includes(e.id)?'<p><a href="#joining-up">What I mean by joining up</a></p>':""}${chans?`<p class="unmet"><b>Related ways of relating</b> ${esc(chans)}</p>`:''}</div></div>`:''}</div>`;}).join("");
+  el.innerHTML=EXP.map(e=>{const o=e.id===openExp;const chans=CH.filter(c=>c.exp.includes(e.id)).map(c=>c.name).join(", ");return `<div class="card r e${o?' open':''}"><button type="button" id="exp-${e.id}" data-id="${e.id}" aria-expanded="${o}"><h3>${esc(e.name)}</h3><p>${esc(e.need)}</p><p class="unmet"><b>Something to notice</b><br>${esc(e.unmet)}</p><span class="more">${o?'Close':'Go deeper'}</span></button>${o?`<div class="depth"><div><span class="label">Where it comes from</span><p>${esc(e.origin)}</p></div><div><span class="label">As your child grows</span><p>${esc(e.grows)}</p></div><div><span class="label">At home</span><p>${esc(e.home)}</p></div><div><span class="label">What meets it</span><p>${esc(e.meets)}</p>${["led","trusted"].includes(e.id)?'<p><a href="#joining-up">What I mean by joining up</a></p>':""}${chans?`<p class="unmet"><b>Related presence signals</b> ${esc(chans)}</p>`:''}</div></div>`:''}</div>`;}).join("");
   el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{openExp=openExp===b.dataset.id?null:b.dataset.id;renderExps();document.getElementById("exp-"+b.dataset.id).focus();}));
 }
 let openResp=null;
