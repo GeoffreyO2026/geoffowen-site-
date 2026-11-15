@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Say It Once | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/shift-map/">The Shift Map</a> &nbsp;/&nbsp; <a href="/presence-signals/">Presence signals</a></div></div>
+<span class="label">Presence signal &middot; What we say</span>
+<h1>Say It Once</h1>
+<p class="sub">What we say, and what it conveys</p>
+<h2 id="the-request-about-shoes">The request about shoes</h2>
+<p>It starts with something small. “Can you put your shoes on, please?” Nothing happens. So you say it again. Then you remind them about yesterday, when you were late because of exactly this. Then you explain why being late matters, and how it makes you feel, and what will happen if it happens again. By the time you finish, your child still hasn’t moved, and you’re both a little more wound up than when you began.</p>
+<p>What we say is one of the nine presence signals in the Shift Map: nine presence signals, five innate expectations, four instinctive responses. It’s the one most parents lean on, because it’s the one we think we’re in control of. And it’s often the one that conveys the most without us meaning it to.</p>
+<p>Because here’s the thing. By the end of that stream of words, your child hasn’t received an instruction about shoes. They’ve received something about you. That you’re not sure they’ll do it. That you need them to understand before they act. That this small thing has become a big thing. And that, perhaps, nobody here is quite in charge.</p>
+<h2 id="what-the-research-says-about-instructions">What the research says about instructions</h2>
+<p>For more than forty years, researchers have studied what happens when parents and teachers give children instructions. The findings are remarkably consistent, and they point the same way.</p>
+<p>Rex Forehand and Robert McMahon, two of the pioneers of this research, described what they called “beta commands”: instructions buried in extra talk, lecturing or reprimanding, or so vague the child can’t tell what is actually being asked. These have long had a reputation for being followed far less often. The alternative, sometimes called an “alpha command”, carries no extra talk and asks for only one thing.</p>
+<p>One study of families referred for help found something worth sitting with. Instructions that were vague or harsh didn’t so much lead to open defiance. They led to children ignoring them. The child simply stopped responding. Which is exactly what a parent experiences as “they never listen to me”.</p>
+<p>The same handful of findings turns up again and again in the clinical research behind parent training programmes. Children respond better when an instruction is direct rather than phrased as a question, so “Sit down here” rather than “Would you like to sit down?” They respond better to one small request than to several strung together, because young children can’t hold multiple steps in mind. They respond better when told what to do rather than what not to do. And clinicians note a simple irony: children who struggle to follow directions end up receiving far more of them, because adults repeat themselves, which makes each one count for less.</p>
+<p>I’m not interested in compliance for its own sake. BAP is not about getting a child to obey. But this research tells us something important about how a child receives what we say. The fewer the words, the clearer the message. The more words, the more the child has to sift through, and the more they read the anxiety underneath.</p>
+<h2 id="why-more-words-land-less">Why more words land less</h2>
+<p>The first two pieces in this series looked at how a child’s biology receives language, and the same research sits underneath this signal.</p>
+<p>Young children understand what is concrete and present. What depends on abstract time, “if this then that” and the word “not” comes much more slowly. Two year olds still struggle with what “no” and “don’t” actually mean in a sentence. So “don’t run” leaves the child holding the word “run”. And the reminder about yesterday, the warning about tomorrow and the reasoning about consequences are pitched at a mind that, in many cases, simply hasn’t grown that far yet.</p>
+<p>In older children the thinking brain is still being built well into the twenties, and it is the region most easily switched off by stress. When a teenager listens to a parent’s criticism, brain scans show the areas that react getting louder and the areas that regulate emotion and take in another point of view going quiet. The more we say in a tense moment, the less of it can be taken in.</p>
+<p>And underneath all of it is settledness. A child has to be settled before words can land. A long explanation, delivered in a hurry with an edge in the voice, is rarely settling. It tends to tell the child that something is wrong, and then ask them to think clearly about it at the very moment they can’t.</p>
+<h2 id="what-a-stream-of-words-conveys">What a stream of words conveys</h2>
+<p>In the Shift Map, what we say mainly carries two of the five innate expectations: led, not followed, and trusted, not rescued.</p>
+<p>Every child’s biology expects a confident adult who is clearly in charge. Not harsh, not controlling, simply steady. I call it benign authority. And a steady adult tends to say things once. They don’t need to persuade, justify or win the argument, because they aren’t in any doubt. When we explain, repeat and justify, the words may be about shoes, but the presence behind them is saying something else: I’m not sure you’ll follow me. The child’s biology reads that very quickly. And what follows isn’t the child testing you. It’s their biology signalling that something it expects is missing. Like the castaway waving and shouting at a ship on the horizon, it works to correct what’s missing, or to find some relief from the discomfort and stress of not having it.</p>
+<p>Think of the captain of a ship. A captain doesn’t ask the crew whether they’d mind dropping anchor, or say “please” and hope. They give the direction, calmly and clearly, because they know where the ship is going. Nobody on board hears that as harsh. They hear it as safe. A request such as “Can you put your shoes on, please?” sounds polite, but it carries a doubt. It leaves the child wondering whether this is really happening, and who is actually steering. A simple statement, such as “It’s time for shoes”, said once and unhurried while you reach for your own, carries no doubt at all. That isn’t a script. The words matter far less than the settledness behind them. The same sentence said in a rush, halfway out of the door, conveys urgency and something close to panic, and the child’s biology receives that instead.</p>
+<p>The same is true of trust. A child expects to be treated as capable. When we break every request into reminders, warnings and running commentary, we convey the opposite. We’re telling them we don’t think they can manage it without us carrying them through it.</p>
+<p>So when this signal is off, children tend to respond in one of two ways. Some fight: pushing back, arguing the case, trying to take control of a situation that doesn’t feel steady. Others freeze: tuning out, going blank, the “I don’t know” and the shrug. Neither is a decision made against you. Both are the biology signalling that something it expects is missing, and trying either to put it right or to get relief from it.</p>
+<h2 id="age-and-stage">Age and stage</h2>
+<p>Most of the research on instructions was carried out with children aged roughly two to eight. The research on negation looked at two and three year olds, and the brain scans on criticism were of teenagers around fourteen. The principle holds at every age: a settled statement, said once. What it looks like changes as a child grows. These are illustrations, not scripts.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What tends to happen</th>
+<th>A settled statement might look like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2 to 3</td>
+<td>“Don’t run” is heard as “run”. A string of words is mostly heard as tone.</td>
+<td>Walking alongside, a hand held out, and “We walk here.”</td>
+</tr>
+<tr class="even">
+<td>4 to 7</td>
+<td>A request becomes a negotiation, or a reminder of last time. The child stops responding.</td>
+<td>“It’s time for shoes”, said once while you put your own on, then quiet.</td>
+</tr>
+<tr class="odd">
+<td>8 to 12</td>
+<td>Long explanations meet the eye roll and “I know”.</td>
+<td>A brief statement of what’s happening, and an answer only if they genuinely ask why.</td>
+</tr>
+<tr class="even">
+<td>13 and over</td>
+<td>The lecture is defended against before it’s finished.</td>
+<td>Fewer words, said once in a calm moment, and trust that it has been heard.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="say-it-once-then-do-it-yourself">Say it once, then do it yourself</h2>
+<p>Every parent knows the next question. And if they don’t do it?</p>
+<p>Then you do it yourself. Not with a sigh, not to make a point and not as a punishment. You simply do it, unhurried, with the same settled authority you gave the direction with. A toddler hears “Toys go in the box now” and doesn’t move. So you start putting them away. Often, before long, a small hand reaches in beside yours. And if it doesn’t, the toys still get put away, and nothing more needs saying.</p>
+<p>This isn’t wishful thinking. Felix Warneken and Michael Tomasello found that infants as young as fourteen to eighteen months readily help an adult with a problem, without any reward. And when twenty month olds were given a material reward for helping, they went on to help less than children who had been given praise or nothing at all. The helping was already there. The reward got in its way.</p>
+<p>Barbara Rogoff, Lucía Alcalá and their colleagues found something similar across whole families. Mothers reported that most two and three year olds helped at home of their own accord. By six or seven, children from Mexican-heritage families usually still did. Middle-class European American children seldom did, and mostly helped under adult management, in something closer to a deal. In an Indigenous-heritage community in Guadalajara, many six to eight year olds took on complex work for the whole family, such as caring for younger siblings or cooking, on their own initiative. And the children themselves described household work as a responsibility the whole family shares.</p>
+<p>So it isn’t about guilt, or conscience, or getting a child to do their share. It’s that a parent who gets on with the task, efficiently and without fuss, is attractive to be around. Children are drawn to join in and to copy what they see. Somewhere deep in them is the expectation that we don’t just help one another. We serve one another. And for a child to serve the family, the family has to serve the child first.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What tends to happen</th>
+<th>Saying it once, then doing it, might look like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2 to 3</td>
+<td>Toddlers want to be where the work is, though they come and go.</td>
+<td>“Toys go in the box now”, and you start. They join in, or they don’t, and both are fine.</td>
+</tr>
+<tr class="even">
+<td>4 to 7</td>
+<td>The task is well within reach, and easily turned into a negotiation.</td>
+<td>Said once. If nothing happens, you do it without comment and leave room for them to step in.</td>
+</tr>
+<tr class="odd">
+<td>8 to 12</td>
+<td>Capable of the whole task, and quick to notice being managed.</td>
+<td>Said once. If it isn’t done, you do it, with no lecture and no score kept.</td>
+</tr>
+<tr class="even">
+<td>13 and over</td>
+<td>A long memory of how directions have gone before.</td>
+<td>Said once, in a calm moment. You do it if it needs doing, and trust that it has been seen.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-has-gone-before">What has gone before</h2>
+<p>If your child is older and has been told, asked and reminded for years, saying it once and then doing it yourself won’t land straight away. It can’t. Your child has an archive of experience around being directed, and their biology has adapted to it. Some children push back hard. Some go quiet and seem not to hear at all. That quiet is often a kind of numbness, the body’s way of coping with more words than it can respond to.</p>
+<p>None of this means something is wrong with your child. Their innate sociality hasn’t gone. I don’t think the continuum ever disappears. It gets overshadowed, or numbed out. And so when you look at your child’s behaviour, it can’t be read on its own, in the moment. It has to be read against their whole experience of the environment so far.</p>
+<p>Researchers who study parents and babies, Ed Tronick among them, describe moments of disconnection followed by repair as a normal part of every close relationship. What matters is that the repair happens. For an older child, repair doesn’t begin with a new technique. It begins with a parent who understands what their child has been adapting to and quietly stops adding to it.</p>
+<p>Repair takes time, often longer than parents expect. A child who has been numbed out may need a long stretch of you simply saying it once, doing it yourself and expecting nothing back, before they start to trust that nothing more is coming. And then, often without any announcement, they begin to join in.</p>
+<h2 id="what-this-means-in-your-home">What this means in your home</h2>
+<p>Modern parenting has taught us that the right words, explained clearly enough and often enough, will produce the right behaviour. They don’t. They really don’t. And it isn’t your fault for believing they would. It’s what the parenting industry has handed almost all of us.</p>
+<p>The Shift Map’s first shift for this signal is simple, though not easy. Say it once, in fewer words. Then stop, and let your presence carry it. And if nothing happens, do it yourself. Explain only when your child genuinely asks why. It can feel almost rude at first, as though you’re not doing enough. But in my experience, the quiet after a single, settled sentence often says more than a whole paragraph ever could.</p>
+<p>So I wonder if it might be worth listening to yourself over the next few days. Not to what you mean, but to what you actually say. How many words does a simple request become? How often do you say it again? And what might your child be hearing underneath?</p>
+<p>If by any chance you’d like to explore this further, bring it to the monthly Q&amp;A. I’d really like to hear what you notice.</p>
+<section class="quiz"><span class="label">A moment to listen to yourself</span><h2>How much do I say?</h2><p>This isn&#x27;t a test and there are no right answers. It&#x27;s a quiet moment to listen to yourself. Read each line and tick the box that feels most true for you at the moment. Try not to tick the one you think you should.</p><form id="quiz"><div class="q" data-rev="0"><p>1. I repeat a request before my child has had time to respond.</p><div class="opts" role="radiogroup" aria-label="Line 1"><label><input type="radio" name="q1" value="often"><span>Often</span></label><label><input type="radio" name="q1" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q1" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>2. A simple request turns into an explanation of why it matters.</p><div class="opts" role="radiogroup" aria-label="Line 2"><label><input type="radio" name="q2" value="often"><span>Often</span></label><label><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>3. I bring up what happened last time while asking for something now.</p><div class="opts" role="radiogroup" aria-label="Line 3"><label><input type="radio" name="q3" value="often"><span>Often</span></label><label><input type="radio" name="q3" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q3" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>4. I phrase directions as questions or soften them with &quot;please&quot;, such as &quot;Can you…, please?&quot;</p><div class="opts" role="radiogroup" aria-label="Line 4"><label><input type="radio" name="q4" value="often"><span>Often</span></label><label><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>5. I tell my child what not to do more than what I&#x27;d like them to do.</p><div class="opts" role="radiogroup" aria-label="Line 5"><label><input type="radio" name="q5" value="often"><span>Often</span></label><label><input type="radio" name="q5" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q5" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>6. I say what I need once, briefly, and then leave a pause.</p><div class="opts" role="radiogroup" aria-label="Line 6"><label><input type="radio" name="q6" value="often"><span>Often</span></label><label><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>7. I explain my reasons when my child genuinely asks, not before.</p><div class="opts" role="radiogroup" aria-label="Line 7"><label><input type="radio" name="q7" value="often"><span>Often</span></label><label><input type="radio" name="q7" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q7" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>8. I notice the moment my words start to speed up or multiply.</p><div class="opts" role="radiogroup" aria-label="Line 8"><label><input type="radio" name="q8" value="often"><span>Often</span></label><label><input type="radio" name="q8" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q8" value="rarely"><span>Rarely</span></label></div></div></form><div class="result" id="result" aria-live="polite"></div><p style="margin-top:18px"><em>What did you notice about yourself as you answered?</em></p></section>
+<div class="back"><a class="btn solid" href="/shift-map/#signal-hearing">Explore this signal in the Shift Map</a><a class="btn" href="/presence-signals/">All presence signals</a></div><h2>The research behind this</h2><div class="refs"><ul>
+<li>Forehand, R. and McMahon, R. J. (1981). <em>Helping the Noncompliant Child: A Clinician’s Guide to Parent Training</em>. Guilford Press.</li>
+<li>Descriptive study of the conditions under which noncompliant children complied with or ignored their parents’ commands. <em>Child &amp; Family Behavior Therapy</em>, 11(3).</li>
+<li>Evaluation of alpha and beta commands on latency to comply during transitions with young children (2019). <em>Education and Treatment of Children</em>, 42(1), 25–45.</li>
+<li>Hembree-Kigin, T. and McNeil, C. B. (1995). <em>Parent–Child Interaction Therapy</em>. Plenum.</li>
+<li>Reuter, T., Feiman, R. and Snedeker, J. (2018). Getting to No: Pragmatic and semantic factors in two- and three-year-olds’ understanding of negation. <em>Child Development</em>, 89(4).</li>
+<li>Lee, K. H. et al. (2015). Neural responses to maternal criticism in healthy youth. <em>Social Cognitive and Affective Neuroscience</em>, 10(7), 902–912.</li>
+<li>Arnsten, A. (2009). Stress signalling pathways that impair prefrontal cortex structure and function. <em>Nature Reviews Neuroscience</em>, 10, 410–422.</li>
+<li>Johnson, S. B., Blum, R. W. and Giedd, J. N. (2009). Adolescent maturity and the brain. <em>Journal of Adolescent Health</em>.</li>
+<li>Warneken, F. and Tomasello, M. (2006). Altruistic helping in human infants and young chimpanzees. <em>Science</em>, 311, 1301–1303.</li>
+<li>Warneken, F. and Tomasello, M. (2008). Extrinsic rewards undermine altruistic tendencies in 20-month-olds. <em>Developmental Psychology</em>, 44(6), 1785–1788.</li>
+<li>Alcalá, L., Rogoff, B., Mejía-Arauz, R., Coppens, A. D. and Dexter, A. L. (2014). Children’s initiative in contributions to family work in Indigenous-heritage and cosmopolitan communities in Mexico. <em>Human Development</em>, 57(2–3), 96–115.</li>
+<li>Coppens, A. D., Alcalá, L., Mejía-Arauz, R. and Rogoff, B. (2014). Children’s initiative in family household work in Mexico. <em>Human Development</em>, 57(2–3), 116–130.</li>
+<li>Coppens, A. D., Alcalá, L., Rogoff, B. and Mejía-Arauz, R. (2018). Cultural variation in the early development of initiative in children’s prosocial helping. <em>Infant and Child Development</em>.</li>
+<li>Tronick, E. Z. and Gianino, A. (1986). Interactive mismatch and repair: challenges to the coping infant. <em>Zero to Three</em>, 6(3), 1–6.</li>
+</ul>
+</div><footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+<script>
+(function(){
+  var READ=[["0 to 5","Your words probably carry a steady, settled presence much of the time. It might be interesting to notice the moments when they start to multiply, and what is happening in you just before."],["6 to 10","Like most parents, you probably move between saying it once and saying it many times, depending on the day. I wonder which line above caught you. That one might be worth carrying with you this week."],["11 to 16","It may be that your words are working very hard, and your presence isn't being given the chance to. Please don't take this as blame. It's how most of us were taught. It might simply be the place where your listening begins."]];
+  var form=document.getElementById('quiz'); if(!form) return;
+  function update(){
+    var total=0, answered=0, n=form.querySelectorAll('.q').length;
+    form.querySelectorAll('.q').forEach(function(q){
+      var c=q.querySelector('input:checked'); if(!c) return; answered++;
+      var rev=q.dataset.rev==='1', v=c.value;
+      if(!rev){ total+= v==='often'?2:(v==='sometimes'?1:0); }
+      else { total+= v==='rarely'?2:(v==='sometimes'?1:0); }
+    });
+    var out=document.getElementById('result');
+    if(answered<n){ out.innerHTML='Answered '+answered+' of '+n+'. Your reflection appears when you have answered every line.'; return; }
+    var r= total<=5?READ[0]:(total<=10?READ[1]:READ[2]);
+    out.innerHTML='<b>Your total: '+total+' ('+r[0]+')</b><br>'+r[1];
+  }
+  form.addEventListener('change',update); update();
+})();
+</script>
+</body>
+</html>
