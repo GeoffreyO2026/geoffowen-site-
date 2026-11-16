@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>How We Sound | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/shift-map/">The Shift Map</a> &nbsp;/&nbsp; <a href="/presence-signals/">Presence signals</a></div></div>
+<span class="label">Presence signal &middot; How we sound</span>
+<h1>How We Sound</h1>
+<p class="sub">How we sound, and what it conveys</p>
+<h2 id="im-not-shouting">“I’m not shouting”</h2>
+<p>It’s the end of a long day. Your child asks for something for the third time, and you answer. The words are reasonable enough: “Not now, I’m making dinner.” But they come out clipped, a little louder and a little faster than you meant. Your child’s face changes. Maybe they push harder. Maybe they go quiet and drift away. And you think, what did I say?</p>
+<p>Often it isn’t what you said. It’s how it sounded.</p>
+<p>How we sound is one of the nine presence signals in the Shift Map: nine presence signals, five innate expectations, four instinctive responses. What we say carries the words. How we sound carries everything around them: the pitch, the pace, the volume, the warmth, the edge or the ease in the voice. And long before a child can follow a sentence, this is the part that reaches them.</p>
+<p><em>A note on language. When I say a child “reads”, “hears” or “expects” something, I don’t mean they are thinking it. A child isn’t weighing up who is in charge or whether you’re paying attention. These are biological processes, happening well below thought. I’ve put them into human words so we can talk about them.</em></p>
+<h2 id="what-the-research-says-about-the-voice">What the research says about the voice</h2>
+<p>Babies tune in to the feeling in a voice very early. Tobias Grossmann and his colleagues found that by seven months, a baby’s brain responds to the human voice much as an adult’s does, and a voice-sensitive area on the right side of the brain responds more strongly when the voice carries anger or happiness. At four months that response wasn’t yet there.</p>
+<p>And it doesn’t switch off when they sleep. Alice Graham, Philip Fisher and Jennifer Pfeifer at the University of Oregon played recordings of nonsense sentences, spoken in very angry, mildly angry, happy and neutral tones, to sleeping babies aged six to twelve months in a brain scanner. Even asleep, the babies’ brains responded differently depending on the tone. And babies whose mothers reported more arguing at home showed stronger responses to the very angry voice, in areas of the brain linked to stress and emotion regulation.</p>
+<p>It might be worth sitting with that for a moment. The tone in a house reaches a baby whether or not anyone thinks they’re listening.</p>
+<p>The voice can settle as well as unsettle. Leslie Seltzer and her colleagues at the University of Wisconsin gave girls aged seven to twelve a stressful task: a speech and some maths in front of strangers. Afterwards some were comforted by their mothers in person, some talked to them on the phone and some had no contact. The girls who heard their mother’s voice, in person or on the phone, showed a drop in the stress hormone cortisol and a rise in oxytocin, a hormone linked to bonding. Girls who only exchanged instant messages with their mothers showed no oxytocin response, and their cortisol rose as high as that of the girls who had no contact at all. The same mothers, the same care. The voice made the difference.</p>
+<p>Daniel Abrams and his team at Stanford found that in children up to around twelve, a mother’s voice lights up reward and emotion areas of the brain in a way a stranger’s voice doesn’t. At around thirteen this shifts, and the reward areas respond more to unfamiliar voices than to the mother’s. The researchers see this as a healthy part of growing up. So a teenager who seems not to hear you isn’t simply being difficult. Their biology is turning outwards.</p>
+<p>That doesn’t mean the voice stops mattering. Netta Weinstein and her colleagues at Cardiff University played more than a thousand fourteen and fifteen year olds recordings of mothers giving the same instructions about school, word for word, in a controlling, a supportive or a neutral tone. The teenagers who heard the controlling tone responded more negatively and were less willing to engage, even though the words were identical. And Ming-Te Wang and Sarah Kenny found that harsh verbal discipline, including shouting, at thirteen predicted more behaviour problems and more low mood a year later.</p>
+<h2 id="what-a-tense-or-hurried-voice-conveys">What a tense or hurried voice conveys</h2>
+<p>In the Shift Map, how we sound mainly carries two of the five innate expectations: contact, not separation, and led, not followed.</p>
+<p>A settled voice is low, even and unhurried. It conveys an adult who is here, with the child, and steady enough to follow. A sharp, rising or hurried voice conveys something else: alarm, distance and an adult who isn’t quite steady. The words might be ordinary. The sound around them says that something is wrong.</p>
+<p>There’s a quieter version of this too. A voice that rises at the end of a direction, as though asking, carries a doubt. So does a pleading voice, or a weary sigh before the words. And the flat, half-there voice of a parent whose mind is elsewhere conveys separation, even with the child standing right beside them.</p>
+<p>A child’s biology registers all of this well before the words land. And what follows isn’t the child testing you. It’s their biology signalling that something it expects is missing. Like the castaway waving and shouting at a ship on the horizon, it works to correct what’s missing, or to find some relief from the discomfort and stress of not having it. And if the ship sails past without seeing them, the waving eventually stops. Not because nothing is missing any more, but because signalling hasn’t worked. The biology turns to coping with the absence instead, and that can look like sadness, withdrawal or something close to depression. That, too, is the biology doing its best with what’s missing.</p>
+<p>So when this signal is off, children tend to respond in one of the four instinctive ways. Some fight, matching your volume or raising their own. Some take flight, leaving the room or heading for a screen. Some freeze, going blank or silent. And some fawn, becoming suddenly quiet and agreeable in a way that isn’t settled at all. None of these is a decision made against you. Each is the biology trying either to put things right or to get relief.</p>
+<h2 id="age-and-stage">Age and stage</h2>
+<p>The research in this piece looked at babies of six to twelve months, children of seven to twelve and teenagers of thirteen to sixteen. There’s less research on the years in between, though nothing to suggest the voice matters any less there. The principle holds at every age: the sound arrives before the sense. What it looks like changes as a child grows. These are illustrations, not scripts.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What tends to happen</th>
+<th>A settled voice might look like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Babies, around 6 to 12 months</td>
+<td>Tone registers even in sleep. A sharp or angry voice in the house reaches them whether or not it’s aimed at them.</td>
+<td>A low, slow, even voice, especially when you’re stressed yourself.</td>
+</tr>
+<tr class="even">
+<td>7 to 12</td>
+<td>A parent’s voice still has a strong settling effect. A sharp tone lands hard.</td>
+<td>Your voice used to comfort, not only to direct. A call can settle when you can’t be there.</td>
+</tr>
+<tr class="odd">
+<td>13 and over</td>
+<td>Their biology is turning towards new voices. A controlling tone tends to meet resistance.</td>
+<td>Fewer words in an even, unhurried tone, the same whether the subject is small or big.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-in-your-home">What this means in your home</h2>
+<p>Modern parenting puts almost all its attention on the words: what to say, how to phrase it, which script to use. And it isn’t your fault for following that. It’s what most of us have been handed. But a child receives the voice first and the words second, and often the voice is the whole message.</p>
+<p>The Shift Map’s first shift for this signal is to notice how you sound before you notice what you say. Lower. Slower. Fewer words. And here’s the honest part. A settled voice can’t be put on for long. The voice follows what is happening in your body. If you’re rushed, tense or running on empty, it will come out in the sound, whatever the words are. So the work on this signal often begins with you, with what settles you, rather than with your child.</p>
+<p>So I wonder if it might be worth listening to yourself over the next few days. Not to your words, but to the sound of them. When does your voice tighten? When does it speed up or rise? And what might your child be taking in, underneath the words, when it does?</p>
+<p>If by any chance you’d like to explore this further, bring it to the monthly Q&amp;A. I’d really like to hear what you notice.</p>
+<section class="quiz"><span class="label">A moment to listen to yourself</span><h2>How do I sound?</h2><p>This isn&#x27;t a test and there are no right answers. It&#x27;s a quiet moment to listen to yourself. Read each line and tick the box that feels most true for you at the moment. Try not to tick the one you think you should.</p><form id="quiz"><div class="q" data-rev="0"><p>1. My voice gets louder or faster when I&#x27;m in a hurry.</p><div class="opts" role="radiogroup" aria-label="Line 1"><label><input type="radio" name="q1" value="often"><span>Often</span></label><label><input type="radio" name="q1" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q1" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>2. My child tells me I&#x27;m shouting when I don&#x27;t think I am.</p><div class="opts" role="radiogroup" aria-label="Line 2"><label><input type="radio" name="q2" value="often"><span>Often</span></label><label><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>3. By the end of the day there&#x27;s an edge in my voice.</p><div class="opts" role="radiogroup" aria-label="Line 3"><label><input type="radio" name="q3" value="often"><span>Often</span></label><label><input type="radio" name="q3" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q3" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>4. My voice rises at the end when I give a direction, as if I&#x27;m asking.</p><div class="opts" role="radiogroup" aria-label="Line 4"><label><input type="radio" name="q4" value="often"><span>Often</span></label><label><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>5. I give directions while my mind is on something else.</p><div class="opts" role="radiogroup" aria-label="Line 5"><label><input type="radio" name="q5" value="often"><span>Often</span></label><label><input type="radio" name="q5" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q5" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>6. I notice how I sound before I notice what I&#x27;m saying.</p><div class="opts" role="radiogroup" aria-label="Line 6"><label><input type="radio" name="q6" value="often"><span>Often</span></label><label><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>7. I can give a direction in the same easy voice I use for chatting.</p><div class="opts" role="radiogroup" aria-label="Line 7"><label><input type="radio" name="q7" value="often"><span>Often</span></label><label><input type="radio" name="q7" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q7" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>8. When I hear my voice tighten, I slow down before I go on.</p><div class="opts" role="radiogroup" aria-label="Line 8"><label><input type="radio" name="q8" value="often"><span>Often</span></label><label><input type="radio" name="q8" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q8" value="rarely"><span>Rarely</span></label></div></div></form><div class="result" id="result" aria-live="polite"></div><p style="margin-top:18px"><em>What did you notice about yourself as you answered?</em></p></section>
+<div class="back"><a class="btn solid" href="/shift-map/#signal-voice">Explore this signal in the Shift Map</a><a class="btn" href="/presence-signals/">All presence signals</a></div><h2>The research behind this</h2><div class="refs"><ul>
+<li>Grossmann, T., Oberecker, R., Koch, S. P. and Friederici, A. D. (2010). The developmental origins of voice processing in the human brain. <em>Neuron</em>, 65(6), 852–858.</li>
+<li>Graham, A. M., Fisher, P. A. and Pfeifer, J. H. (2013). What sleeping babies hear: An fMRI study of interparental conflict and infants’ emotion processing. <em>Psychological Science</em>, 24(5), 782–789.</li>
+<li>Seltzer, L. J., Ziegler, T. E. and Pollak, S. D. (2010). Social vocalizations can release oxytocin in humans. <em>Proceedings of the Royal Society B</em>, 277, 2661–2666.</li>
+<li>Seltzer, L. J., Prososki, A. R., Ziegler, T. E. and Pollak, S. D. (2012). Instant messages vs. speech: hormones and why we still need to hear each other. <em>Evolution and Human Behavior</em>, 33(1), 42–45.</li>
+<li>Abrams, D. A. et al. (2016). Neural circuits underlying mother’s voice perception predict social communication abilities in children. <em>PNAS</em>, 113(22), 6295–6300.</li>
+<li>Abrams, D. A. et al. (2022). A neurodevelopmental shift in reward circuitry from mother’s to nonfamilial voices in adolescence. <em>Journal of Neuroscience</em>, 42(20), 4164–4173.</li>
+<li>Weinstein, N., Vansteenkiste, M. and Paulmann, S. (2019). Listen to your mother: Motivating tones of voice predict adolescents’ reactions to mothers. <em>Developmental Psychology</em>, 55(12), 2534–2546.</li>
+<li>Wang, M.-T. and Kenny, S. (2014). Longitudinal links between fathers’ and mothers’ harsh verbal discipline and adolescents’ conduct problems and depressive symptoms. <em>Child Development</em>, 85(3), 908–923.</li>
+</ul>
+</div><footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+<script>
+(function(){
+  var READ=[["0 to 5","Your voice probably carries a steady, settled presence much of the time. It might be interesting to notice the moments when it changes, and what is happening in you just before."],["6 to 10","Like most parents, your voice probably moves between settled and strained, depending on the day. I wonder which line above caught you. That one might be worth carrying with you this week."],["11 to 16","It may be that your voice is carrying a lot of the strain you're under. Please don't take this as blame. It's how most of us were taught, and how most of us live. It might simply be the place where your listening begins."]];
+  var form=document.getElementById('quiz'); if(!form) return;
+  function update(){
+    var total=0, answered=0, n=form.querySelectorAll('.q').length;
+    form.querySelectorAll('.q').forEach(function(q){
+      var c=q.querySelector('input:checked'); if(!c) return; answered++;
+      var rev=q.dataset.rev==='1', v=c.value;
+      if(!rev){ total+= v==='often'?2:(v==='sometimes'?1:0); }
+      else { total+= v==='rarely'?2:(v==='sometimes'?1:0); }
+    });
+    var out=document.getElementById('result');
+    if(answered<n){ out.innerHTML='Answered '+answered+' of '+n+'. Your reflection appears when you have answered every line.'; return; }
+    var r= total<=5?READ[0]:(total<=10?READ[1]:READ[2]);
+    out.innerHTML='<b>Your total: '+total+' ('+r[0]+')</b><br>'+r[1];
+  }
+  form.addEventListener('change',update); update();
+})();
+</script>
+</body>
+</html>
