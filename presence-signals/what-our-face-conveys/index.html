@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>What Your Face Says | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/shift-map/">The Shift Map</a> &nbsp;/&nbsp; <a href="/presence-signals/">Presence signals</a></div></div>
+<span class="label">Presence signal &middot; What our face conveys</span>
+<h1>What Your Face Says</h1>
+<p class="sub">What our face conveys, and what your child takes from it</p>
+<h2 id="im-fine">“I’m fine”</h2>
+<p>You’ve had a difficult phone call, or a bill has come in, or the day has simply been too long. Your child looks up at you and asks, “Are you cross?” And you say, “No, I’m fine.” You mean it kindly. You don’t want them to worry. But your jaw is set, your brow is tight and the smile doesn’t quite reach your eyes. And within minutes your child is clingy, or silly, or picking a fight with their sibling.</p>
+<p>The words said one thing. The face said another. And it’s very often the face that lands.</p>
+<p>What our face conveys is one of the nine presence signals in the Shift Map: nine presence signals, five innate expectations, four instinctive responses. It carries tension, warmth, worry or confidence, often without our knowing it’s showing. We can choose our words. Our face tends to tell the truth anyway.</p>
+<p><em>A note on language. When I say a child “reads”, “hears” or “expects” something, I don’t mean they are thinking it. A child isn’t weighing up who is in charge or whether you’re paying attention. These are biological processes, happening well below thought. I’ve put them into human words so we can talk about them.</em></p>
+<h2 id="what-the-research-says-about-the-face">What the research says about the face</h2>
+<p>Babies tune in to faces early, and to some faces more than others. Mikko Peltola and his colleagues in Finland found that between five and seven months, babies start to look longer at fearful faces than happy ones, and their brain responses to fear grow stronger. By seven months they’re slower to look away from a frightened face than from a happy or neutral one. A worried face holds a baby’s attention in a way a calm face doesn’t.</p>
+<p>And babies don’t only notice faces. They use them. In one of the best known studies in child development, James Sorce, Robert Emde and their colleagues placed twelve month olds on a “visual cliff”: a glass table with what looked like a drop part way across. Each mother stood on the far side. When she showed a happy face, most of the babies (74 per cent) crawled across to her. When she showed a fearful face, none did. The drop was the same. The mother’s face decided it.</p>
+<p>In Where Your Eyes Go we met Edward Tronick’s still face studies, where a mother’s face going blank was enough to distress her baby within moments. A flat, absent face carries its own message too.</p>
+<p>What surprises many parents is that hiding our feelings doesn’t stop them reaching our children. Sara Waters, Wendy Berry Mendes and their colleagues worked with 107 parents, nearly half of them fathers, and their children aged seven to eleven. Each parent was put through a stressful task, then half were asked to hide their feelings when they rejoined their child. The parents who hid their stress and their children were both less warm and less engaged with each other. And with mothers, the child’s body began to mirror the stress the mother was hiding. As Waters put it, the response happens under the skin.</p>
+<p>Older children’s sensitivity to faces keeps developing. Xiaoqing Gao and Daphne Maurer found that by five, children pick up happy faces as well as adults do, but their sensitivity to subtler anger and sadness goes on improving well past the age of ten, with the brain still processing faces differently from an adult’s into late adolescence. So a teenager may be taking in more from your face than they can put into words, and sometimes reading it less accurately than you’d expect.</p>
+<h2 id="what-a-tense-flat-or-masked-face-conveys">What a tense, flat or masked face conveys</h2>
+<p>In the Shift Map, what our face conveys mainly carries two of the five innate expectations: contact, not separation, and led, not followed.</p>
+<p>A settled face is easy, open and present. It conveys an adult who is here and steady, someone whose face says the world is safe enough to carry on. That’s exactly what the babies on the glass table were drawing on. A tense or worried face conveys the opposite: that something is wrong, even when nothing is said. A flat or distracted face conveys distance. And a masked face, the brave smile over a clenched jaw, conveys two things at once, which may be the most unsettling of all.</p>
+<p>A child’s biology registers this long before it can name it. And what follows isn’t the child testing you. It’s their biology signalling that something it expects is missing. Like the castaway waving and shouting at a ship on the horizon, it works to correct what’s missing, or to find some relief from the discomfort and stress of not having it. And if the ship sails past without seeing them, the waving eventually stops. Not because nothing is missing any more, but because signalling hasn’t worked. The biology turns to coping with the absence instead, and that can look like sadness, withdrawal or something close to depression. That, too, is the biology doing its best with what’s missing.</p>
+<p>So when this signal is off, children tend to respond in one of the four instinctive ways. Some fight, becoming argumentative or provocative. Some take flight, retreating to their room or a screen. Some freeze, going quiet and watchful. And some fawn, becoming suddenly helpful or eager to please, as though trying to bring the face back. None of these is a decision made against you. Each is the biology trying either to put things right or to get relief.</p>
+<h2 id="age-and-stage">Age and stage</h2>
+<p>The research in this piece looked at babies of five to seven months, twelve month olds, children of seven to eleven and older children and teenagers into late adolescence. There’s less research on the toddler and early school years, though nothing to suggest the face matters less there. The principle holds at every age: the face arrives before the words. What it looks like changes as a child grows. These are illustrations, not scripts.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What tends to happen</th>
+<th>A settled face might look like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Babies, around 5 to 12 months</td>
+<td>A worried face holds their attention. By twelve months your face can decide whether they move towards something or away from it.</td>
+<td>An easy, open face when they look to you, especially in anything new.</td>
+</tr>
+<tr class="even">
+<td>7 to 11</td>
+<td>They pick up the stress you’re hiding, and their body can begin to mirror it.</td>
+<td>Letting your face be honest. “I’m a bit tired, but we’re fine” fits the face better than “I’m fine”.</td>
+</tr>
+<tr class="odd">
+<td>10 and over</td>
+<td>Still fine-tuning how they read subtler anger and sadness. Your face may land harder, or be misread.</td>
+<td>A calm, unguarded face in the ordinary moments, not only the important ones.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-in-your-home">What this means in your home</h2>
+<p>Modern parenting often tells us to keep our feelings away from our children, to put on a brave face and protect them from our stress. It comes from love. And it isn’t your fault for doing it. But the research suggests the brave face doesn’t hide much. It tends to add a second, confusing message on top of the first.</p>
+<p>The Shift Map’s first shift for this signal isn’t to fix your face. A face can’t be arranged for long, any more than a voice can. It follows what’s happening inside you. The shift is to let your face and your words tell the same story, and to notice what your face is doing in the ordinary moments: the school run, the homework, the end of the day. Very often the work on this signal begins with what settles you, because a settled face can only come from a settled adult.</p>
+<p>So I wonder if it might be worth catching your face over the next few days. In a mirror, a window, the screen of your phone when it goes dark. What is it doing while your mind is elsewhere? And what might your child be taking in from it?</p>
+<p>If by any chance you’d like to explore this further, bring it to the monthly Q&amp;A. I’d really like to hear what you notice.</p>
+<section class="quiz"><span class="label">A moment to listen to yourself</span><h2>What does my face say?</h2><p>This isn&#x27;t a test and there are no right answers. It&#x27;s a quiet moment to listen to yourself. Read each line and tick the box that feels most true for you at the moment. Try not to tick the one you think you should.</p><form id="quiz"><div class="q" data-rev="0"><p>1. I tell my child I&#x27;m fine when I&#x27;m not.</p><div class="opts" role="radiogroup" aria-label="Line 1"><label><input type="radio" name="q1" value="often"><span>Often</span></label><label><input type="radio" name="q1" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q1" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>2. My child asks if I&#x27;m cross when I don&#x27;t think I am.</p><div class="opts" role="radiogroup" aria-label="Line 2"><label><input type="radio" name="q2" value="often"><span>Often</span></label><label><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>3. I notice tension in my jaw, brow or shoulders at the end of the day.</p><div class="opts" role="radiogroup" aria-label="Line 3"><label><input type="radio" name="q3" value="often"><span>Often</span></label><label><input type="radio" name="q3" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q3" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>4. I smile while my body feels anything but calm.</p><div class="opts" role="radiogroup" aria-label="Line 4"><label><input type="radio" name="q4" value="often"><span>Often</span></label><label><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>5. My face is on a screen or elsewhere when my child looks up at me.</p><div class="opts" role="radiogroup" aria-label="Line 5"><label><input type="radio" name="q5" value="often"><span>Often</span></label><label><input type="radio" name="q5" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q5" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>6. My face and my words tell the same story.</p><div class="opts" role="radiogroup" aria-label="Line 6"><label><input type="radio" name="q6" value="often"><span>Often</span></label><label><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>7. When my child looks to me in something new, my face is easy and open.</p><div class="opts" role="radiogroup" aria-label="Line 7"><label><input type="radio" name="q7" value="often"><span>Often</span></label><label><input type="radio" name="q7" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q7" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>8. I catch what my face is doing, and let it soften before I speak.</p><div class="opts" role="radiogroup" aria-label="Line 8"><label><input type="radio" name="q8" value="often"><span>Often</span></label><label><input type="radio" name="q8" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q8" value="rarely"><span>Rarely</span></label></div></div></form><div class="result" id="result" aria-live="polite"></div><p style="margin-top:18px"><em>What did you notice about yourself as you answered?</em></p></section>
+<div class="back"><a class="btn solid" href="/shift-map/#signal-face">Explore this signal in the Shift Map</a><a class="btn" href="/presence-signals/">All presence signals</a></div><h2>The research behind this</h2><div class="refs"><ul>
+<li>Peltola, M. J., Leppänen, J. M., Mäki, S. and Hietanen, J. K. (2009). Emergence of enhanced attention to fearful faces between 5 and 7 months of age. <em>Social Cognitive and Affective Neuroscience</em>, 4, 134–142.</li>
+<li>Peltola, M. J., Leppänen, J. M., Vogel-Farley, V. K., Hietanen, J. K. and Nelson, C. A. (2009). Fearful faces but not fearful eyes alone delay attention disengagement in 7-month-old infants. <em>Emotion</em>, 9(4).</li>
+<li>Sorce, J. F., Emde, R. N., Campos, J. J. and Klinnert, M. D. (1985). Maternal emotional signaling: Its effect on the visual cliff behavior of 1-year-olds. <em>Developmental Psychology</em>, 21(1), 195–200.</li>
+<li>Tronick, E., Als, H., Adamson, L., Wise, S. and Brazelton, T. B. (1978). The infant’s response to entrapment between contradictory messages in face-to-face interaction. <em>Journal of the American Academy of Child Psychiatry</em>, 17(1).</li>
+<li>Waters, S. F., Karnilowicz, H. R., West, T. V. and Mendes, W. B. (2020). Keep it to yourself? Parent emotion suppression influences physiological linkage and interaction behavior. <em>Journal of Family Psychology</em>, 34(7), 784–793.</li>
+<li>Gao, X. and Maurer, D. (2010). A happy story: Developmental changes in children’s sensitivity to facial expressions of varying intensities. <em>Journal of Experimental Child Psychology</em>, 107(2), 67–86.</li>
+<li>Thomas, L. A., De Bellis, M. D., Graham, R. and LaBar, K. S. (2007). Development of emotional facial recognition in late childhood and adolescence. <em>Developmental Science</em>, 10(5), 547–558.</li>
+</ul>
+</div><footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+<script>
+(function(){
+  var READ=[["0 to 5","Your face probably carries a steady, settled presence much of the time. It might be interesting to notice the moments when it changes, and what is happening in you just before."],["6 to 10","Like most parents, your face probably moves between easy and strained, and sometimes says one thing while your words say another. I wonder which line above caught you. That one might be worth carrying with you this week."],["11 to 16","It may be that your face is carrying a lot of what you're trying to keep from your child. Please don't take this as blame. It's how most of us were taught. It might simply be the place where your noticing begins."]];
+  var form=document.getElementById('quiz'); if(!form) return;
+  function update(){
+    var total=0, answered=0, n=form.querySelectorAll('.q').length;
+    form.querySelectorAll('.q').forEach(function(q){
+      var c=q.querySelector('input:checked'); if(!c) return; answered++;
+      var rev=q.dataset.rev==='1', v=c.value;
+      if(!rev){ total+= v==='often'?2:(v==='sometimes'?1:0); }
+      else { total+= v==='rarely'?2:(v==='sometimes'?1:0); }
+    });
+    var out=document.getElementById('result');
+    if(answered<n){ out.innerHTML='Answered '+answered+' of '+n+'. Your reflection appears when you have answered every line.'; return; }
+    var r= total<=5?READ[0]:(total<=10?READ[1]:READ[2]);
+    out.innerHTML='<b>Your total: '+total+' ('+r[0]+')</b><br>'+r[1];
+  }
+  form.addEventListener('change',update); update();
+})();
+</script>
+</body>
+</html>
