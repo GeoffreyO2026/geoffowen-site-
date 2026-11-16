@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Within Reach | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/shift-map/">The Shift Map</a> &nbsp;/&nbsp; <a href="/presence-signals/">Presence signals</a></div></div>
+<span class="label">Presence signal &middot; Touch and proximity</span>
+<h1>Within Reach</h1>
+<p class="sub">Touch and proximity, and what your nearness conveys</p>
+<h2 id="not-now-im-busy">“Not now, I’m busy”</h2>
+<p>Your child drifts into the kitchen while you’re cooking and leans against your leg. Or they climb onto the sofa and press up against you while you’re answering an email. Or, older now, they hang about in the doorway of the room you’re in, not saying much. And without quite noticing, you shift away, or say “Give me some space”, or carry on as though they weren’t there.</p>
+<p>It’s such an ordinary moment that it hardly registers. But very often, what the child was reaching for wasn’t a conversation. It was you, nearby.</p>
+<p>Touch and proximity is one of the nine presence signals in the Shift Map: nine presence signals, five innate expectations, four instinctive responses. It carries physical closeness, and the quality of it: whether your touch is easy or rushed, whether you are near enough to be felt, and whether your body says “you’re welcome here” or “not now”.</p>
+<p><em>A note on language. When I say a child “reads”, “hears” or “expects” something, I don’t mean they are thinking it. A child isn’t weighing up who is in charge or whether you’re paying attention. These are biological processes, happening well below thought. I’ve put them into human words so we can talk about them.</em></p>
+<h2 id="what-the-research-says-about-touch-and-nearness">What the research says about touch and nearness</h2>
+<p>Jean Liedloff saw it in the Amazon long before the laboratories caught up: babies carried in arms, close to a moving adult, were calm. In 2013 Gianluca Esposito, Kumi Kuroda and their colleagues measured it. They recorded the heart rate, movement and crying of twelve babies aged one to six months as their mothers sat holding them or carried them while walking. When their mothers walked with them, the babies stopped crying and moving almost at once, and their heart rates fell quickly, far more than when they were simply held by a mother sitting down. The researchers found the same calming response in mouse pups being carried, and saw it as a basic part of how mammal mothers and babies work together.</p>
+<p>Touch can hold a baby through a difficult moment too. In the still face studies we met in Where Your Eyes Go, a mother’s face going blank distresses her baby. But Dale Stack and Darwin Muir found that when mothers touched their five month olds during the still face, the babies grimaced less and smiled more than babies whose mothers didn’t touch them. The face was absent. The touch was still there, and it carried them.</p>
+<p>The effects can last. Ruth Feldman and her colleagues asked 73 mothers of premature babies to hold them skin to skin for one hour a day for two weeks, and compared them with 73 matched babies who had standard incubator care. They then followed the children seven times over ten years. At ten, the children who had been held skin to skin had more organised sleep, a better regulated response to stress, more mature nervous system functioning and better thinking skills. Two weeks of touch, at the very start, still showing a decade later.</p>
+<p>And touch seems to shape the social brain. Jens Brauer and his colleagues in Leipzig watched 43 five year olds play with their mothers for ten minutes and counted how often the mothers touched them. The children who were touched more showed more resting activity in the brain’s “social” network, the areas involved in understanding other people, and more connection between its parts.</p>
+<p>The research on touch with older children and teenagers is much thinner. What we can say is that the need for nearness doesn’t vanish. It changes shape.</p>
+<h2 id="what-distance-or-tense-touch-conveys">What distance or tense touch conveys</h2>
+<p>In the Shift Map, touch and proximity mainly carries the first of the five innate expectations: contact, not separation. It also carries watching, not watched, because a child who is near you, getting on with their own thing, is being part of your life rather than the centre of it.</p>
+<p>Easy, unhurried nearness conveys that the child belongs here, close to an adult who is steady. Touch that is quick, tense or functional, the hand that steers rather than holds, conveys something else. So does a body that keeps turning away, or a parent who is always across the room, or behind a closed door, or on the far side of a screen. None of this is said. It’s carried in the space between you.</p>
+<p>A child’s biology registers this well below thought. And what follows isn’t the child testing you. It’s their biology signalling that something it expects is missing. Like the castaway waving and shouting at a ship on the horizon, it works to correct what’s missing, or to find some relief from the discomfort and stress of not having it. And if the ship sails past without seeing them, the waving eventually stops. Not because nothing is missing any more, but because signalling hasn’t worked. The biology turns to coping with the absence instead, and that can look like sadness, withdrawal or something close to depression. That, too, is the biology doing its best with what’s missing.</p>
+<p>So when this signal is off, children tend to respond in one of the four instinctive ways. Some fight, becoming rough, grabbing or clambering on you at the worst moment. Some take flight, disappearing into their room. Some freeze, going still and self-contained, as though they’ve stopped expecting to be held. And some fawn, clinging, following you from room to room, anxious to stay close. None of these is a decision made against you. Each is the biology trying either to put things right or to get relief.</p>
+<h2 id="age-and-stage">Age and stage</h2>
+<p>The research in this piece looked at babies of one to six months, five month olds, premature babies followed to ten and five year olds. There’s much less research on touch with older children and teenagers. The principle holds at every age: nearness settles. What it looks like changes as a child grows, and an older child’s touch should always be on their terms, welcome rather than taken. These are illustrations, not scripts.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What tends to happen</th>
+<th>Settled nearness might look like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Babies, up to about 6 months</td>
+<td>Being carried by a moving adult calms the whole body, heart rate included. Touch can carry them through a moment when your face is elsewhere.</td>
+<td>Carried in arms or a sling while you get on with things, not only held still.</td>
+</tr>
+<tr class="even">
+<td>Around 5</td>
+<td>How often they’re touched in ordinary play is linked with how their social brain develops.</td>
+<td>A hand on the back, a lap to climb onto, closeness folded into ordinary moments.</td>
+</tr>
+<tr class="odd">
+<td>Older children and teenagers</td>
+<td>Less research. Touch often becomes something they offer or refuse. The need for nearness tends to stay.</td>
+<td>Being around: in the kitchen, in the car, in the same room, with touch when it’s welcome.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-in-your-home">What this means in your home</h2>
+<p>Modern parenting has quietly built distance into ordinary life. Babies are put down in cots, chairs and buggies. Children have their own rooms, their own screens and their own schedules. Independence is treated as something to train early. It isn’t your fault for following that. It’s what most of us have been handed. But a child’s biology still arrives expecting contact, and often what looks like neediness is simply that expectation not being met.</p>
+<p>The Shift Map’s first shift for this signal is to let your child be near you while you get on with your life. Not to stop and give them your full attention every time, but to let them lean, sit close, come and go. Liedloff called it being in arms: the child carried along in the adult’s ordinary day. For an older child it might be the same room, the same task, the car journey. And when you do touch, to let it be easy and unhurried, not a hand that steers.</p>
+<p>And if you’re reading this and thinking of the months your baby spent in a cot or a buggy, please don’t carry it as guilt. Almost none of us were shown another way, and many of us were told that holding a baby too much would spoil them. The need for nearness doesn’t close at six months, and the continuum never disappears. Nearness offered now, at whatever age your child is, still lands. It isn’t too late to be within reach.</p>
+<p>So I wonder if it might be worth noticing, over the next few days, how much space there is between you and your child, and who keeps it. When they come close, does your body make room, or move away? And what might they be taking from it?</p>
+<p>If by any chance you’d like to explore this further, bring it to the monthly Q&amp;A. I’d really like to hear what you notice.</p>
+<section class="quiz"><span class="label">A moment to listen to yourself</span><h2>How close am I?</h2><p>This isn&#x27;t a test and there are no right answers. It&#x27;s a quiet moment to listen to yourself. Read each line and tick the box that feels most true for you at the moment. Try not to tick the one you think you should.</p><form id="quiz"><div class="q" data-rev="0"><p>1. When my child leans on me or climbs close, I move or ask for space.</p><div class="opts" role="radiogroup" aria-label="Line 1"><label><input type="radio" name="q1" value="often"><span>Often</span></label><label><input type="radio" name="q1" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q1" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>2. My touch is mostly for steering, hurrying or getting things done.</p><div class="opts" role="radiogroup" aria-label="Line 2"><label><input type="radio" name="q2" value="often"><span>Often</span></label><label><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>3. My child is in a different room from me for most of the evening.</p><div class="opts" role="radiogroup" aria-label="Line 3"><label><input type="radio" name="q3" value="often"><span>Often</span></label><label><input type="radio" name="q3" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q3" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>4. My child clings or follows me about when I&#x27;m busy.</p><div class="opts" role="radiogroup" aria-label="Line 4"><label><input type="radio" name="q4" value="often"><span>Often</span></label><label><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>5. My body is tense when my child is close to me.</p><div class="opts" role="radiogroup" aria-label="Line 5"><label><input type="radio" name="q5" value="often"><span>Often</span></label><label><input type="radio" name="q5" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q5" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>6. My child can be near me while I get on with what I&#x27;m doing.</p><div class="opts" role="radiogroup" aria-label="Line 6"><label><input type="radio" name="q6" value="often"><span>Often</span></label><label><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>7. My touch is easy and unhurried, when it&#x27;s welcome.</p><div class="opts" role="radiogroup" aria-label="Line 7"><label><input type="radio" name="q7" value="often"><span>Often</span></label><label><input type="radio" name="q7" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q7" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>8. I notice when my child comes close, and make room.</p><div class="opts" role="radiogroup" aria-label="Line 8"><label><input type="radio" name="q8" value="often"><span>Often</span></label><label><input type="radio" name="q8" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q8" value="rarely"><span>Rarely</span></label></div></div></form><div class="result" id="result" aria-live="polite"></div><p style="margin-top:18px"><em>What did you notice about yourself as you answered?</em></p></section>
+<div class="back"><a class="btn solid" href="/shift-map/#signal-touch">Explore this signal in the Shift Map</a><a class="btn" href="/presence-signals/">All presence signals</a></div><h2>The research behind this</h2><div class="refs"><ul>
+<li>Liedloff, J. (1975). <em>The Continuum Concept</em>. Duckworth.</li>
+<li>Esposito, G., Yoshida, S., Ohnishi, R. et al. (2013). Infant calming responses during maternal carrying in humans and mice. <em>Current Biology</em>, 23(9), 739–745.</li>
+<li>Stack, D. M. and Muir, D. W. (1992). Adult tactile stimulation during face-to-face interactions modulates five-month-olds’ affect and attention. <em>Child Development</em>, 63(6), 1509–1525.</li>
+<li>Feldman, R., Rosenthal, Z. and Eidelman, A. I. (2014). Maternal-preterm skin-to-skin contact enhances child physiologic organization and cognitive control across the first 10 years of life. <em>Biological Psychiatry</em>, 75(1), 56–64.</li>
+<li>Brauer, J., Xiao, Y., Poulain, T., Friederici, A. D. and Schirmer, A. (2016). Frequency of maternal touch predicts resting activity and connectivity of the developing social brain. <em>Cerebral Cortex</em>, 26(8), 3544–3552.</li>
+</ul>
+</div><footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+<script>
+(function(){
+  var READ=[["0 to 5","There's probably a good deal of easy nearness between you. It might be interesting to notice the moments when the space opens up, and what's usually happening in you then."],["6 to 10","Like most parents, you probably move between close and distant, depending on the day. I wonder which line above caught you. That one might be worth carrying with you this week."],["11 to 16","It may be that there's more space between you than either of you would choose. Please don't take this as blame. Modern life builds a lot of distance in. It might simply be the place where your noticing begins."]];
+  var form=document.getElementById('quiz'); if(!form) return;
+  function update(){
+    var total=0, answered=0, n=form.querySelectorAll('.q').length;
+    form.querySelectorAll('.q').forEach(function(q){
+      var c=q.querySelector('input:checked'); if(!c) return; answered++;
+      var rev=q.dataset.rev==='1', v=c.value;
+      if(!rev){ total+= v==='often'?2:(v==='sometimes'?1:0); }
+      else { total+= v==='rarely'?2:(v==='sometimes'?1:0); }
+    });
+    var out=document.getElementById('result');
+    if(answered<n){ out.innerHTML='Answered '+answered+' of '+n+'. Your reflection appears when you have answered every line.'; return; }
+    var r= total<=5?READ[0]:(total<=10?READ[1]:READ[2]);
+    out.innerHTML='<b>Your total: '+total+' ('+r[0]+')</b><br>'+r[1];
+  }
+  form.addEventListener('change',update); update();
+})();
+</script>
+</body>
+</html>

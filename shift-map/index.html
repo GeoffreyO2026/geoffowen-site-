@@ -267,7 +267,7 @@ let current="hearing";
 try{const s=localStorage.getItem("shiftmap-preview-selection"); if(s&&byId(CH,s)) current=s;}catch(e){}
 const SIGNAL_FROM_LINK=(location.hash.indexOf("#signal-")===0)?location.hash.slice(8):"";
 if(SIGNAL_FROM_LINK&&byId(CH,SIGNAL_FROM_LINK)) current=SIGNAL_FROM_LINK;
-const ARTICLES={hearing:"/presence-signals/what-we-say/",voice:"/presence-signals/how-we-sound/",face:"/presence-signals/what-our-face-conveys/",sight:"/presence-signals/where-our-eyes-go/"};
+const ARTICLES={hearing:"/presence-signals/what-we-say/",voice:"/presence-signals/how-we-sound/",face:"/presence-signals/what-our-face-conveys/",touch:"/presence-signals/touch-and-proximity/",sight:"/presence-signals/where-our-eyes-go/"};
 const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
 
 function renderPicker(){
