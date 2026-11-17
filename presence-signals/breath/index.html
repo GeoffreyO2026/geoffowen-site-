@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Breath Between Us | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/presence-signals/">Presence signals</a></div></div>
+<span class="label">Presence signal &middot; Breath</span>
+<h1>The Breath Between Us</h1>
+<p class="sub">Breath, and what your breathing conveys</p>
+<h2 id="holding-it-together">Holding it together</h2>
+<p>It’s ten minutes to the school run, nobody has shoes on, and you’re holding it together. Your voice is fine. Your words are fine. But your chest is tight and your breathing is high and quick, and somewhere along the way you’ve stopped breathing out properly at all. And then, out of nowhere, your child falls apart over a sock.</p>
+<p>It’s easy to think it came from nowhere. But very often, the storm in the child started in the air between you, long before anyone said a word.</p>
+<p>Breath is one of the nine presence signals in the Shift Map: nine presence signals, five innate expectations, four instinctive responses. It carries the state of your body: whether you are settled or braced, at ease or on alert. You can choose your words. Your breathing tends to tell the truth.</p>
+<p><em>A note on language. When I say a child “reads”, “catches” or “expects” something, I don’t mean they are thinking it. A child isn’t weighing up who is in charge or whether you’re paying attention. These are biological processes, happening well below thought. I’ve put them into human words so we can talk about them.</em></p>
+<h2 id="what-the-research-says-about-breath-and-stress">What the research says about breath and stress</h2>
+<p>A baby’s own breathing seems to settle in the company of another rhythm. Evelyn Thoman and Evan Ingersoll gave premature babies a teddy bear in their incubator that quietly “breathed”, rising and falling at the baby’s own breathing rate during quiet sleep, while other babies had a bear that didn’t breathe. Over two weeks, the babies with the breathing bear moved towards it and made contact with it more and more quickly. The others didn’t. Those babies spent more time in quiet sleep, and their own breathing became calmer. A small, steady rhythm nearby, and the baby’s body reached for it.</p>
+<p>Babies also catch our stress. Sara Waters, Tessa West and Wendy Berry Mendes separated 69 mothers from their babies, aged 12 to 14 months, and put some of the mothers through a stressful task, being harshly judged while giving a talk. When mothers and babies were reunited, the babies of the stressed mothers showed their own heart rates rising within minutes, and they were warier with a stranger. Nobody had told them anything. And when the mother’s task had been the harshest, the baby’s body tracked hers most closely, more so as time went on. As the researchers put it, stress may be caught, not taught.</p>
+<p>It works in both directions. In a follow-up study, the same team found that when mothers did a relaxing task instead, their babies’ bodies relaxed with them. Babies sitting on their mother’s lap caught her stress more strongly than babies sitting apart. Stress is catching, and so is calm.</p>
+<p>It happens moment to moment. Ruth Feldman and her colleagues found that mothers and babies coordinate their heart rhythms during ordinary face to face play, within less than a second of each other, and that this coordination grows stronger in the moments when they are most in tune.</p>
+<p>And our own breathing changes our state. A systematic review by Andrea Zaccaro and his colleagues found that slowing the breath is linked with calmer nervous system activity and less anxiety in adults. Which means the breath is one of the few parts of our own state we can reach directly, and one that our child may be reading all the time.</p>
+<p>The research on breath and stress with older children and teenagers is much thinner. What we can say is that the body keeps reading the bodies around it.</p>
+<h2 id="what-braced-or-held-breath-conveys">What braced or held breath conveys</h2>
+<p>In the Shift Map, breath mainly carries whether the adult is settled enough to lead. A child’s biology expects to be led, not followed, by an adult who is steady. And it expects contact, not separation: not just a body nearby, but a body at ease.</p>
+<p>Slow, easy breathing conveys that the adult is in charge of the moment, and that nothing here needs alarm. Breath that is held, high, quick or braced conveys something else: that something is wrong, and that the adult may not be on top of it. None of this is said. It’s carried in the rise and fall of your chest.</p>
+<p>A child’s biology registers this well below thought. And what follows isn’t the child testing you. It’s their biology signalling that something it expects is missing. Like the castaway waving and shouting at a ship on the horizon, it works to correct what’s missing, or to find some relief from the discomfort and stress of not having it. And if the ship sails past without seeing them, the waving eventually stops. Not because nothing is missing any more, but because signalling hasn’t worked. The biology turns to coping with the absence instead, and that can look like sadness, withdrawal or something close to depression. That, too, is the biology doing its best with what’s missing.</p>
+<p>So when this signal is off, children tend to respond in one of the four instinctive ways. Some fight, flaring up over something small, the sock rather than the real thing. Some take flight, running off or refusing to come out of their room. Some freeze, going still and blank, as though waiting for the storm to pass. And some fawn, suddenly helpful and anxious to please, trying to settle you. None of these is a decision made against you. Each is the biology trying either to put things right or to get relief.</p>
+<h2 id="age-and-stage">Age and stage</h2>
+<p>The research in this piece looked at premature babies, babies of 12 to 14 months and young babies in play with their mothers, along with adults learning to slow their own breathing. There’s much less research on older children and teenagers. The principle holds at every age: a settled body settles the bodies near it. What it looks like changes as a child grows. These are illustrations, not scripts.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What tends to happen</th>
+<th>Settled breath might look like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Premature and young babies</td>
+<td>A steady rhythm nearby calms their own breathing and sleep. Heart rhythms coordinate with the parent’s in play.</td>
+<td>Being held against a chest that is breathing slowly and easily.</td>
+</tr>
+<tr class="even">
+<td>Around 12 to 14 months</td>
+<td>They catch a parent’s stress within minutes of being together, and calm can be caught too.</td>
+<td>A slow breath out before you go back into the room, and before you pick them up.</td>
+</tr>
+<tr class="odd">
+<td>Older children and teenagers</td>
+<td>Less research. The body still reads the bodies around it.</td>
+<td>A breath out before you answer, especially when things are heated.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-in-your-home">What this means in your home</h2>
+<p>Modern parenting puts a great deal of weight on what we say: the right words, the right script, the calm voice. But the calm voice on top of a held breath doesn’t land the way we hope. It isn’t your fault. Most of us run on adrenaline for much of the day, and almost nobody was told that their breathing mattered to their child. But a child’s biology still reads the body underneath the words.</p>
+<p>The Shift Map’s first shift for this signal is to notice your own breath before you do anything else. Not to perform calm, or to make a show of deep breathing at your child, but to let one slow breath out happen before you speak, before you step into the room, before you pick them up. It’s the quietest form of benign authority there is. You aren’t asking your child to calm down. You’re settling the air they’re breathing.</p>
+<p>So I wonder if it might be worth noticing, over the next few days, what your breathing is doing in the moments just before things go wrong. Are you breathing out at all? And what happens in your child when you do?</p>
+<p>If by any chance you’d like to explore this further, bring it to the monthly Q&amp;A. I’d really like to hear what you notice.</p>
+<section class="quiz"><span class="label">A moment to listen to yourself</span><h2>What is my breath saying?</h2><p>This isn&#x27;t a test and there are no right answers. It&#x27;s a quiet moment to listen to yourself. Read each line and tick the box that feels most true for you at the moment. Try not to tick the one you think you should.</p><form id="quiz"><div class="q" data-rev="0"><p>1. I notice I&#x27;m holding my breath or breathing high in my chest around my child.</p><div class="opts" role="radiogroup" aria-label="Line 1"><label><input type="radio" name="q1" value="often"><span>Often</span></label><label><input type="radio" name="q1" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q1" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>2. I&#x27;m on edge before the difficult times of day even start.</p><div class="opts" role="radiogroup" aria-label="Line 2"><label><input type="radio" name="q2" value="often"><span>Often</span></label><label><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>3. My words are calm while my body is tense.</p><div class="opts" role="radiogroup" aria-label="Line 3"><label><input type="radio" name="q3" value="often"><span>Often</span></label><label><input type="radio" name="q3" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q3" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>4. My child seems to fall apart when I&#x27;m stressed, even if I haven&#x27;t said anything.</p><div class="opts" role="radiogroup" aria-label="Line 4"><label><input type="radio" name="q4" value="often"><span>Often</span></label><label><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>5. I go straight into a tense situation without pausing.</p><div class="opts" role="radiogroup" aria-label="Line 5"><label><input type="radio" name="q5" value="often"><span>Often</span></label><label><input type="radio" name="q5" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q5" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>6. I let a slow breath out before I respond to my child.</p><div class="opts" role="radiogroup" aria-label="Line 6"><label><input type="radio" name="q6" value="often"><span>Often</span></label><label><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>7. My child seems to settle when I settle.</p><div class="opts" role="radiogroup" aria-label="Line 7"><label><input type="radio" name="q7" value="often"><span>Often</span></label><label><input type="radio" name="q7" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q7" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>8. I can feel when my own body is calm, and I come back to it.</p><div class="opts" role="radiogroup" aria-label="Line 8"><label><input type="radio" name="q8" value="often"><span>Often</span></label><label><input type="radio" name="q8" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q8" value="rarely"><span>Rarely</span></label></div></div></form><div class="result" id="result" aria-live="polite"></div><p style="margin-top:18px"><em>What did you notice about yourself as you answered?</em></p></section>
+<div class="back"><a class="btn solid" href="/speak-with-geoff">Talk it through with Geoff &rarr;</a><a class="btn" href="/presence-signals/">All presence signals</a></div><h2>The research behind this</h2><div class="refs"><ul>
+<li>Liedloff, J. (1975). <em>The Continuum Concept</em>. Duckworth.</li>
+<li>Thoman, E. B. and Ingersoll, E. W. (1993). Learning in premature infants. <em>Developmental Psychology</em>, 29(4), 692–700.</li>
+<li>Ingersoll, E. W. and Thoman, E. B. (1994). The breathing bear: effects on respiration in premature infants. <em>Physiology and Behavior</em>, 56(5), 855–859.</li>
+<li>Waters, S. F., West, T. V. and Mendes, W. B. (2014). Stress contagion: physiological covariation between mothers and infants. <em>Psychological Science</em>, 25(4), 934–942.</li>
+<li>Waters, S. F., West, T. V., Karnilowicz, H. R. and Mendes, W. B. (2017). Affect contagion between mothers and infants: examining valence and touch. <em>Journal of Experimental Psychology: General</em>, 146(7), 1043–1051.</li>
+<li>Feldman, R., Magori-Cohen, R., Galili, G., Singer, M. and Louzoun, Y. (2011). Mother and infant coordinate heart rhythms through episodes of interaction synchrony. <em>Infant Behavior and Development</em>, 34(4), 569–577.</li>
+<li>Zaccaro, A., Piarulli, A., Laurino, M. et al. (2018). How breath-control can change your life: a systematic review on psycho-physiological correlates of slow breathing. <em>Frontiers in Human Neuroscience</em>, 12, 353.</li>
+</ul>
+</div><footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+<script>
+(function(){
+  var READ=[["0 to 5", "There's probably a good deal of settledness in your body around your child. It might be interesting to notice the moments when your breath tightens, and what's usually happening then."], ["6 to 10", "Like most parents, you probably move between settled and braced, depending on the day. I wonder which line above caught you. That one might be worth carrying with you this week."], ["11 to 16", "It may be that your body is braced a good deal of the time. This isn't blame. Modern life runs most of us on adrenaline. It might simply be the place where your noticing begins."]];
+  var form=document.getElementById('quiz'); if(!form) return;
+  function update(){
+    var total=0, answered=0, n=form.querySelectorAll('.q').length;
+    form.querySelectorAll('.q').forEach(function(q){
+      var c=q.querySelector('input:checked'); if(!c) return; answered++;
+      var rev=q.dataset.rev==='1', v=c.value;
+      if(!rev){ total+= v==='often'?2:(v==='sometimes'?1:0); }
+      else { total+= v==='rarely'?2:(v==='sometimes'?1:0); }
+    });
+    var out=document.getElementById('result');
+    if(answered<n){ out.innerHTML='Answered '+answered+' of '+n+'. Your reflection appears when you have answered every line.'; return; }
+    var r= total<=5?READ[0]:(total<=10?READ[1]:READ[2]);
+    out.innerHTML='<b>Your total: '+total+' ('+r[0]+')</b><br>'+r[1];
+  }
+  form.addEventListener('change',update); update();
+})();
+</script>
+</body>
+</html>
