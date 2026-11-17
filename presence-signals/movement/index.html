@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pace You Set | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/presence-signals/">Presence signals</a></div></div>
+<span class="label">Presence signal &middot; Movement</span>
+<h1>The Pace You Set</h1>
+<p class="sub">Movement, and what the pace of your body conveys</p>
+<h2 id="come-on-come-on">Come on, come on</h2>
+<p>It’s five past eight. You’re looking for the car keys with one hand and holding out a coat with the other. You’re moving fast, turning quickly, calling up the stairs as you go. “Come on, come on.” And the faster you move, the slower your child seems to get, until they sit down on the bottom step and won’t put their shoes on at all.</p>
+<p>Or it’s the other end of the day. You’ve sunk into the sofa, the phone is in your hand and you haven’t moved for a while. You’re exhausted, and who could blame you. And somewhere in the kitchen, things are starting to unravel.</p>
+<p>Movement is one of the nine presence signals in the Shift Map: nine presence signals, five innate expectations, four instinctive responses. It carries the pace you set with your body. Whether you’re rushing or unhurried, darting or steady, moving with purpose or not really moving at all. You may not say a word. Your body is setting the tempo for the whole house.</p>
+<p><em>A note on language. When I say a child “reads”, “catches” or “expects” something, I don’t mean they are thinking it. A child isn’t weighing up who is in charge or whether you’re paying attention. These are biological processes, happening well below thought. I’ve put them into human words so we can talk about them.</em></p>
+<h2 id="what-the-research-says-about-movement-and-pace">What the research says about movement and pace</h2>
+<p>Babies are tuned to how bodies move from the very start. Francesca Simion, Lucia Regolin and Hermann Bulf showed two-day-old babies simple animations made of moving dots. Some dots moved the way a living creature walks, and some moved at random. The newborns looked longer at the walking pattern. Before they can focus properly on anything, babies are already drawn to the way living bodies move.</p>
+<p>And the pace of an adult’s body can settle a baby in seconds. Gianluca Esposito, Kumi Kuroda and their colleagues measured the heart rates of babies while their mothers held them sitting down, and then while their mothers carried them walking. When the mothers walked, the babies stopped crying, stopped wriggling and their heart rates slowed, almost straight away. Simply being held while the mother sat still didn’t have the same effect. The same calming response showed up in mouse pups being carried by their mothers, which suggests it’s very old indeed. A steady, purposeful body on the move settles the body it’s carrying.</p>
+<p>Then there’s the rush. Researchers measuring how chaotic a home feels use a set of statements that includes “We almost always seem to be rushed” and “No matter how hard we try, we always seem to be running late”. Jo Coldwell, Alison Pike and Judy Dunn used this measure with families of children aged four to eight. Homes that felt more chaotic went with less warmth and more harshness from parents. And the chaos itself predicted children’s behaviour problems over and above the parenting. It wasn’t only what parents did. It was the pace and the hubbub of the home around them.</p>
+<p>Small things count. Keith Crnic and Mark Greenberg studied 74 mothers of five-year-olds. The minor, daily hassles of family life, the endless small pressures, turned out to be a more powerful influence on how mothers and children were doing than major life events.</p>
+<p>With teenagers the research is thinner, but studies have found that a more chaotic home goes with more risky behaviour in adolescents. The pace of the home seems to matter all the way through.</p>
+<h2 id="what-rushing-or-stillness-conveys">What rushing or stillness conveys</h2>
+<p>In the Shift Map, movement mainly carries whether an adult is leading with calm certainty. A child’s biology expects to be led, not followed, by an adult who knows where they’re going. And it expects a real place in family life: to be carried along in the flow of the household, not swept up in it or left out of it.</p>
+<p>Jean Liedloff watched this among the Yequana in South America. Babies were carried through the ordinary busy life of the adults, at the adults’ own steady pace. They weren’t the centre of attention. They were simply part of a life that was going somewhere, at a pace that didn’t need hurrying.</p>
+<p>Unhurried, purposeful movement conveys that someone is in charge and that there’s time. Rushing, darting and turning quickly convey something else: that time is running out and the adult may not be on top of things. And the other end matters too. Slow isn’t the same as settled. A body that has gone still and sunk away, eyes on a screen, can convey that nobody is leading at all. None of this is said. It’s carried in the way you cross a room.</p>
+<p>A child’s biology registers this well below thought. And what follows isn’t the child testing you. It’s their biology signalling that something it expects is missing. Like the castaway waving and shouting at a ship on the horizon, it works to correct what’s missing, or to find some relief from the discomfort and stress of not having it. And if the ship sails past without seeing them, the waving eventually stops. Not because nothing is missing any more, but because signalling hasn’t worked. The biology turns to coping with the absence instead, and that can look like sadness, withdrawal or something close to depression. That, too, is the biology doing its best with what’s missing.</p>
+<p>So when this signal is off, children tend to respond in one of the four instinctive ways. Some fight, flaring up the moment you hurry them. Some take flight, running off just as you need to leave. Some freeze, sitting on the bottom step and going nowhere, slower the more you rush. And some fawn, rushing around anxiously to keep up with you, trying to make things right. None of these is a decision made against you. Each is the biology trying either to put things right or to get relief.</p>
+<h2 id="age-and-stage">Age and stage</h2>
+<p>The research in this piece looked at newborn babies, babies being carried in their first months, children of four to eight and their homes, five-year-olds and their mothers, and teenagers. The principle holds at every age: the pace of your body sets the tempo for the child’s. What it looks like changes as a child grows. These are illustrations, not scripts.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What tends to happen</th>
+<th>An unhurried pace might look like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Newborns and young babies</td>
+<td>Drawn to the way bodies move. Calmed within seconds of being carried by an adult who is walking.</td>
+<td>Carrying your baby with you as you go about the house, at your own steady pace.</td>
+</tr>
+<tr class="even">
+<td>Children of four to eight</td>
+<td>A rushed, chaotic home goes with more behaviour problems, over and above parenting.</td>
+<td>Moving steadily through the morning, even when it’s busy, rather than darting from one thing to the next.</td>
+</tr>
+<tr class="odd">
+<td>Teenagers</td>
+<td>Less research. A chaotic home still seems to matter.</td>
+<td>Being around and on the move in the home, unhurried, rather than racing through or disappearing.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-in-your-home">What this means in your home</h2>
+<p>Modern parenting puts a great deal of weight on what we say and what we plan: the reward chart, the countdown, the warning that we’re leaving in five minutes. But a countdown called out by a body that is darting and rushing doesn’t land the way we hope. It isn’t your fault. Most of us live at a pace nobody would have chosen, and almost nobody was told that the way they moved mattered to their child. But a child’s biology still reads the body more than the words.</p>
+<p>The Shift Map’s first shift for this signal is to notice the pace of your own body before anything else. Not to slow down to a crawl, or to make a performance of being calm, but to move with purpose and without hurry. It’s benign authority in its plainest form. You aren’t asking your child to speed up or calm down. You’re setting the tempo they will tend to follow.</p>
+<p>So I wonder if it might be worth noticing, over the next few days, how you move through the hardest parts of the day. Are you rushing? Have you gone still? And what does your child do when you change pace?</p>
+<p>If by any chance you’d like to explore this further, bring it to the monthly Q&amp;A. I’d really like to hear what you notice.</p>
+<section class="quiz"><span class="label">A moment to listen to yourself</span><h2>What pace am I setting?</h2><p>This isn&#x27;t a test and there are no right answers. It&#x27;s a quiet moment to listen to yourself. Read each line and tick the box that feels most true for you at the moment. Try not to tick the one you think you should.</p><form id="quiz"><div class="q" data-rev="0"><p>1. I find myself rushing around my child, especially at the busy times of day.</p><div class="opts" role="radiogroup" aria-label="Line 1"><label><input type="radio" name="q1" value="often"><span>Often</span></label><label><input type="radio" name="q1" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q1" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>2. We seem to be running late, however hard I try.</p><div class="opts" role="radiogroup" aria-label="Line 2"><label><input type="radio" name="q2" value="often"><span>Often</span></label><label><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>3. I hurry my child along with words while my body is darting about.</p><div class="opts" role="radiogroup" aria-label="Line 3"><label><input type="radio" name="q3" value="often"><span>Often</span></label><label><input type="radio" name="q3" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q3" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>4. At the end of the day I sink down and stop moving, even when things are starting to unravel.</p><div class="opts" role="radiogroup" aria-label="Line 4"><label><input type="radio" name="q4" value="often"><span>Often</span></label><label><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>5. The faster I go, the slower my child seems to get.</p><div class="opts" role="radiogroup" aria-label="Line 5"><label><input type="radio" name="q5" value="often"><span>Often</span></label><label><input type="radio" name="q5" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q5" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>6. I can move through a busy moment steadily, without hurrying.</p><div class="opts" role="radiogroup" aria-label="Line 6"><label><input type="radio" name="q6" value="often"><span>Often</span></label><label><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>7. My child tends to fall into step with me when I&#x27;m unhurried.</p><div class="opts" role="radiogroup" aria-label="Line 7"><label><input type="radio" name="q7" value="often"><span>Often</span></label><label><input type="radio" name="q7" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q7" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>8. I notice the pace of my own body and can change it.</p><div class="opts" role="radiogroup" aria-label="Line 8"><label><input type="radio" name="q8" value="often"><span>Often</span></label><label><input type="radio" name="q8" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q8" value="rarely"><span>Rarely</span></label></div></div></form><div class="result" id="result" aria-live="polite"></div><p style="margin-top:18px"><em>What did you notice about yourself as you answered?</em></p></section>
+<div class="back"><a class="btn solid" href="/speak-with-geoff">Talk it through with Geoff &rarr;</a><a class="btn" href="/presence-signals/">All presence signals</a></div><h2>The research behind this</h2><div class="refs"><ul>
+<li>Liedloff, J. (1975). <em>The Continuum Concept</em>. Duckworth.</li>
+<li>Simion, F., Regolin, L. and Bulf, H. (2008). A predisposition for biological motion in the newborn baby. <em>Proceedings of the National Academy of Sciences</em>, 105(2), 809–813.</li>
+<li>Esposito, G., Yoshida, S., Ohnishi, R. et al. (2013). Infant calming responses during maternal carrying in humans and mice. <em>Current Biology</em>, 23(9), 739–745.</li>
+<li>Matheny, A. P., Wachs, T. D., Ludwig, J. L. and Phillips, K. (1995). Bringing order out of chaos: psychometric characteristics of the Confusion, Hubbub and Order Scale. <em>Journal of Applied Developmental Psychology</em>, 16(3), 429–444.</li>
+<li>Coldwell, J., Pike, A. and Dunn, J. (2006). Household chaos: links with parenting and child behaviour. <em>Journal of Child Psychology and Psychiatry</em>, 47(11), 1116–1122.</li>
+<li>Crnic, K. A. and Greenberg, M. T. (1990). Minor parenting stresses with young children. <em>Child Development</em>, 61(5), 1628–1637.</li>
+<li>Chatterjee, A., Gillman, M. W. and Wong, M. D. (2015). Chaos, Hubbub and Order Scale and health risk behaviors in adolescents in Los Angeles. <em>The Journal of Pediatrics</em>, 167(6), 1415–1421.</li>
+</ul>
+</div><footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+<script>
+(function(){
+  var READ=[["0 to 5", "There's probably a good deal of steadiness in the way you move around your child. It might be interesting to notice the moments when your pace changes, and what's usually happening then."], ["6 to 10", "Like most parents, you probably move between unhurried and rushed, depending on the day. I wonder which line above caught you. That one might be worth carrying with you this week."], ["11 to 16", "It may be that the pace of your days is setting the tempo more than you'd choose. This isn't blame. Modern life runs most of us at a speed nobody chose. It might simply be the place where your noticing begins."]];
+  var form=document.getElementById('quiz'); if(!form) return;
+  function update(){
+    var total=0, answered=0, n=form.querySelectorAll('.q').length;
+    form.querySelectorAll('.q').forEach(function(q){
+      var c=q.querySelector('input:checked'); if(!c) return; answered++;
+      var rev=q.dataset.rev==='1', v=c.value;
+      if(!rev){ total+= v==='often'?2:(v==='sometimes'?1:0); }
+      else { total+= v==='rarely'?2:(v==='sometimes'?1:0); }
+    });
+    var out=document.getElementById('result');
+    if(answered<n){ out.innerHTML='Answered '+answered+' of '+n+'. Your reflection appears when you have answered every line.'; return; }
+    var r= total<=5?READ[0]:(total<=10?READ[1]:READ[2]);
+    out.innerHTML='<b>Your total: '+total+' ('+r[0]+')</b><br>'+r[1];
+  }
+  form.addEventListener('change',update); update();
+})();
+</script>
+</body>
+</html>
