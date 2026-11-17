@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Smell of Home | Geoff Owen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--ink:#ECE8E1;--muted:#A39E95;--line:rgba(184,151,42,0.28);--gold:#B8972A;--gold-soft:rgba(184,151,42,0.12);--display:"Cormorant Garamond",Georgia,serif;--body:"Montserrat","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75}
+a{color:var(--gold)}
+.wrap{max-width:760px;margin:0 auto;padding:32px max(18px,env(safe-area-inset-left,0px)) 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.brand{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand span{color:var(--gold)}
+.crumbs{font-size:.8rem;letter-spacing:.06em}
+.crumbs a{text-decoration:none}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 8px}
+.sub{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--muted);margin:0 0 28px}
+h2{font-size:1.8rem;margin:44px 0 12px}
+h2::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin-bottom:14px}
+p{margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:8px 0 24px}
+th{text-align:left;color:var(--gold);font-weight:600;border-bottom:1px solid var(--line);padding:10px 8px}
+td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;vertical-align:top}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin:48px 0}
+.quiz h2{margin-top:6px}
+.quiz h2::before{display:none}
+.q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+.q p{margin:0}
+.opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts label{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts input:checked + span{color:var(--bg)}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.opts input:focus-visible + span{outline:2px solid var(--gold);outline-offset:3px}
+.result{margin-top:20px;padding:18px;border-radius:10px;background:var(--gold-soft);min-height:60px}
+.result b{color:var(--gold)}
+.back{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;text-decoration:none;font-size:.92rem;font-weight:600}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.refs li{font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--gold)}
+.card h3{margin:0;font-size:1.35rem;color:var(--ink)}
+.card p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+.card .go{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-top:auto;padding-top:8px}
+.card.soon{opacity:.6}
+.card.soon .go{color:var(--muted)}
+.lead{font-size:1.05rem;color:var(--muted)}
+.trio{font-family:var(--display);font-size:1.5rem;color:var(--ink);margin:6px 0 22px}
+footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px;margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="https://geoffreyowen.com">Geoff <span>Owen</span></a><div class="crumbs"><a href="/presence-signals/">Presence signals</a></div></div>
+<span class="label">Presence signal &middot; Smell</span>
+<h1>The Smell of Home</h1>
+<p class="sub">Smell, and what your scent conveys</p>
+<h2 id="the-jumper-on-the-pillow">The jumper on the pillow</h2>
+<p>Your child won’t settle at bedtime, so you leave them the jumper you’ve been wearing all day. Or your toddler refuses to let the old blanket go in the wash. Or, older now, they come home from a sleepover tired and scratchy, and only seem to soften once they’ve been on your bed for a while, or under the same roof as you for an hour.</p>
+<p>We tend to put it down to habit, or comfort, or being tired. But very often, part of what’s settling them is something none of us notices. The smell of you, and the smell of home.</p>
+<p>Smell is one of the nine presence signals in the Shift Map: nine presence signals, five innate expectations, four instinctive responses. It carries the most private information of all: who is near, whether they are familiar and something of the state they are in. It works almost entirely out of awareness. You won’t hear your child say “you smell calm”. But their body is taking it in all the same.</p>
+<p><em>A note on language. When I say a child “reads”, “recognises” or “expects” something, I don’t mean they are thinking it. A child isn’t weighing up who is in charge or whether you’re paying attention. These are biological processes, happening well below thought. I’ve put them into human words so we can talk about them.</em></p>
+<h2 id="what-the-research-says-about-smell">What the research says about smell</h2>
+<p>Smell is one of the first ways a baby finds its mother. In 1975 Aidan Macfarlane placed two breast pads either side of newborn babies’ heads, one worn by their own mother and one clean. By five days old, most babies turned more towards their mother’s pad. By six days they were telling their own mother’s pad apart from another mother’s. A baby less than a week old already knows the smell of the person they belong to.</p>
+<p>The smell alone is enough to draw them. Varendi and Porter laid newborns on their tummies with a pad carrying their mother’s breast odour 17 centimetres in front of their nose, and in another trial a clean pad. More babies moved towards and reached the pad that smelled of their mother. And Regina Sullivan and Paul Toubas found that crying newborns stopped crying when they were given a gown their mother had worn.</p>
+<p>Familiar smells calm a baby through distress too. Cécile Rattaz, Nathalie Goubet and André Bullinger studied 44 newborns having a routine heel prick. Babies who smelled a familiar odour, either their mother’s milk or a vanilla scent they had grown used to, cried and grimaced less, and recovered more quickly afterwards, than babies who smelled something new or nothing at all. What mattered wasn’t the smell itself. It was that it was familiar.</p>
+<p>It works the other way too. Johan Lundström and his colleagues scanned the brains of women as they smelled the body odour of two day old babies. The baby smell lit up reward areas of the brain, and did so more strongly in new mothers than in women who had never given birth. A baby’s smell draws the parent in.</p>
+<p>And the conversation doesn’t stop in infancy. Laura Schäfer, Ilona Croy and their colleagues asked 164 mothers to smell night clothes worn by their own child and by four unfamiliar children, aged from birth to eighteen. Mothers are known to recognise their own children by smell, and here the smell of a child also carried clues about where they were in their development, before or after puberty.</p>
+<p>Smell may also carry how we feel. Jasper de Groot and his colleagues collected sweat from men watching frightening or disgusting film clips. Women who smelled the “fear” sweat, without knowing it, made fearful faces themselves. This study was with adults, and the research on whether children pick up a parent’s stress this way is still thin. But it suggests that what we feel may travel further, and more quietly, than we think.</p>
+<h2 id="what-an-unfamiliar-or-anxious-atmosphere-conveys">What an unfamiliar or anxious atmosphere conveys</h2>
+<p>In the Shift Map, smell mainly carries the first of the five innate expectations: contact, not separation. A familiar smell is a kind of contact even when you are out of sight. It tells the child’s body that the one it belongs to is near, or has been near. It also carries something of whether the adult is settled or alarmed.</p>
+<p>When a child’s world smells of you, of home, of the same people and the same places, the message underneath is continuity: you’re still here, and so am I. When that thread keeps breaking, through long stretches apart, constant change or a home where the air is thick with tension, the message is different. None of this is said. It’s carried in the air between you.</p>
+<p>A child’s biology registers this well below thought. And what follows isn’t the child testing you. It’s their biology signalling that something it expects is missing. Like the castaway waving and shouting at a ship on the horizon, it works to correct what’s missing, or to find some relief from the discomfort and stress of not having it. And if the ship sails past without seeing them, the waving eventually stops. Not because nothing is missing any more, but because signalling hasn’t worked. The biology turns to coping with the absence instead, and that can look like sadness, withdrawal or something close to depression. That, too, is the biology doing its best with what’s missing.</p>
+<p>So when this signal is off, children tend to respond in one of the four instinctive ways. Some fight, unsettled and prickly when they come back from being away. Some take flight, retreating to their own room and their own things. Some freeze, going quiet and flat after a change. And some fawn, clinging to a blanket, a jumper or a parent, refusing to let the familiar thing go. None of these is a decision made against you. Each is the biology trying either to put things right or to get relief.</p>
+<h2 id="age-and-stage">Age and stage</h2>
+<p>The research in this piece looked mostly at newborns in their first days and weeks, and at mothers smelling their children’s clothes from birth to eighteen. There’s much less research on how older children respond to a parent’s smell. The principle holds at every age: the familiar settles. What it looks like changes as a child grows. These are illustrations, not scripts.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age</th>
+<th>What tends to happen</th>
+<th>Settled smell might look like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Newborns, first days and weeks</td>
+<td>They recognise their own mother by smell within a week, move towards her smell and are calmed by familiar smells through distress.</td>
+<td>Being held close, skin to skin, with your own smell rather than heavy perfumes or products.</td>
+</tr>
+<tr class="even">
+<td>Babies and young children</td>
+<td>A familiar smell can carry them through a separation.</td>
+<td>Something that smells of you, or of home, when you have to be apart.</td>
+</tr>
+<tr class="odd">
+<td>Children and teenagers</td>
+<td>Mothers still recognise their child’s smell, and it changes with puberty. Less research on how the child responds.</td>
+<td>Home that smells of home, and time under the same roof, not only time spent together.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-in-your-home">What this means in your home</h2>
+<p>Modern parenting rarely mentions smell. Babies are washed in scented products, wrapped in clothes that smell of the laundry rather than of us, and spend long stretches away from the people they belong to. Older children move between homes, schools, clubs and screens, often with little time simply to be home. It isn’t your fault for living like that. It’s what most of us have been handed. But a child’s biology still uses smell, quietly, to know where it is and who it is with.</p>
+<p>The Shift Map’s first shift for this signal is to let your child be surrounded by the familiar. To let them be close enough to smell you. To keep things that smell of you or of home within reach when you have to be apart. And to notice what the air in your home carries, because settledness travels in it, and so does alarm.</p>
+<p>So I wonder if it might be worth noticing, over the next few days, what your child reaches for when they’re unsettled, and whether it smells of you. And when the air at home is tense, how quickly does your child seem to pick it up?</p>
+<p>If by any chance you’d like to explore this further, bring it to the monthly Q&amp;A. I’d really like to hear what you notice.</p>
+<section class="quiz"><span class="label">A moment to listen to yourself</span><h2>What does my home smell of?</h2><p>This isn&#x27;t a test and there are no right answers. It&#x27;s a quiet moment to listen to yourself. Read each line and tick the box that feels most true for you at the moment. Try not to tick the one you think you should.</p><form id="quiz"><div class="q" data-rev="0"><p>1. My child spends long stretches of the day away from me and from home.</p><div class="opts" role="radiogroup" aria-label="Line 1"><label><input type="radio" name="q1" value="often"><span>Often</span></label><label><input type="radio" name="q1" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q1" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>2. The air at home often feels tense, even when nobody is saying anything.</p><div class="opts" role="radiogroup" aria-label="Line 2"><label><input type="radio" name="q2" value="often"><span>Often</span></label><label><input type="radio" name="q2" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q2" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>3. My child clings to a blanket, toy or piece of my clothing when unsettled.</p><div class="opts" role="radiogroup" aria-label="Line 3"><label><input type="radio" name="q3" value="often"><span>Often</span></label><label><input type="radio" name="q3" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q3" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>4. My child seems unsettled or prickly after time away.</p><div class="opts" role="radiogroup" aria-label="Line 4"><label><input type="radio" name="q4" value="often"><span>Often</span></label><label><input type="radio" name="q4" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q4" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="0"><p>5. I&#x27;m usually rushing, even when we&#x27;re at home together.</p><div class="opts" role="radiogroup" aria-label="Line 5"><label><input type="radio" name="q5" value="often"><span>Often</span></label><label><input type="radio" name="q5" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q5" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>6. My child can be close enough to me to smell me, most days.</p><div class="opts" role="radiogroup" aria-label="Line 6"><label><input type="radio" name="q6" value="often"><span>Often</span></label><label><input type="radio" name="q6" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q6" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>7. When we&#x27;re apart, my child has something that smells of me or of home.</p><div class="opts" role="radiogroup" aria-label="Line 7"><label><input type="radio" name="q7" value="often"><span>Often</span></label><label><input type="radio" name="q7" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q7" value="rarely"><span>Rarely</span></label></div></div><div class="q" data-rev="1"><p>8. Home has a familiar feel that my child seems to settle into.</p><div class="opts" role="radiogroup" aria-label="Line 8"><label><input type="radio" name="q8" value="often"><span>Often</span></label><label><input type="radio" name="q8" value="sometimes"><span>Sometimes</span></label><label><input type="radio" name="q8" value="rarely"><span>Rarely</span></label></div></div></form><div class="result" id="result" aria-live="polite"></div><p style="margin-top:18px"><em>What did you notice about yourself as you answered?</em></p></section>
+<div class="back"><a class="btn solid" href="/speak-with-geoff">Talk it through with Geoff &rarr;</a><a class="btn" href="/presence-signals/">All presence signals</a></div><h2>The research behind this</h2><div class="refs"><ul>
+<li>Liedloff, J. (1975). <em>The Continuum Concept</em>. Duckworth.</li>
+<li>Macfarlane, A. (1975). Olfaction in the development of social preferences in the human neonate. In <em>Parent-Infant Interaction</em>, Ciba Foundation Symposium 33 (pp. 103–117). Elsevier.</li>
+<li>Varendi, H. and Porter, R. H. (2001). Breast odour as the only maternal stimulus elicits crawling towards the odour source. <em>Acta Paediatrica</em>, 90(4), 372–375.</li>
+<li>Sullivan, R. M. and Toubas, P. (1998). Clinical usefulness of maternal odor in newborns: soothing and feeding preparatory responses. <em>Biology of the Neonate</em>, 74(6), 402–408.</li>
+<li>Rattaz, C., Goubet, N. and Bullinger, A. (2005). The calming effect of a familiar odor on full-term newborns. <em>Journal of Developmental and Behavioral Pediatrics</em>, 26(2), 86–92.</li>
+<li>Lundström, J. N., Mathe, A., Schaal, B. et al. (2013). Maternal status regulates cortical responses to the body odor of newborns. <em>Frontiers in Psychology</em>, 4, 597.</li>
+<li>Schäfer, L., Sorokowska, A., Weidner, K. and Croy, I. (2020). Children’s body odors: hints to the development status. <em>Frontiers in Psychology</em>, 11, 320.</li>
+<li>de Groot, J. H. B., Smeets, M. A. M., Kaldewaij, A., Duijndam, M. J. A. and Semin, G. R. (2012). Chemosignals communicate human emotions. <em>Psychological Science</em>, 23(11), 1417–1424.</li>
+</ul>
+</div><footer>&copy; 2026 Geoff Owen, Biologically Aligned Parenting.</footer>
+</div>
+<script>
+(function(){
+  var READ=[["0 to 5", "There's probably a good deal of familiarity and closeness in your home. It might be interesting to notice the times when the thread breaks, and what's usually happening then."], ["6 to 10", "Like most parents, you probably move between settled and stretched, depending on the week. I wonder which line above caught you. That one might be worth carrying with you this week."], ["11 to 16", "It may be that your child spends more time away from the familiar than either of you would choose. This isn't blame. Modern life builds a lot of change in. It might simply be the place where your noticing begins."]];
+  var form=document.getElementById('quiz'); if(!form) return;
+  function update(){
+    var total=0, answered=0, n=form.querySelectorAll('.q').length;
+    form.querySelectorAll('.q').forEach(function(q){
+      var c=q.querySelector('input:checked'); if(!c) return; answered++;
+      var rev=q.dataset.rev==='1', v=c.value;
+      if(!rev){ total+= v==='often'?2:(v==='sometimes'?1:0); }
+      else { total+= v==='rarely'?2:(v==='sometimes'?1:0); }
+    });
+    var out=document.getElementById('result');
+    if(answered<n){ out.innerHTML='Answered '+answered+' of '+n+'. Your reflection appears when you have answered every line.'; return; }
+    var r= total<=5?READ[0]:(total<=10?READ[1]:READ[2]);
+    out.innerHTML='<b>Your total: '+total+' ('+r[0]+')</b><br>'+r[1];
+  }
+  form.addEventListener('change',update); update();
+})();
+</script>
+</body>
+</html>
