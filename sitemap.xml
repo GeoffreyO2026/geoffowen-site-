@@ -51,6 +51,21 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://geoffreyowen.com/insights/modern-parenting-manages-behaviour/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://geoffreyowen.com/insights/you-havent-lost-yourself/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://geoffreyowen.com/insights/the-lost-parents-research/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://geoffreyowen.com/insights/the-folly-of-use-your-words/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
